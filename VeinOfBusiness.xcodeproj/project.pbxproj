@@ -1,0 +1,749 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1887AF061DCE38D1003BF6E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF051DCE38D1003BF6E4 /* main.m */; };
+		1887AF091DCE38D1003BF6E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF081DCE38D1003BF6E4 /* AppDelegate.m */; };
+		1887AF0F1DCE38D2003BF6E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF0D1DCE38D2003BF6E4 /* Main.storyboard */; };
+		1887AF111DCE38D2003BF6E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF101DCE38D2003BF6E4 /* Assets.xcassets */; };
+		1887AF141DCE38D2003BF6E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF121DCE38D2003BF6E4 /* LaunchScreen.storyboard */; };
+		1887AF1F1DCE38D2003BF6E4 /* VeinOfBusinessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF1E1DCE38D2003BF6E4 /* VeinOfBusinessTests.m */; };
+		1887AF2A1DCE38D2003BF6E4 /* VeinOfBusinessUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF291DCE38D2003BF6E4 /* VeinOfBusinessUITests.m */; };
+		1887AF4A1DCE3ED3003BF6E4 /* AboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF481DCE3ED3003BF6E4 /* AboutMeViewController.m */; };
+		1887AF4B1DCE3ED3003BF6E4 /* AboutMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF491DCE3ED3003BF6E4 /* AboutMeViewController.xib */; };
+		1887AF4F1DCE3EEA003BF6E4 /* MoneyRewardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF4D1DCE3EEA003BF6E4 /* MoneyRewardViewController.m */; };
+		1887AF501DCE3EEA003BF6E4 /* MoneyRewardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF4E1DCE3EEA003BF6E4 /* MoneyRewardViewController.xib */; };
+		1887AF541DCE3EFA003BF6E4 /* TaskListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF521DCE3EFA003BF6E4 /* TaskListViewController.m */; };
+		1887AF551DCE3EFA003BF6E4 /* TaskListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF531DCE3EFA003BF6E4 /* TaskListViewController.xib */; };
+		1887AF5F1DCEF016003BF6E4 /* LoginInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF5D1DCEF016003BF6E4 /* LoginInViewController.m */; };
+		1887AF601DCEF016003BF6E4 /* LoginInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF5E1DCEF016003BF6E4 /* LoginInViewController.xib */; };
+		1887AF641DCEFE4C003BF6E4 /* PasswordOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF621DCEFE4C003BF6E4 /* PasswordOperationViewController.m */; };
+		1887AF651DCEFE4C003BF6E4 /* PasswordOperationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF631DCEFE4C003BF6E4 /* PasswordOperationViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1887AF1B1DCE38D2003BF6E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1887AEF91DCE38D1003BF6E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1887AF001DCE38D1003BF6E4;
+			remoteInfo = VeinOfBusiness;
+		};
+		1887AF261DCE38D2003BF6E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1887AEF91DCE38D1003BF6E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1887AF001DCE38D1003BF6E4;
+			remoteInfo = VeinOfBusiness;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1887AF011DCE38D1003BF6E4 /* VeinOfBusiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeinOfBusiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1887AF051DCE38D1003BF6E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1887AF071DCE38D1003BF6E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1887AF081DCE38D1003BF6E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1887AF0E1DCE38D2003BF6E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1887AF101DCE38D2003BF6E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1887AF131DCE38D2003BF6E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1887AF151DCE38D2003BF6E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1887AF1A1DCE38D2003BF6E4 /* VeinOfBusinessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeinOfBusinessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1887AF1E1DCE38D2003BF6E4 /* VeinOfBusinessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VeinOfBusinessTests.m; sourceTree = "<group>"; };
+		1887AF201DCE38D2003BF6E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1887AF251DCE38D2003BF6E4 /* VeinOfBusinessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeinOfBusinessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1887AF291DCE38D2003BF6E4 /* VeinOfBusinessUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VeinOfBusinessUITests.m; sourceTree = "<group>"; };
+		1887AF2B1DCE38D2003BF6E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1887AF471DCE3ED3003BF6E4 /* AboutMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutMeViewController.h; sourceTree = "<group>"; };
+		1887AF481DCE3ED3003BF6E4 /* AboutMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutMeViewController.m; sourceTree = "<group>"; };
+		1887AF491DCE3ED3003BF6E4 /* AboutMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutMeViewController.xib; sourceTree = "<group>"; };
+		1887AF4C1DCE3EEA003BF6E4 /* MoneyRewardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyRewardViewController.h; sourceTree = "<group>"; };
+		1887AF4D1DCE3EEA003BF6E4 /* MoneyRewardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyRewardViewController.m; sourceTree = "<group>"; };
+		1887AF4E1DCE3EEA003BF6E4 /* MoneyRewardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoneyRewardViewController.xib; sourceTree = "<group>"; };
+		1887AF511DCE3EFA003BF6E4 /* TaskListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskListViewController.h; sourceTree = "<group>"; };
+		1887AF521DCE3EFA003BF6E4 /* TaskListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskListViewController.m; sourceTree = "<group>"; };
+		1887AF531DCE3EFA003BF6E4 /* TaskListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskListViewController.xib; sourceTree = "<group>"; };
+		1887AF5A1DCE41DF003BF6E4 /* VeinPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VeinPrefixHeader.pch; sourceTree = "<group>"; };
+		1887AF5C1DCEF016003BF6E4 /* LoginInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginInViewController.h; sourceTree = "<group>"; };
+		1887AF5D1DCEF016003BF6E4 /* LoginInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInViewController.m; sourceTree = "<group>"; };
+		1887AF5E1DCEF016003BF6E4 /* LoginInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginInViewController.xib; sourceTree = "<group>"; };
+		1887AF611DCEFE4C003BF6E4 /* PasswordOperationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordOperationViewController.h; sourceTree = "<group>"; };
+		1887AF621DCEFE4C003BF6E4 /* PasswordOperationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordOperationViewController.m; sourceTree = "<group>"; };
+		1887AF631DCEFE4C003BF6E4 /* PasswordOperationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordOperationViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1887AEFE1DCE38D1003BF6E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1887AF171DCE38D2003BF6E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1887AF221DCE38D2003BF6E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1887AEF81DCE38D1003BF6E4 = {
+			isa = PBXGroup;
+			children = (
+				1887AF031DCE38D1003BF6E4 /* VeinOfBusiness */,
+				1887AF1D1DCE38D2003BF6E4 /* VeinOfBusinessTests */,
+				1887AF281DCE38D2003BF6E4 /* VeinOfBusinessUITests */,
+				1887AF021DCE38D1003BF6E4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1887AF021DCE38D1003BF6E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1887AF011DCE38D1003BF6E4 /* VeinOfBusiness.app */,
+				1887AF1A1DCE38D2003BF6E4 /* VeinOfBusinessTests.xctest */,
+				1887AF251DCE38D2003BF6E4 /* VeinOfBusinessUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1887AF031DCE38D1003BF6E4 /* VeinOfBusiness */ = {
+			isa = PBXGroup;
+			children = (
+				1887AF371DCE3E9D003BF6E4 /* Helper */,
+				1887AF3A1DCE3E9D003BF6E4 /* Sections */,
+				1887AF071DCE38D1003BF6E4 /* AppDelegate.h */,
+				1887AF081DCE38D1003BF6E4 /* AppDelegate.m */,
+				1887AF0D1DCE38D2003BF6E4 /* Main.storyboard */,
+				1887AF101DCE38D2003BF6E4 /* Assets.xcassets */,
+				1887AF121DCE38D2003BF6E4 /* LaunchScreen.storyboard */,
+				1887AF151DCE38D2003BF6E4 /* Info.plist */,
+				1887AF041DCE38D1003BF6E4 /* Supporting Files */,
+			);
+			path = VeinOfBusiness;
+			sourceTree = "<group>";
+		};
+		1887AF041DCE38D1003BF6E4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1887AF051DCE38D1003BF6E4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1887AF1D1DCE38D2003BF6E4 /* VeinOfBusinessTests */ = {
+			isa = PBXGroup;
+			children = (
+				1887AF1E1DCE38D2003BF6E4 /* VeinOfBusinessTests.m */,
+				1887AF201DCE38D2003BF6E4 /* Info.plist */,
+			);
+			path = VeinOfBusinessTests;
+			sourceTree = "<group>";
+		};
+		1887AF281DCE38D2003BF6E4 /* VeinOfBusinessUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1887AF291DCE38D2003BF6E4 /* VeinOfBusinessUITests.m */,
+				1887AF2B1DCE38D2003BF6E4 /* Info.plist */,
+			);
+			path = VeinOfBusinessUITests;
+			sourceTree = "<group>";
+		};
+		1887AF371DCE3E9D003BF6E4 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1887AF5B1DCE44CD003BF6E4 /* QuoteFile */,
+				1887AF381DCE3E9D003BF6E4 /* Category */,
+				1887AF391DCE3E9D003BF6E4 /* PchFile */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		1887AF381DCE3E9D003BF6E4 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		1887AF391DCE3E9D003BF6E4 /* PchFile */ = {
+			isa = PBXGroup;
+			children = (
+				1887AF5A1DCE41DF003BF6E4 /* VeinPrefixHeader.pch */,
+			);
+			path = PchFile;
+			sourceTree = "<group>";
+		};
+		1887AF3A1DCE3E9D003BF6E4 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				1887AF561DCE41A5003BF6E4 /* LoginFlow */,
+				1887AF3B1DCE3E9D003BF6E4 /* AboutMy */,
+				1887AF3F1DCE3E9D003BF6E4 /* MoneyReward */,
+				1887AF431DCE3E9D003BF6E4 /* TaskList */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		1887AF3B1DCE3E9D003BF6E4 /* AboutMy */ = {
+			isa = PBXGroup;
+			children = (
+				1887AF3C1DCE3E9D003BF6E4 /* Controller */,
+				1887AF3D1DCE3E9D003BF6E4 /* Model */,
+				1887AF3E1DCE3E9D003BF6E4 /* View */,
+			);
+			path = AboutMy;
+			sourceTree = "<group>";
+		};
+		1887AF3C1DCE3E9D003BF6E4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1887AF471DCE3ED3003BF6E4 /* AboutMeViewController.h */,
+				1887AF481DCE3ED3003BF6E4 /* AboutMeViewController.m */,
+				1887AF491DCE3ED3003BF6E4 /* AboutMeViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1887AF3D1DCE3E9D003BF6E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1887AF3E1DCE3E9D003BF6E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1887AF3F1DCE3E9D003BF6E4 /* MoneyReward */ = {
+			isa = PBXGroup;
+			children = (
+				1887AF401DCE3E9D003BF6E4 /* Controller */,
+				1887AF411DCE3E9D003BF6E4 /* Model */,
+				1887AF421DCE3E9D003BF6E4 /* View */,
+			);
+			path = MoneyReward;
+			sourceTree = "<group>";
+		};
+		1887AF401DCE3E9D003BF6E4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1887AF4C1DCE3EEA003BF6E4 /* MoneyRewardViewController.h */,
+				1887AF4D1DCE3EEA003BF6E4 /* MoneyRewardViewController.m */,
+				1887AF4E1DCE3EEA003BF6E4 /* MoneyRewardViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1887AF411DCE3E9D003BF6E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1887AF421DCE3E9D003BF6E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1887AF431DCE3E9D003BF6E4 /* TaskList */ = {
+			isa = PBXGroup;
+			children = (
+				1887AF441DCE3E9D003BF6E4 /* Controller */,
+				1887AF451DCE3E9D003BF6E4 /* Model */,
+				1887AF461DCE3E9D003BF6E4 /* View */,
+			);
+			path = TaskList;
+			sourceTree = "<group>";
+		};
+		1887AF441DCE3E9D003BF6E4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1887AF511DCE3EFA003BF6E4 /* TaskListViewController.h */,
+				1887AF521DCE3EFA003BF6E4 /* TaskListViewController.m */,
+				1887AF531DCE3EFA003BF6E4 /* TaskListViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1887AF451DCE3E9D003BF6E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1887AF461DCE3E9D003BF6E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1887AF561DCE41A5003BF6E4 /* LoginFlow */ = {
+			isa = PBXGroup;
+			children = (
+				1887AF571DCE41A5003BF6E4 /* Controller */,
+				1887AF581DCE41A5003BF6E4 /* Model */,
+				1887AF591DCE41A5003BF6E4 /* View */,
+			);
+			path = LoginFlow;
+			sourceTree = "<group>";
+		};
+		1887AF571DCE41A5003BF6E4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1887AF5C1DCEF016003BF6E4 /* LoginInViewController.h */,
+				1887AF5D1DCEF016003BF6E4 /* LoginInViewController.m */,
+				1887AF5E1DCEF016003BF6E4 /* LoginInViewController.xib */,
+				1887AF611DCEFE4C003BF6E4 /* PasswordOperationViewController.h */,
+				1887AF621DCEFE4C003BF6E4 /* PasswordOperationViewController.m */,
+				1887AF631DCEFE4C003BF6E4 /* PasswordOperationViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1887AF581DCE41A5003BF6E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1887AF591DCE41A5003BF6E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1887AF5B1DCE44CD003BF6E4 /* QuoteFile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = QuoteFile;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1887AF001DCE38D1003BF6E4 /* VeinOfBusiness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1887AF2E1DCE38D2003BF6E4 /* Build configuration list for PBXNativeTarget "VeinOfBusiness" */;
+			buildPhases = (
+				1887AEFD1DCE38D1003BF6E4 /* Sources */,
+				1887AEFE1DCE38D1003BF6E4 /* Frameworks */,
+				1887AEFF1DCE38D1003BF6E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VeinOfBusiness;
+			productName = VeinOfBusiness;
+			productReference = 1887AF011DCE38D1003BF6E4 /* VeinOfBusiness.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1887AF191DCE38D2003BF6E4 /* VeinOfBusinessTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1887AF311DCE38D2003BF6E4 /* Build configuration list for PBXNativeTarget "VeinOfBusinessTests" */;
+			buildPhases = (
+				1887AF161DCE38D2003BF6E4 /* Sources */,
+				1887AF171DCE38D2003BF6E4 /* Frameworks */,
+				1887AF181DCE38D2003BF6E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1887AF1C1DCE38D2003BF6E4 /* PBXTargetDependency */,
+			);
+			name = VeinOfBusinessTests;
+			productName = VeinOfBusinessTests;
+			productReference = 1887AF1A1DCE38D2003BF6E4 /* VeinOfBusinessTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1887AF241DCE38D2003BF6E4 /* VeinOfBusinessUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1887AF341DCE38D2003BF6E4 /* Build configuration list for PBXNativeTarget "VeinOfBusinessUITests" */;
+			buildPhases = (
+				1887AF211DCE38D2003BF6E4 /* Sources */,
+				1887AF221DCE38D2003BF6E4 /* Frameworks */,
+				1887AF231DCE38D2003BF6E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1887AF271DCE38D2003BF6E4 /* PBXTargetDependency */,
+			);
+			name = VeinOfBusinessUITests;
+			productName = VeinOfBusinessUITests;
+			productReference = 1887AF251DCE38D2003BF6E4 /* VeinOfBusinessUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1887AEF91DCE38D1003BF6E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					1887AF001DCE38D1003BF6E4 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					1887AF191DCE38D2003BF6E4 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1887AF001DCE38D1003BF6E4;
+					};
+					1887AF241DCE38D2003BF6E4 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1887AF001DCE38D1003BF6E4;
+					};
+				};
+			};
+			buildConfigurationList = 1887AEFC1DCE38D1003BF6E4 /* Build configuration list for PBXProject "VeinOfBusiness" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1887AEF81DCE38D1003BF6E4;
+			productRefGroup = 1887AF021DCE38D1003BF6E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1887AF001DCE38D1003BF6E4 /* VeinOfBusiness */,
+				1887AF191DCE38D2003BF6E4 /* VeinOfBusinessTests */,
+				1887AF241DCE38D2003BF6E4 /* VeinOfBusinessUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1887AEFF1DCE38D1003BF6E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1887AF141DCE38D2003BF6E4 /* LaunchScreen.storyboard in Resources */,
+				1887AF551DCE3EFA003BF6E4 /* TaskListViewController.xib in Resources */,
+				1887AF111DCE38D2003BF6E4 /* Assets.xcassets in Resources */,
+				1887AF601DCEF016003BF6E4 /* LoginInViewController.xib in Resources */,
+				1887AF501DCE3EEA003BF6E4 /* MoneyRewardViewController.xib in Resources */,
+				1887AF4B1DCE3ED3003BF6E4 /* AboutMeViewController.xib in Resources */,
+				1887AF0F1DCE38D2003BF6E4 /* Main.storyboard in Resources */,
+				1887AF651DCEFE4C003BF6E4 /* PasswordOperationViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1887AF181DCE38D2003BF6E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1887AF231DCE38D2003BF6E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1887AEFD1DCE38D1003BF6E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1887AF091DCE38D1003BF6E4 /* AppDelegate.m in Sources */,
+				1887AF4A1DCE3ED3003BF6E4 /* AboutMeViewController.m in Sources */,
+				1887AF4F1DCE3EEA003BF6E4 /* MoneyRewardViewController.m in Sources */,
+				1887AF541DCE3EFA003BF6E4 /* TaskListViewController.m in Sources */,
+				1887AF641DCEFE4C003BF6E4 /* PasswordOperationViewController.m in Sources */,
+				1887AF061DCE38D1003BF6E4 /* main.m in Sources */,
+				1887AF5F1DCEF016003BF6E4 /* LoginInViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1887AF161DCE38D2003BF6E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1887AF1F1DCE38D2003BF6E4 /* VeinOfBusinessTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1887AF211DCE38D2003BF6E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1887AF2A1DCE38D2003BF6E4 /* VeinOfBusinessUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1887AF1C1DCE38D2003BF6E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1887AF001DCE38D1003BF6E4 /* VeinOfBusiness */;
+			targetProxy = 1887AF1B1DCE38D2003BF6E4 /* PBXContainerItemProxy */;
+		};
+		1887AF271DCE38D2003BF6E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1887AF001DCE38D1003BF6E4 /* VeinOfBusiness */;
+			targetProxy = 1887AF261DCE38D2003BF6E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1887AF0D1DCE38D2003BF6E4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1887AF0E1DCE38D2003BF6E4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1887AF121DCE38D2003BF6E4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1887AF131DCE38D2003BF6E4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1887AF2C1DCE38D2003BF6E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1887AF2D1DCE38D2003BF6E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1887AF2F1DCE38D2003BF6E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/VeinOfBusiness/Helper/PchFile/VeinPrefixHeader.pch";
+				INFOPLIST_FILE = VeinOfBusiness/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Today.app.VeinOfBusiness;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1887AF301DCE38D2003BF6E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/VeinOfBusiness/Helper/PchFile/VeinPrefixHeader.pch";
+				INFOPLIST_FILE = VeinOfBusiness/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Today.app.VeinOfBusiness;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1887AF321DCE38D2003BF6E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VeinOfBusinessTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Today.app.VeinOfBusinessTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VeinOfBusiness.app/VeinOfBusiness";
+			};
+			name = Debug;
+		};
+		1887AF331DCE38D2003BF6E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VeinOfBusinessTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Today.app.VeinOfBusinessTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VeinOfBusiness.app/VeinOfBusiness";
+			};
+			name = Release;
+		};
+		1887AF351DCE38D2003BF6E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VeinOfBusinessUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Today.app.VeinOfBusinessUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VeinOfBusiness;
+			};
+			name = Debug;
+		};
+		1887AF361DCE38D2003BF6E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VeinOfBusinessUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Today.app.VeinOfBusinessUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VeinOfBusiness;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1887AEFC1DCE38D1003BF6E4 /* Build configuration list for PBXProject "VeinOfBusiness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1887AF2C1DCE38D2003BF6E4 /* Debug */,
+				1887AF2D1DCE38D2003BF6E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1887AF2E1DCE38D2003BF6E4 /* Build configuration list for PBXNativeTarget "VeinOfBusiness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1887AF2F1DCE38D2003BF6E4 /* Debug */,
+				1887AF301DCE38D2003BF6E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1887AF311DCE38D2003BF6E4 /* Build configuration list for PBXNativeTarget "VeinOfBusinessTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1887AF321DCE38D2003BF6E4 /* Debug */,
+				1887AF331DCE38D2003BF6E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1887AF341DCE38D2003BF6E4 /* Build configuration list for PBXNativeTarget "VeinOfBusinessUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1887AF351DCE38D2003BF6E4 /* Debug */,
+				1887AF361DCE38D2003BF6E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1887AEF91DCE38D1003BF6E4 /* Project object */;
+}

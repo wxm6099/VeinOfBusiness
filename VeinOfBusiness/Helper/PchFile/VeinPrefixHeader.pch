@@ -1,0 +1,41 @@
+//
+//  FriendChainsPrefixHeader.pch
+//  friendChains
+//
+//  Created by tom on 15/11/12.
+//  Copyright © 2015年 donler. All rights reserved.
+//
+
+#ifndef VeinPrefixHeader_pch
+#define VeinPrefixHeader_pch
+//一些第三方的接口需要的APPKEY等最好不要写在这里
+
+//预定义一些工具宏
+#define DLScreenWidth ([UIScreen mainScreen].bounds.size.width)
+#define DLScreenHeight ([UIScreen mainScreen].bounds.size.height)
+#define DLMultipleWidth(A) ([UIScreen mainScreen].bounds.size.width / (375.0 / (A)))
+
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+#define IS_IPHONE_4 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )480 ) < DBL_EPSILON )
+#define KNOTIFICATION_LOGINCHANGE @"loginStateChange"
+// 统一的背景颜色
+
+#define BackColor RGBACOLOR(250  , 250, 250, 1)
+
+#define CustomColor RGBACOLOR(23  , 178, 176, 1)
+
+
+
+#define RECOMMEND_FRIEND_INFO @"你的求助问题，我觉得TA可以帮上忙！"
+//发布时关闭日志输出的宏
+#ifndef __OPTIMIZE__
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+
+
+
+#endif /* FriendChainsPrefixHeader_pch */
