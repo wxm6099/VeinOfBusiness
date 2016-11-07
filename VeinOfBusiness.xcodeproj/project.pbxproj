@@ -24,6 +24,25 @@
 		1887AF601DCEF016003BF6E4 /* LoginInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF5E1DCEF016003BF6E4 /* LoginInViewController.xib */; };
 		1887AF641DCEFE4C003BF6E4 /* PasswordOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF621DCEFE4C003BF6E4 /* PasswordOperationViewController.m */; };
 		1887AF651DCEFE4C003BF6E4 /* PasswordOperationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF631DCEFE4C003BF6E4 /* PasswordOperationViewController.xib */; };
+		1887AF691DCF16BB003BF6E4 /* TaskListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF671DCF16BB003BF6E4 /* TaskListTableCell.m */; };
+		1887AF6A1DCF16BB003BF6E4 /* TaskListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF681DCF16BB003BF6E4 /* TaskListTableCell.xib */; };
+		1887AF6E1DCF1B82003BF6E4 /* TaskWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF6C1DCF1B82003BF6E4 /* TaskWebViewController.m */; };
+		1887AF6F1DCF1B82003BF6E4 /* TaskWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF6D1DCF1B82003BF6E4 /* TaskWebViewController.xib */; };
+		1887AF731DCF1F6D003BF6E4 /* RedEnvelopeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF711DCF1F6D003BF6E4 /* RedEnvelopeViewController.m */; };
+		1887AF741DCF1F6D003BF6E4 /* RedEnvelopeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF721DCF1F6D003BF6E4 /* RedEnvelopeViewController.xib */; };
+		18985A0A1DCF747B00D0B702 /* RewardVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 18985A091DCF747B00D0B702 /* RewardVIew.m */; };
+		18985A0E1DD04D6700D0B702 /* RewardListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18985A0C1DD04D6700D0B702 /* RewardListViewController.m */; };
+		18985A0F1DD04D6700D0B702 /* RewardListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18985A0D1DD04D6700D0B702 /* RewardListViewController.xib */; };
+		18985A131DD0B01300D0B702 /* RewardListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18985A111DD0B01300D0B702 /* RewardListTableCell.m */; };
+		18985A141DD0B01300D0B702 /* RewardListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18985A121DD0B01300D0B702 /* RewardListTableCell.xib */; };
+		18985A181DD0B4FA00D0B702 /* MyIntegralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18985A161DD0B4FA00D0B702 /* MyIntegralViewController.m */; };
+		18985A191DD0B4FA00D0B702 /* MyIntegralViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18985A171DD0B4FA00D0B702 /* MyIntegralViewController.xib */; };
+		18985A1D1DD0BC2300D0B702 /* IntegralExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18985A1B1DD0BC2300D0B702 /* IntegralExchangeViewController.m */; };
+		18985A1E1DD0BC2300D0B702 /* IntegralExchangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18985A1C1DD0BC2300D0B702 /* IntegralExchangeViewController.xib */; };
+		18985A221DD0C26C00D0B702 /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18985A201DD0C26C00D0B702 /* CheckInViewController.m */; };
+		18985A231DD0C26C00D0B702 /* CheckInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18985A211DD0C26C00D0B702 /* CheckInViewController.xib */; };
+		18985A271DD1346700D0B702 /* InviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18985A251DD1346700D0B702 /* InviteViewController.m */; };
+		18985A281DD1346700D0B702 /* InviteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18985A261DD1346700D0B702 /* InviteViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +93,35 @@
 		1887AF611DCEFE4C003BF6E4 /* PasswordOperationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordOperationViewController.h; sourceTree = "<group>"; };
 		1887AF621DCEFE4C003BF6E4 /* PasswordOperationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordOperationViewController.m; sourceTree = "<group>"; };
 		1887AF631DCEFE4C003BF6E4 /* PasswordOperationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordOperationViewController.xib; sourceTree = "<group>"; };
+		1887AF661DCF16BB003BF6E4 /* TaskListTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskListTableCell.h; path = VeinOfBusiness/Sections/TaskList/VIew/TaskListTableCell.h; sourceTree = SOURCE_ROOT; };
+		1887AF671DCF16BB003BF6E4 /* TaskListTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskListTableCell.m; path = VeinOfBusiness/Sections/TaskList/VIew/TaskListTableCell.m; sourceTree = SOURCE_ROOT; };
+		1887AF681DCF16BB003BF6E4 /* TaskListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TaskListTableCell.xib; path = VeinOfBusiness/Sections/TaskList/VIew/TaskListTableCell.xib; sourceTree = SOURCE_ROOT; };
+		1887AF6B1DCF1B82003BF6E4 /* TaskWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskWebViewController.h; sourceTree = "<group>"; };
+		1887AF6C1DCF1B82003BF6E4 /* TaskWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskWebViewController.m; sourceTree = "<group>"; };
+		1887AF6D1DCF1B82003BF6E4 /* TaskWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskWebViewController.xib; sourceTree = "<group>"; };
+		1887AF701DCF1F6D003BF6E4 /* RedEnvelopeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedEnvelopeViewController.h; sourceTree = "<group>"; };
+		1887AF711DCF1F6D003BF6E4 /* RedEnvelopeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedEnvelopeViewController.m; sourceTree = "<group>"; };
+		1887AF721DCF1F6D003BF6E4 /* RedEnvelopeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RedEnvelopeViewController.xib; sourceTree = "<group>"; };
+		18985A081DCF747B00D0B702 /* RewardVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardVIew.h; sourceTree = "<group>"; };
+		18985A091DCF747B00D0B702 /* RewardVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardVIew.m; sourceTree = "<group>"; };
+		18985A0B1DD04D6700D0B702 /* RewardListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardListViewController.h; sourceTree = "<group>"; };
+		18985A0C1DD04D6700D0B702 /* RewardListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardListViewController.m; sourceTree = "<group>"; };
+		18985A0D1DD04D6700D0B702 /* RewardListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RewardListViewController.xib; sourceTree = "<group>"; };
+		18985A101DD0B01300D0B702 /* RewardListTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardListTableCell.h; sourceTree = "<group>"; };
+		18985A111DD0B01300D0B702 /* RewardListTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardListTableCell.m; sourceTree = "<group>"; };
+		18985A121DD0B01300D0B702 /* RewardListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RewardListTableCell.xib; sourceTree = "<group>"; };
+		18985A151DD0B4FA00D0B702 /* MyIntegralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyIntegralViewController.h; sourceTree = "<group>"; };
+		18985A161DD0B4FA00D0B702 /* MyIntegralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyIntegralViewController.m; sourceTree = "<group>"; };
+		18985A171DD0B4FA00D0B702 /* MyIntegralViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyIntegralViewController.xib; sourceTree = "<group>"; };
+		18985A1A1DD0BC2300D0B702 /* IntegralExchangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegralExchangeViewController.h; sourceTree = "<group>"; };
+		18985A1B1DD0BC2300D0B702 /* IntegralExchangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegralExchangeViewController.m; sourceTree = "<group>"; };
+		18985A1C1DD0BC2300D0B702 /* IntegralExchangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntegralExchangeViewController.xib; sourceTree = "<group>"; };
+		18985A1F1DD0C26C00D0B702 /* CheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInViewController.h; sourceTree = "<group>"; };
+		18985A201DD0C26C00D0B702 /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInViewController.m; sourceTree = "<group>"; };
+		18985A211DD0C26C00D0B702 /* CheckInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckInViewController.xib; sourceTree = "<group>"; };
+		18985A241DD1346700D0B702 /* InviteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteViewController.h; sourceTree = "<group>"; };
+		18985A251DD1346700D0B702 /* InviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteViewController.m; sourceTree = "<group>"; };
+		18985A261DD1346700D0B702 /* InviteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InviteViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +297,21 @@
 				1887AF4C1DCE3EEA003BF6E4 /* MoneyRewardViewController.h */,
 				1887AF4D1DCE3EEA003BF6E4 /* MoneyRewardViewController.m */,
 				1887AF4E1DCE3EEA003BF6E4 /* MoneyRewardViewController.xib */,
+				18985A0B1DD04D6700D0B702 /* RewardListViewController.h */,
+				18985A0C1DD04D6700D0B702 /* RewardListViewController.m */,
+				18985A0D1DD04D6700D0B702 /* RewardListViewController.xib */,
+				18985A151DD0B4FA00D0B702 /* MyIntegralViewController.h */,
+				18985A161DD0B4FA00D0B702 /* MyIntegralViewController.m */,
+				18985A171DD0B4FA00D0B702 /* MyIntegralViewController.xib */,
+				18985A1A1DD0BC2300D0B702 /* IntegralExchangeViewController.h */,
+				18985A1B1DD0BC2300D0B702 /* IntegralExchangeViewController.m */,
+				18985A1C1DD0BC2300D0B702 /* IntegralExchangeViewController.xib */,
+				18985A1F1DD0C26C00D0B702 /* CheckInViewController.h */,
+				18985A201DD0C26C00D0B702 /* CheckInViewController.m */,
+				18985A211DD0C26C00D0B702 /* CheckInViewController.xib */,
+				18985A241DD1346700D0B702 /* InviteViewController.h */,
+				18985A251DD1346700D0B702 /* InviteViewController.m */,
+				18985A261DD1346700D0B702 /* InviteViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -263,6 +326,11 @@
 		1887AF421DCE3E9D003BF6E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18985A081DCF747B00D0B702 /* RewardVIew.h */,
+				18985A091DCF747B00D0B702 /* RewardVIew.m */,
+				18985A101DD0B01300D0B702 /* RewardListTableCell.h */,
+				18985A111DD0B01300D0B702 /* RewardListTableCell.m */,
+				18985A121DD0B01300D0B702 /* RewardListTableCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -283,6 +351,12 @@
 				1887AF511DCE3EFA003BF6E4 /* TaskListViewController.h */,
 				1887AF521DCE3EFA003BF6E4 /* TaskListViewController.m */,
 				1887AF531DCE3EFA003BF6E4 /* TaskListViewController.xib */,
+				1887AF6B1DCF1B82003BF6E4 /* TaskWebViewController.h */,
+				1887AF6C1DCF1B82003BF6E4 /* TaskWebViewController.m */,
+				1887AF6D1DCF1B82003BF6E4 /* TaskWebViewController.xib */,
+				1887AF701DCF1F6D003BF6E4 /* RedEnvelopeViewController.h */,
+				1887AF711DCF1F6D003BF6E4 /* RedEnvelopeViewController.m */,
+				1887AF721DCF1F6D003BF6E4 /* RedEnvelopeViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -297,6 +371,9 @@
 		1887AF461DCE3E9D003BF6E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1887AF661DCF16BB003BF6E4 /* TaskListTableCell.h */,
+				1887AF671DCF16BB003BF6E4 /* TaskListTableCell.m */,
+				1887AF681DCF16BB003BF6E4 /* TaskListTableCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -451,13 +528,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18985A141DD0B01300D0B702 /* RewardListTableCell.xib in Resources */,
 				1887AF141DCE38D2003BF6E4 /* LaunchScreen.storyboard in Resources */,
 				1887AF551DCE3EFA003BF6E4 /* TaskListViewController.xib in Resources */,
 				1887AF111DCE38D2003BF6E4 /* Assets.xcassets in Resources */,
 				1887AF601DCEF016003BF6E4 /* LoginInViewController.xib in Resources */,
+				1887AF6A1DCF16BB003BF6E4 /* TaskListTableCell.xib in Resources */,
+				1887AF741DCF1F6D003BF6E4 /* RedEnvelopeViewController.xib in Resources */,
 				1887AF501DCE3EEA003BF6E4 /* MoneyRewardViewController.xib in Resources */,
+				18985A191DD0B4FA00D0B702 /* MyIntegralViewController.xib in Resources */,
+				18985A281DD1346700D0B702 /* InviteViewController.xib in Resources */,
 				1887AF4B1DCE3ED3003BF6E4 /* AboutMeViewController.xib in Resources */,
 				1887AF0F1DCE38D2003BF6E4 /* Main.storyboard in Resources */,
+				18985A1E1DD0BC2300D0B702 /* IntegralExchangeViewController.xib in Resources */,
+				18985A0F1DD04D6700D0B702 /* RewardListViewController.xib in Resources */,
+				1887AF6F1DCF1B82003BF6E4 /* TaskWebViewController.xib in Resources */,
+				18985A231DD0C26C00D0B702 /* CheckInViewController.xib in Resources */,
 				1887AF651DCEFE4C003BF6E4 /* PasswordOperationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,9 +573,19 @@
 				1887AF4A1DCE3ED3003BF6E4 /* AboutMeViewController.m in Sources */,
 				1887AF4F1DCE3EEA003BF6E4 /* MoneyRewardViewController.m in Sources */,
 				1887AF541DCE3EFA003BF6E4 /* TaskListViewController.m in Sources */,
+				18985A271DD1346700D0B702 /* InviteViewController.m in Sources */,
+				1887AF731DCF1F6D003BF6E4 /* RedEnvelopeViewController.m in Sources */,
+				18985A1D1DD0BC2300D0B702 /* IntegralExchangeViewController.m in Sources */,
+				18985A221DD0C26C00D0B702 /* CheckInViewController.m in Sources */,
+				18985A131DD0B01300D0B702 /* RewardListTableCell.m in Sources */,
+				18985A0E1DD04D6700D0B702 /* RewardListViewController.m in Sources */,
 				1887AF641DCEFE4C003BF6E4 /* PasswordOperationViewController.m in Sources */,
+				1887AF6E1DCF1B82003BF6E4 /* TaskWebViewController.m in Sources */,
+				1887AF691DCF16BB003BF6E4 /* TaskListTableCell.m in Sources */,
 				1887AF061DCE38D1003BF6E4 /* main.m in Sources */,
 				1887AF5F1DCEF016003BF6E4 /* LoginInViewController.m in Sources */,
+				18985A181DD0B4FA00D0B702 /* MyIntegralViewController.m in Sources */,
+				18985A0A1DCF747B00D0B702 /* RewardVIew.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
