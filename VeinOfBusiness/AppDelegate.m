@@ -11,6 +11,7 @@
 #import "MoneyRewardViewController.h"
 #import "TaskListViewController.h"
 #import "LoginInViewController.h"
+#import "WXApi.h"
 
 @interface AppDelegate ()
 
@@ -25,6 +26,10 @@
     //这儿是商脉APP的第一行代码
     [self.window makeKeyAndVisible];
     
+    // 注册微信 TO DO 跳转URL 未设置
+    [WXApi registerApp:WXAppID];
+    
+
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginInSucceed) name:@"WindowChangeRoot" object:nil];
     
     
@@ -64,11 +69,13 @@
     if (!_window) {
         _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
         
+
+//        LoginInViewController *loginIn = [[LoginInViewController alloc] initWithNibName:@"LoginInViewController" bundle:nil];
+//        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:loginIn];
+//        [_window setRootViewController:nav];
         
-        
-        LoginInViewController *loginIn = [[LoginInViewController alloc] initWithNibName:@"LoginInViewController" bundle:nil];
-        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:loginIn];
-        [_window setRootViewController:nav];
+        AboutMeViewController *aboutMe = [[AboutMeViewController alloc]init];
+        _window.rootViewController = aboutMe;
         
         
     }
@@ -102,10 +109,57 @@
     
     [_window setRootViewController:tab];
     
+//    TaskListViewController *task = [[TaskListViewController alloc]init];
+//    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:main];
+//    UIImage *image1 = [UIImage imageNamed:@"1.jpg"];
+//    UIImage *image2 = [image1 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    UITabBarItem *item1 = [[UITabBarItem alloc]initWithTitle:@"小说" image:image2 tag:0];
+//    main.tabBarItem = item1;
+//    
+//    SecondViewController *second = [[SecondViewController alloc]init];
+//    UIImage *image3 = [UIImage imageNamed:@"2.jpg"];
+//    UIImage *image4 = [image3 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    UITabBarItem *item2 = [[UITabBarItem alloc]initWithTitle:@"相册" image:image4 tag:0];
+//    second.tabBarItem = item2;
+//    
+//    NSMutableArray *array = [NSMutableArray array];
+//    [array addObject:nav];
+//    [array addObject:second];
+//    
+//    UITabBarController *tab = [[UITabBarController alloc]init];
+//    tab.viewControllers = array;
+//    [self.window setRootViewController:tab];
+//    
+//    [tab release];
+//    [nav release];
+//    
+//    NSLog(@"%@", [array objectAtIndex:0]);
+//    NSLog(@"%@", [array objectAtIndex:1]);
+//    NSLog(@"%@", main);
+    
 }
 
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    if ([sourceApplication isEqualToString:@"com.qq.www"]||[sourceApplication isEqualToString:@"com.tencent.mqq"]) {
+//        return [TencentOAuth HandleOpenURL:url]||[QQApiInterface handleOpenURL:url delegate:[MainViewController sharedManager]];
+    }
+    if ([sourceApplication isEqualToString:@"com.sina.weibo"]) {
+//        return [WeiboSDK handleOpenURL:url delegate:[LoginViewController sharedManager]];
+    }
+    if ([sourceApplication isEqualToString:@"com.tencent.xin"]) {
+//        return [WXApi handleOpenURL:url delegate:[LoginViewController sharedManager]];
+    }
 
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+//    return [WXApi handleOpenURL:url delegate:[LoginViewController sharedManager]];
+    return YES;
+}
 
 
 
