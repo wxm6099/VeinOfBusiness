@@ -1,26 +1,22 @@
 //
-//  InviteViewController.m
+//  AccountBalanceViewController.m
 //  VeinOfBusiness
 //
 //  Created by Apple on 16/11/8.
 //  Copyright © 2016年 Apple. All rights reserved.
-//做个截图
+//
 
-#import "InviteViewController.h"
+#import "AccountBalanceViewController.h"
 
-@interface InviteViewController ()
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *backViewWidth;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *backViewBottom;
+@interface AccountBalanceViewController ()
 
 @end
 
-@implementation InviteViewController
+@implementation AccountBalanceViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.backViewWidth.constant = DLScreenWidth;
-    self.backViewBottom.constant = DLScreenHeight - 353;
 }
 
 - (void)didReceiveMemoryWarning {

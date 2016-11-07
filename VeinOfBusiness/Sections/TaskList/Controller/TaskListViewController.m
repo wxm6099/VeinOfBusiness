@@ -35,7 +35,7 @@
     
     
     [button addTarget:self action:@selector(redEnvelopButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    
+    self.title = @"任务";
 }
 
 

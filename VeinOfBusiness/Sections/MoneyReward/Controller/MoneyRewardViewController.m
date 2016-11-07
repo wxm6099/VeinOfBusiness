@@ -11,7 +11,7 @@
 #import "RewardListViewController.h"
 #import "MyIntegralViewController.h"
 #import "CheckInViewController.h"
-
+#import "AccountBalanceViewController.h"
 #import "InviteViewController.h"
 
 
@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *historyIncome;
 @property (weak, nonatomic) IBOutlet UIView *backViewTwo;
 @property (weak, nonatomic) IBOutlet UIView *backViewThree;
+@property (weak, nonatomic) IBOutlet UIView *topBackTempView;
 
 @end
 
@@ -32,13 +33,15 @@
     // Do any additional setup after loading the view from its nib
     
     
-    UITapGestureRecognizer *backTwoTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tampViewTouchAction:)];
+    UITapGestureRecognizer *topTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(topBackViewAction:)];
+    [self.topBackTempView addGestureRecognizer:topTap];
     
+    UITapGestureRecognizer *backTwoTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tampViewTouchAction:)];
+    self.title = @"赏金";
     [self.backViewTwo addGestureRecognizer:backTwoTap];
     
     
     CGFloat tempWidth = DLScreenWidth / 2 - 1;
-    
     
     NSArray *array = @[@[@"qiandao", @"签到", @"最高可得100元"],
   @[@"积分兑换", @"积分兑换", @"当前积分0"],
@@ -66,7 +69,10 @@
     
 }
 
-
+- (void)topBackViewAction:(UITapGestureRecognizer *)sender{
+    AccountBalanceViewController *ac = [[AccountBalanceViewController alloc]initWithNibName:@"AccountBalanceViewController" bundle:nil];
+    [self.navigationController pushViewController:ac animated:YES];
+}
 
 - (void)tampViewTouchAction:(UITapGestureRecognizer *)tap
 {

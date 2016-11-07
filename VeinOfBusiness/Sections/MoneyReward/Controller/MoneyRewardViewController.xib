@@ -13,6 +13,7 @@
                 <outlet property="historyIncome" destination="cwU-Ij-cGI" id="KDm-ON-vdl"/>
                 <outlet property="surplusMoneyLabel" destination="R35-ZN-ISW" id="HFN-vk-aIO"/>
                 <outlet property="todayIncome" destination="Yc6-xH-GyO" id="zES-Oa-TBY"/>
+                <outlet property="topBackTempView" destination="2Vo-FV-n4H" id="fj2-vw-SWt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

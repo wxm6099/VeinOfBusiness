@@ -8,6 +8,9 @@
 
 #import "RewardListViewController.h"
 #import "RewardListTableCell.h"
+
+#import "TaskWebViewController.h"
+
 @interface RewardListViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
@@ -50,10 +53,17 @@
     RewardListTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RewardListTableCell"];
     
     
-    
-    
     return cell;
 }
+
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    TaskWebViewController *web = [[TaskWebViewController alloc]initWithNibName:@"TaskWebViewController" bundle:nil];
+    [self.navigationController pushViewController:web animated:YES];
+}
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
