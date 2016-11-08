@@ -22,34 +22,6 @@
 		1887AF551DCE3EFA003BF6E4 /* TaskListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF531DCE3EFA003BF6E4 /* TaskListViewController.xib */; };
 		1887AF5F1DCEF016003BF6E4 /* LoginInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF5D1DCEF016003BF6E4 /* LoginInViewController.m */; };
 		1887AF601DCEF016003BF6E4 /* LoginInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF5E1DCEF016003BF6E4 /* LoginInViewController.xib */; };
-		1887AF641DCEFE4C003BF6E4 /* PasswordOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF621DCEFE4C003BF6E4 /* PasswordOperationViewController.m */; };
-		1887AF651DCEFE4C003BF6E4 /* PasswordOperationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF631DCEFE4C003BF6E4 /* PasswordOperationViewController.xib */; };
-
-		EF5478261DD04F6500279E12 /* AboutMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5478241DD04F6500279E12 /* AboutMeCell.m */; };
-		EF5478271DD04F6500279E12 /* AboutMeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5478251DD04F6500279E12 /* AboutMeCell.xib */; };
-		EF54783D1DD0686000279E12 /* ShareUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5478321DD0686000279E12 /* ShareUtil.m */; };
-		EF5478491DD070F600279E12 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5478441DD070F600279E12 /* libWeChatSDK.a */; };
-		EF54784A1DD070F600279E12 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF5478451DD070F600279E12 /* README.txt */; };
-		EF5478521DD0716B00279E12 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF54784E1DD0716B00279E12 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */; };
-		EF5478531DD0716B00279E12 /* WXMediaMessage+messageConstruct.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5478501DD0716B00279E12 /* WXMediaMessage+messageConstruct.m */; };
-		EF5478551DD072E400279E12 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5478541DD072E400279E12 /* SystemConfiguration.framework */; };
-		EF5478571DD0730100279E12 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5478561DD0730100279E12 /* libz.tbd */; };
-		EF5478591DD0731200279E12 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5478581DD0731200279E12 /* libsqlite3.0.tbd */; };
-		EF54785B1DD0732000279E12 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EF54785A1DD0732000279E12 /* libc++.tbd */; };
-		EF54785D1DD0732E00279E12 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF54785C1DD0732E00279E12 /* Security.framework */; };
-		EF54785F1DD0734100279E12 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF54785E1DD0734100279E12 /* CoreTelephony.framework */; };
-		EF5478611DD0734C00279E12 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5478601DD0734C00279E12 /* CFNetwork.framework */; };
-		EF5478641DD08BA200279E12 /* requsetHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5478631DD08BA200279E12 /* requsetHandler.m */; };
-		EF5478681DD090A900279E12 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5478661DD090A900279E12 /* MessageViewController.m */; };
-		EF5478691DD090A900279E12 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5478671DD090A900279E12 /* MessageViewController.xib */; };
-		EF5478701DD090E700279E12 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF54786E1DD090E700279E12 /* SettingViewController.m */; };
-		EF5478711DD090E700279E12 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF54786F1DD090E700279E12 /* SettingViewController.xib */; };
-		EF5478781DD0911500279E12 /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5478761DD0911500279E12 /* RankingViewController.m */; };
-		EF5478791DD0911500279E12 /* RankingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5478771DD0911500279E12 /* RankingViewController.xib */; };
-		EF5478801DD0918D00279E12 /* DrawMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF54787E1DD0918D00279E12 /* DrawMoneyViewController.m */; };
-		EF5478811DD0918D00279E12 /* DrawMoneyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF54787F1DD0918D00279E12 /* DrawMoneyViewController.xib */; };
-		F85D7D6D00B4996CE174CE92 /* libPods-VeinOfBusiness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DC26B7FD20090109099671 /* libPods-VeinOfBusiness.a */; };
-
 		1887AF691DCF16BB003BF6E4 /* TaskListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF671DCF16BB003BF6E4 /* TaskListTableCell.m */; };
 		1887AF6A1DCF16BB003BF6E4 /* TaskListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF681DCF16BB003BF6E4 /* TaskListTableCell.xib */; };
 		1887AF6E1DCF1B82003BF6E4 /* TaskWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF6C1DCF1B82003BF6E4 /* TaskWebViewController.m */; };
@@ -72,7 +44,35 @@
 		18985A341DD13BCD00D0B702 /* DLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18985A331DD13BCD00D0B702 /* DLNavigationController.m */; };
 		18985A381DD1433E00D0B702 /* AccountBalanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18985A361DD1433E00D0B702 /* AccountBalanceViewController.m */; };
 		18985A391DD1433E00D0B702 /* AccountBalanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18985A371DD1433E00D0B702 /* AccountBalanceViewController.xib */; };
-
+		EF54783D1DD0686000279E12 /* ShareUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5478321DD0686000279E12 /* ShareUtil.m */; };
+		EF5478521DD0716B00279E12 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF54784E1DD0716B00279E12 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */; };
+		EF5478531DD0716B00279E12 /* WXMediaMessage+messageConstruct.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5478501DD0716B00279E12 /* WXMediaMessage+messageConstruct.m */; };
+		EF5478551DD072E400279E12 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5478541DD072E400279E12 /* SystemConfiguration.framework */; };
+		EF5478571DD0730100279E12 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5478561DD0730100279E12 /* libz.tbd */; };
+		EF5478591DD0731200279E12 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5478581DD0731200279E12 /* libsqlite3.0.tbd */; };
+		EF54785B1DD0732000279E12 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EF54785A1DD0732000279E12 /* libc++.tbd */; };
+		EF54785D1DD0732E00279E12 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF54785C1DD0732E00279E12 /* Security.framework */; };
+		EF54785F1DD0734100279E12 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF54785E1DD0734100279E12 /* CoreTelephony.framework */; };
+		EF5478611DD0734C00279E12 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5478601DD0734C00279E12 /* CFNetwork.framework */; };
+		EF5478641DD08BA200279E12 /* requsetHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5478631DD08BA200279E12 /* requsetHandler.m */; };
+		EF5478681DD090A900279E12 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5478661DD090A900279E12 /* MessageViewController.m */; };
+		EF5478691DD090A900279E12 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5478671DD090A900279E12 /* MessageViewController.xib */; };
+		EF5478701DD090E700279E12 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF54786E1DD090E700279E12 /* SettingViewController.m */; };
+		EF5478711DD090E700279E12 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF54786F1DD090E700279E12 /* SettingViewController.xib */; };
+		EF5478781DD0911500279E12 /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5478761DD0911500279E12 /* RankingViewController.m */; };
+		EF5478791DD0911500279E12 /* RankingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5478771DD0911500279E12 /* RankingViewController.xib */; };
+		EF5478801DD0918D00279E12 /* DrawMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF54787E1DD0918D00279E12 /* DrawMoneyViewController.m */; };
+		EF5478811DD0918D00279E12 /* DrawMoneyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF54787F1DD0918D00279E12 /* DrawMoneyViewController.xib */; };
+		EF999EB61DD16C3300C8D3F7 /* PasswordOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF999EB41DD16C3300C8D3F7 /* PasswordOperationViewController.m */; };
+		EF999EB71DD16C3300C8D3F7 /* PasswordOperationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF999EB51DD16C3300C8D3F7 /* PasswordOperationViewController.xib */; };
+		EF999EBE1DD16C4B00C8D3F7 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF999EB91DD16C4B00C8D3F7 /* libWeChatSDK.a */; };
+		EF999EBF1DD16C4B00C8D3F7 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF999EBA1DD16C4B00C8D3F7 /* README.txt */; };
+		EF999EC31DD175FB00C8D3F7 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF999EC11DD175FB00C8D3F7 /* UserViewController.m */; };
+		EF999EC41DD175FB00C8D3F7 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF999EC21DD175FB00C8D3F7 /* UserViewController.xib */; };
+		EF999EC81DD17EF700C8D3F7 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF999EC61DD17EF700C8D3F7 /* MessageCell.m */; };
+		EF999EC91DD17EF700C8D3F7 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF999EC71DD17EF700C8D3F7 /* MessageCell.xib */; };
+		EF999ECC1DD185A100C8D3F7 /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF999ECB1DD185A100C8D3F7 /* MessageModel.m */; };
+		F85D7D6D00B4996CE174CE92 /* libPods-VeinOfBusiness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DC26B7FD20090109099671 /* libPods-VeinOfBusiness.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,49 +120,6 @@
 		1887AF5C1DCEF016003BF6E4 /* LoginInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginInViewController.h; sourceTree = "<group>"; };
 		1887AF5D1DCEF016003BF6E4 /* LoginInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInViewController.m; sourceTree = "<group>"; };
 		1887AF5E1DCEF016003BF6E4 /* LoginInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginInViewController.xib; sourceTree = "<group>"; };
-		1887AF611DCEFE4C003BF6E4 /* PasswordOperationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordOperationViewController.h; sourceTree = "<group>"; };
-		1887AF621DCEFE4C003BF6E4 /* PasswordOperationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordOperationViewController.m; sourceTree = "<group>"; };
-		1887AF631DCEFE4C003BF6E4 /* PasswordOperationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordOperationViewController.xib; sourceTree = "<group>"; };
-
-		439580931483652A1B9217ED /* Pods-VeinOfBusiness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeinOfBusiness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VeinOfBusiness/Pods-VeinOfBusiness.debug.xcconfig"; sourceTree = "<group>"; };
-		B4DC26B7FD20090109099671 /* libPods-VeinOfBusiness.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VeinOfBusiness.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3AA581EDC0B6303B05D4498 /* Pods-VeinOfBusiness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeinOfBusiness.release.xcconfig"; path = "Pods/Target Support Files/Pods-VeinOfBusiness/Pods-VeinOfBusiness.release.xcconfig"; sourceTree = "<group>"; };
-		EF5478231DD04F6500279E12 /* AboutMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutMeCell.h; path = VeinOfBusiness/Sections/AboutMy/AboutMeCell.h; sourceTree = SOURCE_ROOT; };
-		EF5478241DD04F6500279E12 /* AboutMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutMeCell.m; path = VeinOfBusiness/Sections/AboutMy/AboutMeCell.m; sourceTree = SOURCE_ROOT; };
-		EF5478251DD04F6500279E12 /* AboutMeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AboutMeCell.xib; path = VeinOfBusiness/Sections/AboutMy/AboutMeCell.xib; sourceTree = SOURCE_ROOT; };
-		EF5478311DD0686000279E12 /* ShareUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareUtil.h; sourceTree = "<group>"; };
-		EF5478321DD0686000279E12 /* ShareUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareUtil.m; sourceTree = "<group>"; };
-		EF5478441DD070F600279E12 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
-		EF5478451DD070F600279E12 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		EF5478461DD070F600279E12 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
-		EF5478471DD070F600279E12 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		EF5478481DD070F600279E12 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
-		EF54784D1DD0716B00279E12 /* SendMessageToWXReq+requestWithTextOrMediaMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SendMessageToWXReq+requestWithTextOrMediaMessage.h"; sourceTree = "<group>"; };
-		EF54784E1DD0716B00279E12 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SendMessageToWXReq+requestWithTextOrMediaMessage.m"; sourceTree = "<group>"; };
-		EF54784F1DD0716B00279E12 /* WXMediaMessage+messageConstruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WXMediaMessage+messageConstruct.h"; sourceTree = "<group>"; };
-		EF5478501DD0716B00279E12 /* WXMediaMessage+messageConstruct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WXMediaMessage+messageConstruct.m"; sourceTree = "<group>"; };
-		EF5478541DD072E400279E12 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		EF5478561DD0730100279E12 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		EF5478581DD0731200279E12 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		EF54785A1DD0732000279E12 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		EF54785C1DD0732E00279E12 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		EF54785E1DD0734100279E12 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		EF5478601DD0734C00279E12 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		EF5478621DD08BA200279E12 /* requsetHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = requsetHandler.h; sourceTree = "<group>"; };
-		EF5478631DD08BA200279E12 /* requsetHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = requsetHandler.m; sourceTree = "<group>"; };
-		EF5478651DD090A900279E12 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
-		EF5478661DD090A900279E12 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
-		EF5478671DD090A900279E12 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
-		EF54786D1DD090E700279E12 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
-		EF54786E1DD090E700279E12 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
-		EF54786F1DD090E700279E12 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
-		EF5478751DD0911500279E12 /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
-		EF5478761DD0911500279E12 /* RankingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingViewController.m; sourceTree = "<group>"; };
-		EF5478771DD0911500279E12 /* RankingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankingViewController.xib; sourceTree = "<group>"; };
-		EF54787D1DD0918D00279E12 /* DrawMoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawMoneyViewController.h; sourceTree = "<group>"; };
-		EF54787E1DD0918D00279E12 /* DrawMoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawMoneyViewController.m; sourceTree = "<group>"; };
-		EF54787F1DD0918D00279E12 /* DrawMoneyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawMoneyViewController.xib; sourceTree = "<group>"; };
-
 		1887AF661DCF16BB003BF6E4 /* TaskListTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskListTableCell.h; path = VeinOfBusiness/Sections/TaskList/VIew/TaskListTableCell.h; sourceTree = SOURCE_ROOT; };
 		1887AF671DCF16BB003BF6E4 /* TaskListTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskListTableCell.m; path = VeinOfBusiness/Sections/TaskList/VIew/TaskListTableCell.m; sourceTree = SOURCE_ROOT; };
 		1887AF681DCF16BB003BF6E4 /* TaskListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TaskListTableCell.xib; path = VeinOfBusiness/Sections/TaskList/VIew/TaskListTableCell.xib; sourceTree = SOURCE_ROOT; };
@@ -197,7 +154,52 @@
 		18985A351DD1433E00D0B702 /* AccountBalanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountBalanceViewController.h; sourceTree = "<group>"; };
 		18985A361DD1433E00D0B702 /* AccountBalanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountBalanceViewController.m; sourceTree = "<group>"; };
 		18985A371DD1433E00D0B702 /* AccountBalanceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountBalanceViewController.xib; sourceTree = "<group>"; };
-
+		439580931483652A1B9217ED /* Pods-VeinOfBusiness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeinOfBusiness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VeinOfBusiness/Pods-VeinOfBusiness.debug.xcconfig"; sourceTree = "<group>"; };
+		B4DC26B7FD20090109099671 /* libPods-VeinOfBusiness.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VeinOfBusiness.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3AA581EDC0B6303B05D4498 /* Pods-VeinOfBusiness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeinOfBusiness.release.xcconfig"; path = "Pods/Target Support Files/Pods-VeinOfBusiness/Pods-VeinOfBusiness.release.xcconfig"; sourceTree = "<group>"; };
+		EF5478311DD0686000279E12 /* ShareUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareUtil.h; sourceTree = "<group>"; };
+		EF5478321DD0686000279E12 /* ShareUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareUtil.m; sourceTree = "<group>"; };
+		EF54784D1DD0716B00279E12 /* SendMessageToWXReq+requestWithTextOrMediaMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SendMessageToWXReq+requestWithTextOrMediaMessage.h"; sourceTree = "<group>"; };
+		EF54784E1DD0716B00279E12 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SendMessageToWXReq+requestWithTextOrMediaMessage.m"; sourceTree = "<group>"; };
+		EF54784F1DD0716B00279E12 /* WXMediaMessage+messageConstruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WXMediaMessage+messageConstruct.h"; sourceTree = "<group>"; };
+		EF5478501DD0716B00279E12 /* WXMediaMessage+messageConstruct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WXMediaMessage+messageConstruct.m"; sourceTree = "<group>"; };
+		EF5478541DD072E400279E12 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EF5478561DD0730100279E12 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		EF5478581DD0731200279E12 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		EF54785A1DD0732000279E12 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		EF54785C1DD0732E00279E12 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		EF54785E1DD0734100279E12 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		EF5478601DD0734C00279E12 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EF5478621DD08BA200279E12 /* requsetHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = requsetHandler.h; sourceTree = "<group>"; };
+		EF5478631DD08BA200279E12 /* requsetHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = requsetHandler.m; sourceTree = "<group>"; };
+		EF5478651DD090A900279E12 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		EF5478661DD090A900279E12 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		EF5478671DD090A900279E12 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
+		EF54786D1DD090E700279E12 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		EF54786E1DD090E700279E12 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		EF54786F1DD090E700279E12 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		EF5478751DD0911500279E12 /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
+		EF5478761DD0911500279E12 /* RankingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingViewController.m; sourceTree = "<group>"; };
+		EF5478771DD0911500279E12 /* RankingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankingViewController.xib; sourceTree = "<group>"; };
+		EF54787D1DD0918D00279E12 /* DrawMoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawMoneyViewController.h; sourceTree = "<group>"; };
+		EF54787E1DD0918D00279E12 /* DrawMoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawMoneyViewController.m; sourceTree = "<group>"; };
+		EF54787F1DD0918D00279E12 /* DrawMoneyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawMoneyViewController.xib; sourceTree = "<group>"; };
+		EF999EB31DD16C3300C8D3F7 /* PasswordOperationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordOperationViewController.h; sourceTree = "<group>"; };
+		EF999EB41DD16C3300C8D3F7 /* PasswordOperationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordOperationViewController.m; sourceTree = "<group>"; };
+		EF999EB51DD16C3300C8D3F7 /* PasswordOperationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordOperationViewController.xib; sourceTree = "<group>"; };
+		EF999EB91DD16C4B00C8D3F7 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		EF999EBA1DD16C4B00C8D3F7 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		EF999EBB1DD16C4B00C8D3F7 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		EF999EBC1DD16C4B00C8D3F7 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		EF999EBD1DD16C4B00C8D3F7 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		EF999EC01DD175FB00C8D3F7 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		EF999EC11DD175FB00C8D3F7 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		EF999EC21DD175FB00C8D3F7 /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
+		EF999EC51DD17EF700C8D3F7 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageCell.h; path = VeinOfBusiness/Sections/AboutMy/Controller/MessageCell.h; sourceTree = SOURCE_ROOT; };
+		EF999EC61DD17EF700C8D3F7 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageCell.m; path = VeinOfBusiness/Sections/AboutMy/Controller/MessageCell.m; sourceTree = SOURCE_ROOT; };
+		EF999EC71DD17EF700C8D3F7 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessageCell.xib; path = VeinOfBusiness/Sections/AboutMy/Controller/MessageCell.xib; sourceTree = SOURCE_ROOT; };
+		EF999ECA1DD185A100C8D3F7 /* MessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageModel.h; path = VeinOfBusiness/Sections/AboutMy/Controller/MessageModel.h; sourceTree = SOURCE_ROOT; };
+		EF999ECB1DD185A100C8D3F7 /* MessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageModel.m; path = VeinOfBusiness/Sections/AboutMy/Controller/MessageModel.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,12 +209,12 @@
 			files = (
 				EF5478611DD0734C00279E12 /* CFNetwork.framework in Frameworks */,
 				EF54785F1DD0734100279E12 /* CoreTelephony.framework in Frameworks */,
+				EF999EBE1DD16C4B00C8D3F7 /* libWeChatSDK.a in Frameworks */,
 				EF54785D1DD0732E00279E12 /* Security.framework in Frameworks */,
 				EF54785B1DD0732000279E12 /* libc++.tbd in Frameworks */,
 				EF5478591DD0731200279E12 /* libsqlite3.0.tbd in Frameworks */,
 				EF5478571DD0730100279E12 /* libz.tbd in Frameworks */,
 				EF5478551DD072E400279E12 /* SystemConfiguration.framework in Frameworks */,
-				EF5478491DD070F600279E12 /* libWeChatSDK.a in Frameworks */,
 				F85D7D6D00B4996CE174CE92 /* libPods-VeinOfBusiness.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +358,9 @@
 				EF54787D1DD0918D00279E12 /* DrawMoneyViewController.h */,
 				EF54787E1DD0918D00279E12 /* DrawMoneyViewController.m */,
 				EF54787F1DD0918D00279E12 /* DrawMoneyViewController.xib */,
+				EF999EC01DD175FB00C8D3F7 /* UserViewController.h */,
+				EF999EC11DD175FB00C8D3F7 /* UserViewController.m */,
+				EF999EC21DD175FB00C8D3F7 /* UserViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -363,6 +368,8 @@
 		1887AF3D1DCE3E9D003BF6E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EF999ECA1DD185A100C8D3F7 /* MessageModel.h */,
+				EF999ECB1DD185A100C8D3F7 /* MessageModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -370,9 +377,9 @@
 		1887AF3E1DCE3E9D003BF6E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EF5478231DD04F6500279E12 /* AboutMeCell.h */,
-				EF5478241DD04F6500279E12 /* AboutMeCell.m */,
-				EF5478251DD04F6500279E12 /* AboutMeCell.xib */,
+				EF999EC51DD17EF700C8D3F7 /* MessageCell.h */,
+				EF999EC61DD17EF700C8D3F7 /* MessageCell.m */,
+				EF999EC71DD17EF700C8D3F7 /* MessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -490,12 +497,12 @@
 		1887AF571DCE41A5003BF6E4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EF999EB31DD16C3300C8D3F7 /* PasswordOperationViewController.h */,
+				EF999EB41DD16C3300C8D3F7 /* PasswordOperationViewController.m */,
+				EF999EB51DD16C3300C8D3F7 /* PasswordOperationViewController.xib */,
 				1887AF5C1DCEF016003BF6E4 /* LoginInViewController.h */,
 				1887AF5D1DCEF016003BF6E4 /* LoginInViewController.m */,
 				1887AF5E1DCEF016003BF6E4 /* LoginInViewController.xib */,
-				1887AF611DCEFE4C003BF6E4 /* PasswordOperationViewController.h */,
-				1887AF621DCEFE4C003BF6E4 /* PasswordOperationViewController.m */,
-				1887AF631DCEFE4C003BF6E4 /* PasswordOperationViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -541,7 +548,6 @@
 		EF5478281DD0686000279E12 /* Utilitys */ = {
 			isa = PBXGroup;
 			children = (
-
 				EF5478621DD08BA200279E12 /* requsetHandler.h */,
 				EF5478631DD08BA200279E12 /* requsetHandler.m */,
 				EF5478311DD0686000279E12 /* ShareUtil.h */,
@@ -564,23 +570,21 @@
 		EF5478421DD0709100279E12 /* QuoteFile */ = {
 			isa = PBXGroup;
 			children = (
-				EF5478431DD070F600279E12 /* WeChatSDK */,
-
+				EF999EB81DD16C4B00C8D3F7 /* WeChatSDK */,
 				18985A321DD13BCD00D0B702 /* DLNavigationController.h */,
 				18985A331DD13BCD00D0B702 /* DLNavigationController.m */,
-
 			);
 			path = QuoteFile;
 			sourceTree = "<group>";
 		};
-		EF5478431DD070F600279E12 /* WeChatSDK */ = {
+		EF999EB81DD16C4B00C8D3F7 /* WeChatSDK */ = {
 			isa = PBXGroup;
 			children = (
-				EF5478441DD070F600279E12 /* libWeChatSDK.a */,
-				EF5478451DD070F600279E12 /* README.txt */,
-				EF5478461DD070F600279E12 /* WechatAuthSDK.h */,
-				EF5478471DD070F600279E12 /* WXApi.h */,
-				EF5478481DD070F600279E12 /* WXApiObject.h */,
+				EF999EB91DD16C4B00C8D3F7 /* libWeChatSDK.a */,
+				EF999EBA1DD16C4B00C8D3F7 /* README.txt */,
+				EF999EBB1DD16C4B00C8D3F7 /* WechatAuthSDK.h */,
+				EF999EBC1DD16C4B00C8D3F7 /* WXApi.h */,
+				EF999EBD1DD16C4B00C8D3F7 /* WXApiObject.h */,
 			);
 			path = WeChatSDK;
 			sourceTree = "<group>";
@@ -696,34 +700,29 @@
 			files = (
 				18985A141DD0B01300D0B702 /* RewardListTableCell.xib in Resources */,
 				1887AF141DCE38D2003BF6E4 /* LaunchScreen.storyboard in Resources */,
-
 				EF5478811DD0918D00279E12 /* DrawMoneyViewController.xib in Resources */,
-
 				18985A391DD1433E00D0B702 /* AccountBalanceViewController.xib in Resources */,
-
 				1887AF551DCE3EFA003BF6E4 /* TaskListViewController.xib in Resources */,
 				1887AF111DCE38D2003BF6E4 /* Assets.xcassets in Resources */,
-				EF5478271DD04F6500279E12 /* AboutMeCell.xib in Resources */,
-				EF54784A1DD070F600279E12 /* README.txt in Resources */,
+				EF999EB71DD16C3300C8D3F7 /* PasswordOperationViewController.xib in Resources */,
 				1887AF601DCEF016003BF6E4 /* LoginInViewController.xib in Resources */,
 				1887AF6A1DCF16BB003BF6E4 /* TaskListTableCell.xib in Resources */,
 				1887AF741DCF1F6D003BF6E4 /* RedEnvelopeViewController.xib in Resources */,
+				EF999EC91DD17EF700C8D3F7 /* MessageCell.xib in Resources */,
 				1887AF501DCE3EEA003BF6E4 /* MoneyRewardViewController.xib in Resources */,
-
 				EF5478711DD090E700279E12 /* SettingViewController.xib in Resources */,
 				EF5478791DD0911500279E12 /* RankingViewController.xib in Resources */,
-
 				18985A191DD0B4FA00D0B702 /* MyIntegralViewController.xib in Resources */,
 				18985A281DD1346700D0B702 /* InviteViewController.xib in Resources */,
-
+				EF999EC41DD175FB00C8D3F7 /* UserViewController.xib in Resources */,
 				1887AF4B1DCE3ED3003BF6E4 /* AboutMeViewController.xib in Resources */,
 				EF5478691DD090A900279E12 /* MessageViewController.xib in Resources */,
 				1887AF0F1DCE38D2003BF6E4 /* Main.storyboard in Resources */,
 				18985A1E1DD0BC2300D0B702 /* IntegralExchangeViewController.xib in Resources */,
 				18985A0F1DD04D6700D0B702 /* RewardListViewController.xib in Resources */,
 				1887AF6F1DCF1B82003BF6E4 /* TaskWebViewController.xib in Resources */,
+				EF999EBF1DD16C4B00C8D3F7 /* README.txt in Resources */,
 				18985A231DD0C26C00D0B702 /* CheckInViewController.xib in Resources */,
-				1887AF651DCEFE4C003BF6E4 /* PasswordOperationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,32 +804,27 @@
 				EF5478521DD0716B00279E12 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */,
 				1887AF4F1DCE3EEA003BF6E4 /* MoneyRewardViewController.m in Sources */,
 				1887AF541DCE3EFA003BF6E4 /* TaskListViewController.m in Sources */,
-
 				EF5478801DD0918D00279E12 /* DrawMoneyViewController.m in Sources */,
-				1887AF641DCEFE4C003BF6E4 /* PasswordOperationViewController.m in Sources */,
-				EF5478261DD04F6500279E12 /* AboutMeCell.m in Sources */,
-
+				EF999EC31DD175FB00C8D3F7 /* UserViewController.m in Sources */,
 				18985A271DD1346700D0B702 /* InviteViewController.m in Sources */,
 				1887AF731DCF1F6D003BF6E4 /* RedEnvelopeViewController.m in Sources */,
 				18985A381DD1433E00D0B702 /* AccountBalanceViewController.m in Sources */,
 				18985A1D1DD0BC2300D0B702 /* IntegralExchangeViewController.m in Sources */,
 				18985A221DD0C26C00D0B702 /* CheckInViewController.m in Sources */,
 				18985A131DD0B01300D0B702 /* RewardListTableCell.m in Sources */,
+				EF999ECC1DD185A100C8D3F7 /* MessageModel.m in Sources */,
 				18985A0E1DD04D6700D0B702 /* RewardListViewController.m in Sources */,
-				1887AF641DCEFE4C003BF6E4 /* PasswordOperationViewController.m in Sources */,
 				18985A341DD13BCD00D0B702 /* DLNavigationController.m in Sources */,
 				1887AF6E1DCF1B82003BF6E4 /* TaskWebViewController.m in Sources */,
 				1887AF691DCF16BB003BF6E4 /* TaskListTableCell.m in Sources */,
-
 				1887AF061DCE38D1003BF6E4 /* main.m in Sources */,
 				EF5478641DD08BA200279E12 /* requsetHandler.m in Sources */,
 				1887AF5F1DCEF016003BF6E4 /* LoginInViewController.m in Sources */,
-
 				EF5478781DD0911500279E12 /* RankingViewController.m in Sources */,
-
+				EF999EB61DD16C3300C8D3F7 /* PasswordOperationViewController.m in Sources */,
 				18985A181DD0B4FA00D0B702 /* MyIntegralViewController.m in Sources */,
 				18985A0A1DCF747B00D0B702 /* RewardVIew.m in Sources */,
-
+				EF999EC81DD17EF700C8D3F7 /* MessageCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -982,6 +976,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VeinOfBusiness/Helper/PchFile/VeinPrefixHeader.pch";
 				INFOPLIST_FILE = VeinOfBusiness/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1014,6 +1009,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VeinOfBusiness/Helper/PchFile/VeinPrefixHeader.pch";
 				INFOPLIST_FILE = VeinOfBusiness/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

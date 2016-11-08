@@ -1,26 +1,26 @@
 //
-//  SettingViewController.m
+//  UserViewController.m
 //  VeinOfBusiness
 //
-//  Created by sense on 16/11/7.
+//  Created by sense on 16/11/8.
 //  Copyright © 2016年 Apple. All rights reserved.
 //
 
-#import "SettingViewController.h"
+#import "UserViewController.h"
 
-@interface SettingViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface UserViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,retain) NSMutableArray *arraySource;
 
 @end
 
-@implementation SettingViewController
+@implementation UserViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.navigationItem.title = @"设置";
+    self.navigationItem.title = @"基本资料";
     
     [self createUI];
 }
@@ -28,7 +28,7 @@
 - (void)createUI
 {
     UITableView *table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, DLScreenWidth, DLScreenHeight) style:UITableViewStyleGrouped];
-    [table registerClass:[UITableViewCell class] forCellReuseIdentifier:@"setting"];
+//    [table registerClass:[UITableViewCell class] forCellReuseIdentifier:@"user"];
     //    [table registerClass:[AboutMeCell class] forCellReuseIdentifier:@"aboutMeFirst"];
     table.scrollEnabled = NO;
     table.delegate = self;
@@ -59,36 +59,51 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"setting"];
+    static NSString *ident = @"ident";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ident];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ident];
+    }
     
     NSArray *array = [_arraySource objectAtIndex:indexPath.section];
     NSDictionary *dic = [array objectAtIndex:indexPath.row];
     cell.textLabel.text = [dic objectForKey:@"name"];
-    if (indexPath.row == 2) {
-        cell.textLabel.textAlignment = NSTextAlignmentCenter;
-    } else {
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    }
+    cell.detailTextLabel.text = [dic objectForKey:@"detail"];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {
-//        DrawMoneyViewController *draw = [[DrawMoneyViewController alloc]init];
-//        [self.navigationController pushViewController:draw animated:YES];
+    if (indexPath.section == 0) {
+        
+        if (indexPath.row == 0) {
+        
+        }
+        if (indexPath.row == 1) {
+        
+        }
+        if (indexPath.row == 2) {
+        
+        }
+        if (indexPath.row == 3) {
+        
+        }
     }
-    if (indexPath.row == 1) {
-//        MessageViewController *message = [[MessageViewController alloc]init];
-//        [self.navigationController pushViewController:message animated:YES];
-    }
-    if (indexPath.row == 2) {
-//        RankingViewController *rank = [[RankingViewController alloc]init];
-//        [self.navigationController pushViewController:rank animated:YES];
-    }
-    if (indexPath.row == 3) {
-//        SettingViewController *setting = [[SettingViewController alloc]init];
-//        [self.navigationController pushViewController:setting animated:YES];
+    if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            
+        }
+        if (indexPath.row == 1) {
+            
+        }
+        if (indexPath.row == 2) {
+            
+        }
+        if (indexPath.row == 3) {
+            
+        }
     }
 }
 
@@ -101,16 +116,38 @@
         //                               @"name":@"提现"};
         
         
-        NSDictionary *dic1 = @{@"name":@"登录密码"};
-        NSDictionary *dic2 = @{@"name":@"缓存清理"};
-        NSDictionary *dic3 = @{@"name":@"退出登录"};
+        NSDictionary *dic1_1 = @{@"name":@"昵称",
+                               @"detail":@"哎哟不错先生"};
+
+        NSDictionary *dic1_2 = @{@"name":@"性别",
+                               @"detail":@"男"};
         
-        NSArray *arr1 = [NSArray arrayWithObjects:dic1,dic2, nil];
-        NSArray *arr2 = [NSArray arrayWithObject:dic3];
+        NSDictionary *dic1_3 = @{@"name":@"我的排行榜",
+                               @"detail":@"1990-08-08"};
+        
+        NSDictionary *dic1_4 = @{@"name":@"所在地区",
+                               @"detail":@"未设置"};
+        NSArray *arr1 = [NSArray arrayWithObjects:dic1_1,dic1_2,dic1_3,dic1_4, nil];
+        
+        NSDictionary *dic2_1 = @{@"name":@"所属行业",
+                                 @"detail":@"未设置"};
+        
+        NSDictionary *dic2_2 = @{@"name":@"月收入",
+                                 @"detail":@"未设置"};
+        
+        NSDictionary *dic2_3 = @{@"name":@"学历",
+                                 @"detail":@"本科"};
+        
+        NSDictionary *dic2_4 = @{@"name":@"兴趣爱好",
+                                 @"detail":@"未设置"};
+        NSArray *arr2 = [NSArray arrayWithObjects:dic2_1,dic2_2,dic2_3,dic2_4,nil];
+        
         _arraySource = [NSMutableArray arrayWithObjects:arr1,arr2, nil];
     }
     return _arraySource;
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

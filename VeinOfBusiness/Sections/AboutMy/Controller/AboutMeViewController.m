@@ -7,7 +7,12 @@
 //
 
 #import "AboutMeViewController.h"
-#import "AboutMeCell.h"
+
+#import "MessageViewController.h"
+#import "SettingViewController.h"
+#import "RankingViewController.h"
+#import "DrawMoneyViewController.h"
+#import "UserViewController.h"
 
 @interface AboutMeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -17,6 +22,16 @@
 @end
 
 @implementation AboutMeViewController
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.navigationController.navigationBarHidden = YES;
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    self.navigationController.navigationBarHidden = NO;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,6 +53,11 @@
     imageView.layer.masksToBounds = YES;
     imageView.layer.borderWidth = 2;
     imageView.layer.borderColor = [UIColor redColor].CGColor;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapImage)];
+    imageView.userInteractionEnabled = YES;
+    [imageView addGestureRecognizer:tap];
+    
     [viewa addSubview:imageView];
     
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(100, 75, 96, 22)];
@@ -81,7 +101,28 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if (indexPath.row == 0) {
+        DrawMoneyViewController *draw = [[DrawMoneyViewController alloc]init];
+        [self.navigationController pushViewController:draw animated:YES];
+    }
+    if (indexPath.row == 1) {
+        MessageViewController *message = [[MessageViewController alloc]init];
+        [self.navigationController pushViewController:message animated:YES];
+    }
+    if (indexPath.row == 2) {
+        RankingViewController *rank = [[RankingViewController alloc]init];
+        [self.navigationController pushViewController:rank animated:YES];
+    }
+    if (indexPath.row == 3) {
+        SettingViewController *setting = [[SettingViewController alloc]init];
+        [self.navigationController pushViewController:setting animated:YES];
+    }
+}
+
+- (void)tapImage
+{
+    UserViewController *user = [[UserViewController alloc]init];
+    [self.navigationController pushViewController:user animated:YES];
 }
 
 

@@ -17,6 +17,51 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.navigationItem.title = @"提现";
+    self.view.backgroundColor = BackColor;
+    
+    [self createUI];
+}
+
+- (void)createUI
+{
+    UIView *viewa = [[UIView alloc]initWithFrame:CGRectMake(90, 100, DLScreenWidth - 90*2, DLScreenWidth - 90*2)];
+    viewa.layer.cornerRadius = (DLScreenWidth - 90*2)/2;
+    viewa.layer.borderColor = [UIColor redColor].CGColor;
+    viewa.layer.borderWidth = 10;
+    viewa.layer.masksToBounds = YES;
+    viewa.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:viewa];
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(50, 50, 70, 40)];
+    label.text = @"当前余额";
+    [viewa addSubview:label];
+    
+    UILabel *labelMoney = [[UILabel alloc]initWithFrame:CGRectMake(50, 70, 80, 70)];
+    labelMoney.textAlignment = NSTextAlignmentCenter;
+    labelMoney.font = [UIFont systemFontOfSize:30];
+    labelMoney.text = @"500";
+    [viewa addSubview:labelMoney];
+    
+    
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 450, 200, 50)];
+    [button addTarget:self action:@selector(getMoney) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"提现到支付宝" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    
+    button.layer.borderWidth = 1;
+    button.layer.cornerRadius = 5;
+    button.layer.masksToBounds = YES;
+    button.backgroundColor = [UIColor grayColor];
+    
+    [self.view addSubview:button];
+
+}
+
+- (void)getMoney
+{
+    
 }
 
 - (void)didReceiveMemoryWarning {

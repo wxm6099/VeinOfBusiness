@@ -31,7 +31,7 @@
     [self.window makeKeyAndVisible];
     
     // 注册微信 TO DO 跳转URL 未设置
-    [WXApi registerApp:WXAppID];
+//    [WXApi registerApp:WXAppID];
     
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginInSucceed) name:@"WindowChangeRoot" object:nil];
@@ -79,13 +79,14 @@
 //        [_window setRootViewController:nav];
         
 
-        AboutMeViewController *aboutMe = [[AboutMeViewController alloc]init];
-        _window.rootViewController = aboutMe;
+//        AboutMeViewController *aboutMe = [[AboutMeViewController alloc]init];
+//        DLNavigationController *nav = [[DLNavigationController alloc]initWithRootViewController:aboutMe];
+//        _window.rootViewController = nav;
 
         
-//        LoginInViewController *loginIn = [[LoginInViewController alloc] initWithNibName:@"LoginInViewController" bundle:nil];
-//        DLNavigationController *nav = [[DLNavigationController alloc]initWithRootViewController:loginIn];
-//        [_window setRootViewController:nav];
+        LoginInViewController *loginIn = [[LoginInViewController alloc] initWithNibName:@"LoginInViewController" bundle:nil];
+        DLNavigationController *nav = [[DLNavigationController alloc]initWithRootViewController:loginIn];
+        [_window setRootViewController:nav];
 
         
         
@@ -115,44 +116,19 @@
     moneyReward.tabBarItem.title = @"赏金";
     
     //个人页面
-    AboutMeViewController *me = [[AboutMeViewController alloc] initWithNibName:@"AboutMeViewController" bundle:nil];
-    DLNavigationController *navThree = [[DLNavigationController alloc]initWithRootViewController:me];
-    me.tabBarItem.title = @"我的";
+//    AboutMeViewController *me = [[AboutMeViewController alloc] initWithNibName:@"AboutMeViewController" bundle:nil];
+//    DLNavigationController *navThree = [[DLNavigationController alloc]initWithRootViewController:me];
+//    me.tabBarItem.title = @"我的";
+    AboutMeViewController *aboutMe = [[AboutMeViewController alloc]init];
+    DLNavigationController *navThree = [[DLNavigationController alloc]initWithRootViewController:aboutMe];
+    aboutMe.tabBarItem.title = @"我的";
     
     [tab addChildViewController:navOne];
     [tab addChildViewController:navTwo];
     [tab addChildViewController:navThree];
     
     [_window setRootViewController:tab];
-    
-//    TaskListViewController *task = [[TaskListViewController alloc]init];
-//    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:main];
-//    UIImage *image1 = [UIImage imageNamed:@"1.jpg"];
-//    UIImage *image2 = [image1 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    UITabBarItem *item1 = [[UITabBarItem alloc]initWithTitle:@"小说" image:image2 tag:0];
-//    main.tabBarItem = item1;
-//    
-//    SecondViewController *second = [[SecondViewController alloc]init];
-//    UIImage *image3 = [UIImage imageNamed:@"2.jpg"];
-//    UIImage *image4 = [image3 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    UITabBarItem *item2 = [[UITabBarItem alloc]initWithTitle:@"相册" image:image4 tag:0];
-//    second.tabBarItem = item2;
-//    
-//    NSMutableArray *array = [NSMutableArray array];
-//    [array addObject:nav];
-//    [array addObject:second];
-//    
-//    UITabBarController *tab = [[UITabBarController alloc]init];
-//    tab.viewControllers = array;
-//    [self.window setRootViewController:tab];
-//    
-//    [tab release];
-//    [nav release];
-//    
-//    NSLog(@"%@", [array objectAtIndex:0]);
-//    NSLog(@"%@", [array objectAtIndex:1]);
-//    NSLog(@"%@", main);
-    
+        
 }
 
 
