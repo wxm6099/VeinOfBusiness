@@ -6,9 +6,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TaskListViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RewardListViewController">
             <connections>
-                <outlet property="myTableView" destination="vh8-od-5Vk" id="Vko-qd-Na5"/>
+                <outlet property="myTableView" destination="jD4-D0-n3V" id="a1x-Fb-rJX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,18 +17,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vh8-od-5Vk">
-                    <frame key="frameInset" minX="67" minY="209" width="240" height="128"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jD4-D0-n3V">
+                    <frame key="frameInset" minX="67" minY="362" width="240" height="128"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="vh8-od-5Vk" secondAttribute="trailing" id="S0O-Bl-nwj"/>
-                <constraint firstItem="vh8-od-5Vk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TUL-CD-T7f"/>
-                <constraint firstItem="vh8-od-5Vk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="g52-aq-bcf"/>
-                <constraint firstAttribute="bottom" secondItem="vh8-od-5Vk" secondAttribute="bottom" id="yuM-qt-mWU"/>
+                <constraint firstItem="jD4-D0-n3V" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QoU-uE-feh"/>
+                <constraint firstAttribute="trailing" secondItem="jD4-D0-n3V" secondAttribute="trailing" id="aAB-Kl-17Z"/>
+                <constraint firstAttribute="bottom" secondItem="jD4-D0-n3V" secondAttribute="bottom" id="l7o-DW-skr"/>
+                <constraint firstItem="jD4-D0-n3V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yMS-ic-3TL"/>
             </constraints>
+            <point key="canvasLocation" x="48" y="26"/>
         </view>
     </objects>
 </document>

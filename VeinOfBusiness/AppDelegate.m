@@ -11,7 +11,11 @@
 #import "MoneyRewardViewController.h"
 #import "TaskListViewController.h"
 #import "LoginInViewController.h"
+
 #import "WXApi.h"
+
+
+#import "DLNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -74,8 +78,15 @@
 //        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:loginIn];
 //        [_window setRootViewController:nav];
         
+
         AboutMeViewController *aboutMe = [[AboutMeViewController alloc]init];
         _window.rootViewController = aboutMe;
+
+        
+//        LoginInViewController *loginIn = [[LoginInViewController alloc] initWithNibName:@"LoginInViewController" bundle:nil];
+//        DLNavigationController *nav = [[DLNavigationController alloc]initWithRootViewController:loginIn];
+//        [_window setRootViewController:nav];
+
         
         
     }
@@ -87,20 +98,25 @@
     
     
     UITabBarController *tab = [[UITabBarController alloc]init];
+    UITabBar *tabBar = [tab tabBar];
+    [tabBar setTintColor:[UIColor whiteColor]];
+    tabBar.barTintColor = CustomColor;
     
+    
+//    [tabBar setSelectedImageTintColor:[UIColor orangeColor]];
     //任务列表view
     TaskListViewController *taskListView = [[TaskListViewController alloc]initWithNibName:@"TaskListViewController" bundle:nil];
-    UINavigationController *navOne = [[UINavigationController alloc]initWithRootViewController:taskListView];
+    DLNavigationController *navOne = [[DLNavigationController alloc]initWithRootViewController:taskListView];
     taskListView.tabBarItem.title = @"任务";
     
     //赏金列表
     MoneyRewardViewController * moneyReward= [[MoneyRewardViewController alloc] initWithNibName:@"MoneyRewardViewController" bundle:nil];
-    UINavigationController *navTwo = [[UINavigationController alloc]initWithRootViewController:moneyReward];
+    DLNavigationController *navTwo = [[DLNavigationController alloc]initWithRootViewController:moneyReward];
     moneyReward.tabBarItem.title = @"赏金";
     
     //个人页面
     AboutMeViewController *me = [[AboutMeViewController alloc] initWithNibName:@"AboutMeViewController" bundle:nil];
-    UINavigationController *navThree = [[UINavigationController alloc]initWithRootViewController:me];
+    DLNavigationController *navThree = [[DLNavigationController alloc]initWithRootViewController:me];
     me.tabBarItem.title = @"我的";
     
     [tab addChildViewController:navOne];

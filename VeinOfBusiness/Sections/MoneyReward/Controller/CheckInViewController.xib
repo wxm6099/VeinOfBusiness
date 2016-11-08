@@ -6,9 +6,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TaskListViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckInViewController">
             <connections>
-                <outlet property="myTableView" destination="vh8-od-5Vk" id="Vko-qd-Na5"/>
+                <outlet property="myScrollView" destination="MUq-Se-rOr" id="PmP-vx-9Hy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,18 +17,18 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vh8-od-5Vk">
-                    <frame key="frameInset" minX="67" minY="209" width="240" height="128"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </tableView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUq-Se-rOr">
+                    <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="vh8-od-5Vk" secondAttribute="trailing" id="S0O-Bl-nwj"/>
-                <constraint firstItem="vh8-od-5Vk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TUL-CD-T7f"/>
-                <constraint firstItem="vh8-od-5Vk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="g52-aq-bcf"/>
-                <constraint firstAttribute="bottom" secondItem="vh8-od-5Vk" secondAttribute="bottom" id="yuM-qt-mWU"/>
+                <constraint firstItem="MUq-Se-rOr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eHV-eO-dzi"/>
+                <constraint firstAttribute="trailing" secondItem="MUq-Se-rOr" secondAttribute="trailing" id="h08-a3-jf9"/>
+                <constraint firstAttribute="bottom" secondItem="MUq-Se-rOr" secondAttribute="bottom" id="qiY-Ye-Q1S"/>
+                <constraint firstItem="MUq-Se-rOr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ygS-1U-A7n"/>
             </constraints>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
 </document>

@@ -6,9 +6,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TaskListViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TaskWebViewController">
             <connections>
-                <outlet property="myTableView" destination="vh8-od-5Vk" id="Vko-qd-Na5"/>
+                <outlet property="myWebView" destination="jpq-Sv-ase" id="9HG-ka-bLW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,17 +17,17 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vh8-od-5Vk">
-                    <frame key="frameInset" minX="67" minY="209" width="240" height="128"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </tableView>
+                <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jpq-Sv-ase">
+                    <frame key="frameInset" minX="78" minY="183" width="240" height="128"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="vh8-od-5Vk" secondAttribute="trailing" id="S0O-Bl-nwj"/>
-                <constraint firstItem="vh8-od-5Vk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TUL-CD-T7f"/>
-                <constraint firstItem="vh8-od-5Vk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="g52-aq-bcf"/>
-                <constraint firstAttribute="bottom" secondItem="vh8-od-5Vk" secondAttribute="bottom" id="yuM-qt-mWU"/>
+                <constraint firstAttribute="bottom" secondItem="jpq-Sv-ase" secondAttribute="bottom" id="OOY-iN-nB3"/>
+                <constraint firstAttribute="trailing" secondItem="jpq-Sv-ase" secondAttribute="trailing" id="S1b-2Q-vWy"/>
+                <constraint firstItem="jpq-Sv-ase" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eNH-Hv-GyP"/>
+                <constraint firstItem="jpq-Sv-ase" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hj1-wK-5ja"/>
             </constraints>
         </view>
     </objects>
