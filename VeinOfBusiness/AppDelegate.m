@@ -11,7 +11,12 @@
 #import "MoneyRewardViewController.h"
 #import "TaskListViewController.h"
 #import "LoginInViewController.h"
+
+#import "WXApi.h"
+
+
 #import "DLNavigationController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -25,6 +30,10 @@
     //这儿是商脉APP的第一行代码
     [self.window makeKeyAndVisible];
     
+    // 注册微信 TO DO 跳转URL 未设置
+//    [WXApi registerApp:WXAppID];
+    
+
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginInSucceed) name:@"WindowChangeRoot" object:nil];
     
     
@@ -64,11 +73,21 @@
     if (!_window) {
         _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
         
+
+//        LoginInViewController *loginIn = [[LoginInViewController alloc] initWithNibName:@"LoginInViewController" bundle:nil];
+//        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:loginIn];
+//        [_window setRootViewController:nav];
         
+
+//        AboutMeViewController *aboutMe = [[AboutMeViewController alloc]init];
+//        DLNavigationController *nav = [[DLNavigationController alloc]initWithRootViewController:aboutMe];
+//        _window.rootViewController = nav;
+
         
         LoginInViewController *loginIn = [[LoginInViewController alloc] initWithNibName:@"LoginInViewController" bundle:nil];
         DLNavigationController *nav = [[DLNavigationController alloc]initWithRootViewController:loginIn];
         [_window setRootViewController:nav];
+
         
         
     }
@@ -97,20 +116,42 @@
     moneyReward.tabBarItem.title = @"赏金";
     
     //个人页面
-    AboutMeViewController *me = [[AboutMeViewController alloc] initWithNibName:@"AboutMeViewController" bundle:nil];
-    DLNavigationController *navThree = [[DLNavigationController alloc]initWithRootViewController:me];
-    me.tabBarItem.title = @"我的";
+//    AboutMeViewController *me = [[AboutMeViewController alloc] initWithNibName:@"AboutMeViewController" bundle:nil];
+//    DLNavigationController *navThree = [[DLNavigationController alloc]initWithRootViewController:me];
+//    me.tabBarItem.title = @"我的";
+    AboutMeViewController *aboutMe = [[AboutMeViewController alloc]init];
+    DLNavigationController *navThree = [[DLNavigationController alloc]initWithRootViewController:aboutMe];
+    aboutMe.tabBarItem.title = @"我的";
     
     [tab addChildViewController:navOne];
     [tab addChildViewController:navTwo];
     [tab addChildViewController:navThree];
     
     [_window setRootViewController:tab];
-    
+        
 }
 
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    if ([sourceApplication isEqualToString:@"com.qq.www"]||[sourceApplication isEqualToString:@"com.tencent.mqq"]) {
+//        return [TencentOAuth HandleOpenURL:url]||[QQApiInterface handleOpenURL:url delegate:[MainViewController sharedManager]];
+    }
+    if ([sourceApplication isEqualToString:@"com.sina.weibo"]) {
+//        return [WeiboSDK handleOpenURL:url delegate:[LoginViewController sharedManager]];
+    }
+    if ([sourceApplication isEqualToString:@"com.tencent.xin"]) {
+//        return [WXApi handleOpenURL:url delegate:[LoginViewController sharedManager]];
+    }
 
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+//    return [WXApi handleOpenURL:url delegate:[LoginViewController sharedManager]];
+    return YES;
+}
 
 
 
