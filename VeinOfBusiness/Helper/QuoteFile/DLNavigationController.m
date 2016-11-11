@@ -7,6 +7,9 @@
 //
 
 #import "DLNavigationController.h"
+#import "UINavigationBar+DLNavigationBar.h"
+#import "UIBarButtonItem+Extension.h"
+#import "UIViewController+DismissKeyboard.h"
 
 @interface DLNavigationController ()
 
@@ -30,9 +33,31 @@
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    self.hidesBottomBarWhenPushed = YES;
-
+    
+    if (self.viewControllers.count > 0) { // 这时push进来的控制器viewController，不是第一个子控制器（不是根控制器）
+        /* 自动显示和隐藏tabbar */
+        
+        viewController.hidesBottomBarWhenPushed = YES;
+        
+        NSArray* filterControllers = @[@"AboutMeViewController",@"MoneyRewardViewController", @"TaskListViewController"];
+        for (NSString* vcName in filterControllers) {
+            if ([viewController isKindOfClass:NSClassFromString(vcName)]) {
+                viewController.hidesBottomBarWhenPushed = NO;
+            }
+        }
+        /* 设置导航栏上面的内容 */
+        // 设置左边的返回按钮
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(back) image:@"return2" highImage:@""];
+    }
     [super pushViewController:viewController animated:YES];
+    
+}
+- (void)back
+{
+
+    // 因为self本来就是一个导航控制器，self.navigationController这里是nil的
+    
+    [self popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

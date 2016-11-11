@@ -80,6 +80,9 @@
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <state key="normal" title="提现记录"/>
+                            <connections>
+                                <action selector="withdrawRecordAction:" destination="-1" eventType="touchUpInside" id="Vj3-9c-xH5"/>
+                            </connections>
                         </button>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入要提现的金额" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JDN-w9-pVY">
                             <constraints>

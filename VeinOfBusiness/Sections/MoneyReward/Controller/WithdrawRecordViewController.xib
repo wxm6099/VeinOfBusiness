@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WithdrawRecordViewController">
+            <connections>
+                <outlet property="myTableVIew" destination="nuj-Hn-bsI" id="nwa-UP-TlR"/>
+                <outlet property="timeButtonWidth" destination="Rx0-H5-kaj" id="f1n-Lp-mtV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmN-lN-ctp">
+                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="DRL-vN-myT"/>
+                        <constraint firstAttribute="width" constant="31" id="Rx0-H5-kaj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="时间">
+                        <color key="titleColor" red="0.20273642015706805" green="0.19610629872830154" blue="0.20099263764848177" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlP-29-eUN">
+                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="金额">
+                        <color key="titleColor" red="0.20273642015706805" green="0.19720817166170793" blue="0.20061014993972032" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vML-bM-XcP">
+                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="状态">
+                        <color key="titleColor" red="0.20273642015706805" green="0.20273642015706805" blue="0.20273642015706805" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nuj-Hn-bsI">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pmN-lN-ctp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4IN-Sh-kIX"/>
+                <constraint firstItem="vML-bM-XcP" firstAttribute="top" secondItem="NlP-29-eUN" secondAttribute="top" id="8B9-D2-O0A"/>
+                <constraint firstItem="nuj-Hn-bsI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="AGZ-BY-RAc"/>
+                <constraint firstItem="nuj-Hn-bsI" firstAttribute="top" secondItem="NlP-29-eUN" secondAttribute="bottom" id="IUG-gQ-O9H"/>
+                <constraint firstItem="pmN-lN-ctp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Jy3-f1-Jlk"/>
+                <constraint firstItem="vML-bM-XcP" firstAttribute="leading" secondItem="NlP-29-eUN" secondAttribute="trailing" constant="1" id="Uca-c3-2ct"/>
+                <constraint firstItem="NlP-29-eUN" firstAttribute="width" secondItem="pmN-lN-ctp" secondAttribute="width" id="YBq-re-ke0"/>
+                <constraint firstItem="NlP-29-eUN" firstAttribute="height" secondItem="pmN-lN-ctp" secondAttribute="height" id="fXb-NU-Sge"/>
+                <constraint firstItem="vML-bM-XcP" firstAttribute="height" secondItem="NlP-29-eUN" secondAttribute="height" id="ftD-w8-Wvl"/>
+                <constraint firstItem="vML-bM-XcP" firstAttribute="width" secondItem="NlP-29-eUN" secondAttribute="width" id="g1P-9P-RCA"/>
+                <constraint firstItem="NlP-29-eUN" firstAttribute="top" secondItem="pmN-lN-ctp" secondAttribute="top" id="msc-5C-oyr"/>
+                <constraint firstItem="NlP-29-eUN" firstAttribute="leading" secondItem="pmN-lN-ctp" secondAttribute="trailing" constant="1" id="nQb-RP-icn"/>
+                <constraint firstAttribute="bottom" secondItem="nuj-Hn-bsI" secondAttribute="bottom" id="u6O-us-OEM"/>
+                <constraint firstAttribute="trailing" secondItem="nuj-Hn-bsI" secondAttribute="trailing" id="zVP-Rw-lDC"/>
+            </constraints>
+            <point key="canvasLocation" x="35" y="75"/>
+        </view>
+    </objects>
+</document>

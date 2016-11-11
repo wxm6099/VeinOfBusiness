@@ -7,7 +7,7 @@
 //
 
 #import "AccountBalanceViewController.h"
-
+#import "WithdrawRecordViewController.h"
 @interface AccountBalanceViewController ()
 
 @end
@@ -22,6 +22,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)withdrawRecordAction:(id)sender {
+    WithdrawRecordViewController *with = [[WithdrawRecordViewController alloc]initWithNibName:@"WithdrawRecordViewController" bundle:nil];
+    [self.navigationController pushViewController:with animated:YES];
 }
 
 /*
