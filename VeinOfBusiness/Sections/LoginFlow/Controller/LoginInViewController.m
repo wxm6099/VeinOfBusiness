@@ -7,9 +7,9 @@
 //
 
 #import "LoginInViewController.h"
-
+#import "ComObjectMethod.h"
 #import "PasswordOperationViewController.h"
-
+#import "RestfulAPIRequestTool.h"
 
 @interface LoginInViewController ()
 
@@ -32,7 +32,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-//    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(JumpAction)]];
+    //    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(JumpAction)]];
     
     self.loginInButton.backgroundColor = CustomColor;
     
@@ -41,14 +41,34 @@
     [self.forgetPasswordButton setTitleColor:CustomColor forState:UIControlStateNormal];
     
     
-    
-    
 }
 
 //登录
 - (IBAction)loginButtonAction:(id)sender {
     
-    [self JumpAction];
+    NSString *phone = self.accountTextField.text;
+    NSString *password = self.passwordTextfield.text;
+    
+    
+    
+    if (phone.length == 0 || password.length == 0) {
+        
+    } else {
+        NSDictionary *dic = @{@"mobile" : phone,
+                              @"password": password};
+        [RestfulAPIRequestTool routeName:@"login_loginIn" requestModel:dic useKeys:[dic allKeys] success:^(id json) {
+            
+            NSLog(@"登录结果为%@", json);
+            //            [self JumpAction];
+            
+        } failure:^(id errorJson) {
+            NSLog(@"登录结果为%@", errorJson);
+        }];
+    }
+    
+    
+    
+    
     
 }
 
@@ -81,13 +101,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

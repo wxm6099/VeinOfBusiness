@@ -66,12 +66,12 @@ static AFHTTPSessionManager *_mgr;
     NSURL *baseUrl = [NSURL URLWithString:[ServerAddress serverAddress]];
     _mgr = [[AFHTTPSessionManager alloc]initWithBaseURL:baseUrl];
     _mgr.responseSerializer  = [AFHTTPResponseSerializer serializer];
-    if (!flag) {
-        _mgr.requestSerializer  = [AFJSONRequestSerializer serializer];
-    }
-//    if ([AccountTool account].userToken) {
-//        [_mgr.requestSerializer setValue:[AccountTool account].userToken forHTTPHeaderField:@"x-access-token"];
-//    }
+    //    if (!flag) {
+    //        _mgr.requestSerializer  = [AFJSONRequestSerializer serializer];
+    //    }
+    //    if ([AccountTool account].userToken) {
+    //        [_mgr.requestSerializer setValue:[AccountTool account].userToken forHTTPHeaderField:@"x-access-token"];
+    //    }
 }
 
 + (void)routeName:(NSString *)routeName requestModel:(id)requestModel useKeys:(NSArray *)keysArray success:(void (^)(id json))success failure:(void (^)(id errorJson))failure{
@@ -114,12 +114,6 @@ static AFHTTPSessionManager *_mgr;
         [mutableParamsDict removeObjectForKey:key];
     }];
     
-    // 中航国际 接口 添加几个固定条件
-    [mutableParamsDict setValue:routeName forKey:@"a"];
-    [mutableParamsDict setValue:@"index" forKey:@"c"];
-    [mutableParamsDict setValue:@"api" forKey:@"m"];
-    
-    //添加条件结束
     
     NSString *amendStr = [NSString stringWithFormat:@"%@%@", [ServerAddress serverAddress], routeUrl];
     
@@ -406,7 +400,7 @@ static AFHTTPSessionManager *_mgr;
     NSLog(@"========Response Code========");
     if (responseStatusCode==401) {
         NSLog(@"toke expired,need user to reLogin");
-
+        
         return;
     }else if (responseStatusCode==408) {
         NSLog(@"timeout error");

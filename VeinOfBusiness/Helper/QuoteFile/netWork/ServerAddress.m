@@ -37,7 +37,7 @@ static ServerAddress* imgServer = nil;
 - (NSString *)getServerAddress
 {
     if (!self.serverAddress) {
-        self.serverAddress= @"http://123.196.117.247:8090/index.php";
+        self.serverAddress= @"http://222.186.45.63/";
     }
     return self.serverAddress;
 }
