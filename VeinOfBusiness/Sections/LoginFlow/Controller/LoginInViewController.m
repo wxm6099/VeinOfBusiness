@@ -59,7 +59,18 @@
         [RestfulAPIRequestTool routeName:@"login_loginIn" requestModel:dic useKeys:[dic allKeys] success:^(id json) {
             
             NSLog(@"登录结果为%@", json);
-            //            [self JumpAction];
+            
+            NSString *msg = json[@"msg"];
+            
+            if ([msg isEqualToString:@"登录成功"]) {
+                [self JumpAction];
+                
+            } else{
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"登录失败" message:msg delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil];
+                [alert show];
+            }
+            
+            
             
         } failure:^(id errorJson) {
             NSLog(@"登录结果为%@", errorJson);
