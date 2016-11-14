@@ -19,6 +19,16 @@
         self.labelTitle.backgroundColor = [UIColor grayColor];
         [self.contentView addSubview:self.labelTitle];
         
+        self.labelNew = [[UILabel alloc]initWithFrame:CGRectMake(60, 5, 50, 30)];
+        self.labelNew.backgroundColor = [UIColor redColor];
+        self.labelNew.text = @"NEW";
+        self.labelNew.textAlignment = NSTextAlignmentCenter;
+        self.labelNew.textColor = [UIColor whiteColor];
+        self.labelNew.layer.cornerRadius = 15;
+        self.labelNew.layer.masksToBounds = YES;
+        [self.contentView addSubview:self.labelNew];
+        
+        
         self.labelTime = [[UILabel alloc]initWithFrame:CGRectMake(DLScreenWidth - 100, 5, 50, 30)];
         self.labelTime.backgroundColor = [UIColor greenColor];
         [self.contentView addSubview:self.labelTime];

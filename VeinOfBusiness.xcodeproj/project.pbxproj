@@ -66,6 +66,8 @@
 		18985A7B1DD5F45300D0B702 /* UIScreen+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18985A7A1DD5F45300D0B702 /* UIScreen+Extension.m */; };
 		18985A7D1DD5FD1400D0B702 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 18985A7C1DD5FD1400D0B702 /* README.md */; };
 		18985A801DD8B49B00D0B702 /* ComObjectMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 18985A7F1DD8B49B00D0B702 /* ComObjectMethod.m */; };
+		EF4E23C31DD4A02600B77017 /* RankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4E23C11DD4A02600B77017 /* RankingCell.m */; };
+		EF4E23C41DD4A02600B77017 /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF4E23C21DD4A02600B77017 /* RankingCell.xib */; };
 		EF54783D1DD0686000279E12 /* ShareUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5478321DD0686000279E12 /* ShareUtil.m */; };
 		EF5478521DD0716B00279E12 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF54784E1DD0716B00279E12 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */; };
 		EF5478531DD0716B00279E12 /* WXMediaMessage+messageConstruct.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5478501DD0716B00279E12 /* WXMediaMessage+messageConstruct.m */; };
@@ -218,6 +220,9 @@
 		439580931483652A1B9217ED /* Pods-VeinOfBusiness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeinOfBusiness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VeinOfBusiness/Pods-VeinOfBusiness.debug.xcconfig"; sourceTree = "<group>"; };
 		B4DC26B7FD20090109099671 /* libPods-VeinOfBusiness.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VeinOfBusiness.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3AA581EDC0B6303B05D4498 /* Pods-VeinOfBusiness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeinOfBusiness.release.xcconfig"; path = "Pods/Target Support Files/Pods-VeinOfBusiness/Pods-VeinOfBusiness.release.xcconfig"; sourceTree = "<group>"; };
+		EF4E23C01DD4A02600B77017 /* RankingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RankingCell.h; path = VeinOfBusiness/Sections/AboutMy/Controller/RankingCell.h; sourceTree = SOURCE_ROOT; };
+		EF4E23C11DD4A02600B77017 /* RankingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RankingCell.m; path = VeinOfBusiness/Sections/AboutMy/Controller/RankingCell.m; sourceTree = SOURCE_ROOT; };
+		EF4E23C21DD4A02600B77017 /* RankingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RankingCell.xib; path = VeinOfBusiness/Sections/AboutMy/Controller/RankingCell.xib; sourceTree = SOURCE_ROOT; };
 		EF5478311DD0686000279E12 /* ShareUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareUtil.h; sourceTree = "<group>"; };
 		EF5478321DD0686000279E12 /* ShareUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareUtil.m; sourceTree = "<group>"; };
 		EF54784D1DD0716B00279E12 /* SendMessageToWXReq+requestWithTextOrMediaMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SendMessageToWXReq+requestWithTextOrMediaMessage.h"; sourceTree = "<group>"; };
@@ -444,6 +449,9 @@
 				EF999EC51DD17EF700C8D3F7 /* MessageCell.h */,
 				EF999EC61DD17EF700C8D3F7 /* MessageCell.m */,
 				EF999EC71DD17EF700C8D3F7 /* MessageCell.xib */,
+				EF4E23C01DD4A02600B77017 /* RankingCell.h */,
+				EF4E23C11DD4A02600B77017 /* RankingCell.m */,
+				EF4E23C21DD4A02600B77017 /* RankingCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -842,6 +850,7 @@
 				1887AF111DCE38D2003BF6E4 /* Assets.xcassets in Resources */,
 				EF999EB71DD16C3300C8D3F7 /* PasswordOperationViewController.xib in Resources */,
 				1887AF601DCEF016003BF6E4 /* LoginInViewController.xib in Resources */,
+				EF4E23C41DD4A02600B77017 /* RankingCell.xib in Resources */,
 				1887AF6A1DCF16BB003BF6E4 /* TaskListTableCell.xib in Resources */,
 				1887AF741DCF1F6D003BF6E4 /* RedEnvelopeViewController.xib in Resources */,
 				EF999EC91DD17EF700C8D3F7 /* MessageCell.xib in Resources */,
@@ -963,6 +972,7 @@
 				18985A7D1DD5FD1400D0B702 /* README.md in Sources */,
 				18985A5F1DD5E7C100D0B702 /* JKDBModel.m in Sources */,
 				1887AF4F1DCE3EEA003BF6E4 /* MoneyRewardViewController.m in Sources */,
+				EF4E23C31DD4A02600B77017 /* RankingCell.m in Sources */,
 				1887AF541DCE3EFA003BF6E4 /* TaskListViewController.m in Sources */,
 				18985A6F1DD5E84A00D0B702 /* RouteInfoModel.m in Sources */,
 				EF5478801DD0918D00279E12 /* DrawMoneyViewController.m in Sources */,

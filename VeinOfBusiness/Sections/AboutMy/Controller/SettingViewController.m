@@ -64,8 +64,11 @@
     NSArray *array = [_arraySource objectAtIndex:indexPath.section];
     NSDictionary *dic = [array objectAtIndex:indexPath.row];
     cell.textLabel.text = [dic objectForKey:@"name"];
-    if (indexPath.row == 2) {
-        cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    
+    if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            cell.textLabel.textAlignment = NSTextAlignmentCenter;
+        }
     } else {
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
