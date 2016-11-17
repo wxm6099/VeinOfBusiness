@@ -29,6 +29,9 @@
 @implementation LoginInViewController
 
 - (void)viewDidLoad {
+    
+    self.title = @"登  录";
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
@@ -46,16 +49,18 @@
 //登录
 - (IBAction)loginButtonAction:(id)sender {
     
+
     NSString *phone = self.accountTextField.text;
     NSString *password = self.passwordTextfield.text;
     
-    
+//    [self JumpAction];
     
     if (phone.length == 0 || password.length == 0) {
         
     } else {
         NSDictionary *dic = @{@"mobile" : phone,
-                              @"password": password};
+                              @"password": password,
+                              @"userType":@"3"};
         [RestfulAPIRequestTool routeName:@"login_loginIn" requestModel:dic useKeys:[dic allKeys] success:^(id json) {
             
             NSLog(@"登录结果为%@", json);
@@ -69,7 +74,7 @@
                 UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"登录失败" message:msg delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil];
                 [alert show];
             }
-            
+     
             
             
         } failure:^(id errorJson) {

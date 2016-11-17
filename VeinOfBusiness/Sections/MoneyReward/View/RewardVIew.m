@@ -45,8 +45,8 @@
     
     
     UIImageView *imageviewRight = [[UIImageView alloc]initWithFrame:CGRectMake(frame.size.width - 19, top, 7, 25)];
-    
-    imageviewRight.backgroundColor = [UIColor lightGrayColor];
+    imageviewRight.image = [UIImage imageNamed:@"icon_grayRight"];
+//    imageviewRight.backgroundColor = [UIColor lightGrayColor];
     imageviewRight.contentMode = UIViewContentModeScaleAspectFit;
     [self addSubview:imageviewRight];
     

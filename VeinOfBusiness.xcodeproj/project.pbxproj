@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180569EF1DDB38D9002CC3BC /* Bitmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 180569E01DDB38D9002CC3BC /* Bitmap.png */; };
+		180569F01DDB38D9002CC3BC /* icon_backCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 180569E11DDB38D9002CC3BC /* icon_backCircle.png */; };
+		180569F11DDB38D9002CC3BC /* icon_checkIn.png in Resources */ = {isa = PBXBuildFile; fileRef = 180569E21DDB38D9002CC3BC /* icon_checkIn.png */; };
+		180569F21DDB38D9002CC3BC /* icon_grayRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 180569E31DDB38D9002CC3BC /* icon_grayRight.png */; };
+		180569F31DDB38D9002CC3BC /* icon_integral.png in Resources */ = {isa = PBXBuildFile; fileRef = 180569E41DDB38D9002CC3BC /* icon_integral.png */; };
+		180569F41DDB38D9002CC3BC /* icon_invite.png in Resources */ = {isa = PBXBuildFile; fileRef = 180569E51DDB38D9002CC3BC /* icon_invite.png */; };
+		180569F51DDB38D9002CC3BC /* people.png in Resources */ = {isa = PBXBuildFile; fileRef = 180569E61DDB38D9002CC3BC /* people.png */; };
+		180569F61DDB38D9002CC3BC /* Rectangle 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 180569E71DDB38D9002CC3BC /* Rectangle 2.png */; };
+		180569F71DDB38D9002CC3BC /* Rectangle 28.png in Resources */ = {isa = PBXBuildFile; fileRef = 180569E81DDB38D9002CC3BC /* Rectangle 28.png */; };
+		180569F81DDB38D9002CC3BC /* select_hot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 180569E91DDB38D9002CC3BC /* select_hot@2x.png */; };
+		180569F91DDB38D9002CC3BC /* select_my@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 180569EA1DDB38D9002CC3BC /* select_my@2x.png */; };
+		180569FA1DDB38D9002CC3BC /* select_reward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 180569EB1DDB38D9002CC3BC /* select_reward@2x.png */; };
+		180569FB1DDB38D9002CC3BC /* unselect_hot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 180569EC1DDB38D9002CC3BC /* unselect_hot@2x.png */; };
+		180569FC1DDB38D9002CC3BC /* unselect_my@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 180569ED1DDB38D9002CC3BC /* unselect_my@2x.png */; };
+		180569FD1DDB38D9002CC3BC /* unselect_reward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 180569EE1DDB38D9002CC3BC /* unselect_reward@2x.png */; };
+		180569FF1DDB3D60002CC3BC /* icon_rewardBlueLine.png in Resources */ = {isa = PBXBuildFile; fileRef = 180569FE1DDB3D60002CC3BC /* icon_rewardBlueLine.png */; };
 		1887AF061DCE38D1003BF6E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF051DCE38D1003BF6E4 /* main.m */; };
 		1887AF091DCE38D1003BF6E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF081DCE38D1003BF6E4 /* AppDelegate.m */; };
 		1887AF0F1DCE38D2003BF6E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF0D1DCE38D2003BF6E4 /* Main.storyboard */; };
@@ -117,6 +133,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		180569E01DDB38D9002CC3BC /* Bitmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bitmap.png; sourceTree = "<group>"; };
+		180569E11DDB38D9002CC3BC /* icon_backCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_backCircle.png; sourceTree = "<group>"; };
+		180569E21DDB38D9002CC3BC /* icon_checkIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_checkIn.png; sourceTree = "<group>"; };
+		180569E31DDB38D9002CC3BC /* icon_grayRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_grayRight.png; sourceTree = "<group>"; };
+		180569E41DDB38D9002CC3BC /* icon_integral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_integral.png; sourceTree = "<group>"; };
+		180569E51DDB38D9002CC3BC /* icon_invite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_invite.png; sourceTree = "<group>"; };
+		180569E61DDB38D9002CC3BC /* people.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = people.png; sourceTree = "<group>"; };
+		180569E71DDB38D9002CC3BC /* Rectangle 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 2.png"; sourceTree = "<group>"; };
+		180569E81DDB38D9002CC3BC /* Rectangle 28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 28.png"; sourceTree = "<group>"; };
+		180569E91DDB38D9002CC3BC /* select_hot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "select_hot@2x.png"; sourceTree = "<group>"; };
+		180569EA1DDB38D9002CC3BC /* select_my@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "select_my@2x.png"; sourceTree = "<group>"; };
+		180569EB1DDB38D9002CC3BC /* select_reward@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "select_reward@2x.png"; sourceTree = "<group>"; };
+		180569EC1DDB38D9002CC3BC /* unselect_hot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unselect_hot@2x.png"; sourceTree = "<group>"; };
+		180569ED1DDB38D9002CC3BC /* unselect_my@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unselect_my@2x.png"; sourceTree = "<group>"; };
+		180569EE1DDB38D9002CC3BC /* unselect_reward@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unselect_reward@2x.png"; sourceTree = "<group>"; };
+		180569FE1DDB3D60002CC3BC /* icon_rewardBlueLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_rewardBlueLine.png; sourceTree = "<group>"; };
 		1887AF011DCE38D1003BF6E4 /* VeinOfBusiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeinOfBusiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1887AF051DCE38D1003BF6E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1887AF071DCE38D1003BF6E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -602,6 +634,22 @@
 		18985A491DD3561E00D0B702 /* icon */ = {
 			isa = PBXGroup;
 			children = (
+				180569FE1DDB3D60002CC3BC /* icon_rewardBlueLine.png */,
+				180569E01DDB38D9002CC3BC /* Bitmap.png */,
+				180569E11DDB38D9002CC3BC /* icon_backCircle.png */,
+				180569E21DDB38D9002CC3BC /* icon_checkIn.png */,
+				180569E31DDB38D9002CC3BC /* icon_grayRight.png */,
+				180569E41DDB38D9002CC3BC /* icon_integral.png */,
+				180569E51DDB38D9002CC3BC /* icon_invite.png */,
+				180569E61DDB38D9002CC3BC /* people.png */,
+				180569E71DDB38D9002CC3BC /* Rectangle 2.png */,
+				180569E81DDB38D9002CC3BC /* Rectangle 28.png */,
+				180569E91DDB38D9002CC3BC /* select_hot@2x.png */,
+				180569EA1DDB38D9002CC3BC /* select_my@2x.png */,
+				180569EB1DDB38D9002CC3BC /* select_reward@2x.png */,
+				180569EC1DDB38D9002CC3BC /* unselect_hot@2x.png */,
+				180569ED1DDB38D9002CC3BC /* unselect_my@2x.png */,
+				180569EE1DDB38D9002CC3BC /* unselect_reward@2x.png */,
 				18985A4A1DD3562700D0B702 /* return2.png */,
 			);
 			path = icon;
@@ -841,34 +889,50 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180569F31DDB38D9002CC3BC /* icon_integral.png in Resources */,
 				18985A141DD0B01300D0B702 /* RewardListTableCell.xib in Resources */,
+				180569FA1DDB38D9002CC3BC /* select_reward@2x.png in Resources */,
 				18985A6E1DD5E84A00D0B702 /* RouteInfo.plist in Resources */,
+				180569FB1DDB38D9002CC3BC /* unselect_hot@2x.png in Resources */,
 				1887AF141DCE38D2003BF6E4 /* LaunchScreen.storyboard in Resources */,
 				EF5478811DD0918D00279E12 /* DrawMoneyViewController.xib in Resources */,
+				180569F21DDB38D9002CC3BC /* icon_grayRight.png in Resources */,
 				18985A391DD1433E00D0B702 /* AccountBalanceViewController.xib in Resources */,
 				1887AF551DCE3EFA003BF6E4 /* TaskListViewController.xib in Resources */,
 				1887AF111DCE38D2003BF6E4 /* Assets.xcassets in Resources */,
 				EF999EB71DD16C3300C8D3F7 /* PasswordOperationViewController.xib in Resources */,
 				1887AF601DCEF016003BF6E4 /* LoginInViewController.xib in Resources */,
+				180569F11DDB38D9002CC3BC /* icon_checkIn.png in Resources */,
+				180569EF1DDB38D9002CC3BC /* Bitmap.png in Resources */,
 				EF4E23C41DD4A02600B77017 /* RankingCell.xib in Resources */,
 				1887AF6A1DCF16BB003BF6E4 /* TaskListTableCell.xib in Resources */,
+				180569FD1DDB38D9002CC3BC /* unselect_reward@2x.png in Resources */,
 				1887AF741DCF1F6D003BF6E4 /* RedEnvelopeViewController.xib in Resources */,
+				180569FF1DDB3D60002CC3BC /* icon_rewardBlueLine.png in Resources */,
 				EF999EC91DD17EF700C8D3F7 /* MessageCell.xib in Resources */,
 				1887AF501DCE3EEA003BF6E4 /* MoneyRewardViewController.xib in Resources */,
 				EF5478711DD090E700279E12 /* SettingViewController.xib in Resources */,
+				180569F81DDB38D9002CC3BC /* select_hot@2x.png in Resources */,
+				180569FC1DDB38D9002CC3BC /* unselect_my@2x.png in Resources */,
 				EF5478791DD0911500279E12 /* RankingViewController.xib in Resources */,
+				180569F01DDB38D9002CC3BC /* icon_backCircle.png in Resources */,
 				18985A4B1DD3562700D0B702 /* return2.png in Resources */,
 				18985A191DD0B4FA00D0B702 /* MyIntegralViewController.xib in Resources */,
 				18985A281DD1346700D0B702 /* InviteViewController.xib in Resources */,
+				180569F71DDB38D9002CC3BC /* Rectangle 28.png in Resources */,
 				18985A581DD35CBB00D0B702 /* WithdrawRecordTableCell.xib in Resources */,
+				180569F41DDB38D9002CC3BC /* icon_invite.png in Resources */,
 				EF999EC41DD175FB00C8D3F7 /* UserViewController.xib in Resources */,
 				1887AF4B1DCE3ED3003BF6E4 /* AboutMeViewController.xib in Resources */,
 				EF5478691DD090A900279E12 /* MessageViewController.xib in Resources */,
 				1887AF0F1DCE38D2003BF6E4 /* Main.storyboard in Resources */,
 				18985A1E1DD0BC2300D0B702 /* IntegralExchangeViewController.xib in Resources */,
+				180569F51DDB38D9002CC3BC /* people.png in Resources */,
 				18985A531DD35A1C00D0B702 /* WithdrawRecordViewController.xib in Resources */,
+				180569F61DDB38D9002CC3BC /* Rectangle 2.png in Resources */,
 				18985A0F1DD04D6700D0B702 /* RewardListViewController.xib in Resources */,
 				1887AF6F1DCF1B82003BF6E4 /* TaskWebViewController.xib in Resources */,
+				180569F91DDB38D9002CC3BC /* select_my@2x.png in Resources */,
 				EF999EBF1DD16C4B00C8D3F7 /* README.txt in Resources */,
 				18985A231DD0C26C00D0B702 /* CheckInViewController.xib in Resources */,
 			);

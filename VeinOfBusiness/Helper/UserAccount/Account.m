@@ -13,7 +13,7 @@
 + (NSDictionary *)replacedKeyFromPropertyName{
     return @{
              @"userToken":@"token",
-             @"userId":@"id",
+             @"customerId":@"id",
              @"easemobId":@"id",
              };
 }
@@ -27,8 +27,8 @@
     if ([key isEqualToString:@"user_phone"]) {
         self.phone = value;
     }
-    if ([key isEqualToString:@"user_id"] && [key isEqualToString:@"userid"]) {
-        self.userId = value;
+    if ([key isEqualToString:@"customerId"] && [key isEqualToString:@"customerId"]) {
+        self.customerId = value;
     }
     
 }

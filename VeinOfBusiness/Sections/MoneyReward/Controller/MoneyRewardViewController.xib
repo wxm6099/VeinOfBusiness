@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -26,13 +23,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L7v-pg-KNj">
-                    <rect key="frame" x="0.0" y="-64" width="375" height="731"/>
                     <subviews>
                         <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Inb-dT-fC2">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="261"/>
                             <subviews>
                                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7pm-zz-xbw">
-                                    <rect key="frame" x="175" y="218" width="25" height="35"/>
+                                    <frame key="frameInset" minX="175" minY="218" width="25" height="35"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="1" id="0Ft-JI-bMW"/>
@@ -40,13 +36,13 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="累计收益(元)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwU-Ij-cGI">
-                                    <rect key="frame" x="269" y="218" width="98" height="21"/>
+                                    <frame key="frameInset" minX="269" minY="218" width="98" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="今日收益(元)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yc6-xH-GyO">
-                                    <rect key="frame" x="53" y="218" width="98" height="21"/>
+                                    <frame key="frameInset" minX="53" minY="218" width="98" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -70,15 +66,15 @@
                         <view tag="4" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rC3-tv-WFI">
                             <rect key="frame" x="8" y="281" width="240" height="128"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8r6-Mz-NeB">
-                                    <rect key="frame" x="22" y="33" width="26" height="30"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon_rewardBlueLine.png" translatesAutoresizingMaskIntoConstraints="NO" id="8r6-Mz-NeB">
+                                    <frame key="frameInset" minX="22" minY="33" width="26" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="25" id="ZQO-Hi-N8J"/>
                                         <constraint firstAttribute="height" constant="25" id="nM9-Bf-ODq"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="赏金任务" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFH-F4-1Fq">
-                                    <rect key="frame" x="61" y="38" width="69" height="21"/>
+                                    <frame key="frameInset" minX="61" minY="38" width="69" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="uO0-eG-lV2"/>
                                     </constraints>
@@ -87,7 +83,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="当前任务  66" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDU-tR-aeV">
-                                    <rect key="frame" x="146" y="29" width="42" height="21"/>
+                                    <frame key="frameInset" minX="146" minY="29" width="42" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="YGr-7j-0JI"/>
                                     </constraints>
@@ -96,7 +92,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OU4-CD-vxD">
-                                    <rect key="frame" x="196" y="19" width="36" height="40"/>
+                                    <frame key="frameInset" minX="196" minY="19" width="36" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="14" id="WrS-wn-0bZ"/>
                                         <constraint firstAttribute="width" constant="14" id="aqq-ND-Jk4"/>
@@ -120,7 +116,7 @@
                             <rect key="frame" x="31" y="494" width="240" height="128"/>
                             <subviews>
                                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ubn-gl-Wi3">
-                                    <rect key="frame" x="94" y="8" width="53" height="25"/>
+                                    <frame key="frameInset" minX="94" minY="8" width="53" height="25"/>
                                     <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="95" id="ccC-ap-Mwh"/>
@@ -128,14 +124,14 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GN3-X3-w1u">
-                                    <rect key="frame" x="66" y="41" width="94" height="36"/>
+                                    <frame key="frameInset" minX="66" minY="41" width="94" height="36"/>
                                     <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="aqs-aC-vLf"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E77-gf-a4Y">
-                                    <rect key="frame" x="82" y="84" width="53" height="25"/>
+                                    <frame key="frameInset" minX="82" minY="84" width="53" height="25"/>
                                     <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="1" id="2XS-rP-epq"/>
@@ -159,7 +155,7 @@
                             <rect key="frame" x="67" y="66" width="240" height="128"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="余额" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0GP-gz-VoK">
-                                    <rect key="frame" x="99" y="53" width="42" height="21"/>
+                                    <frame key="frameInset" minX="99" minY="53" width="42" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="puh-H4-Iff"/>
                                         <constraint firstAttribute="width" constant="42" id="uR9-DV-IEN"/>
@@ -169,7 +165,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0,00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R35-ZN-ISW">
-                                    <rect key="frame" x="41" y="67" width="159" height="33"/>
+                                    <frame key="frameInset" minX="41" minY="67" width="159" height="33"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="33" id="bj7-vb-U3g"/>
                                         <constraint firstAttribute="width" constant="100" id="dxq-8x-JpA"/>
@@ -230,4 +226,7 @@
             <point key="canvasLocation" x="-67.5" y="-26.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="icon_rewardBlueLine.png" width="41" height="52"/>
+    </resources>
 </document>

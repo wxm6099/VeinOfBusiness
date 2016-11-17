@@ -21,8 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LF3-gV-hSF">
-                    <color key="backgroundColor" red="1" green="0.15023402991414547" blue="0.14277353867692943" alpha="1" colorSpace="calibratedRGB"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="people.png" translatesAutoresizingMaskIntoConstraints="NO" id="LF3-gV-hSF">
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="82b-KN-DE3"/>
                         <constraint firstAttribute="width" constant="100" id="xuM-AX-mYj"/>
@@ -37,14 +36,14 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AJ3-ew-V1S">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AJ3-ew-V1S">
                     <frame key="frameInset" minX="137" minY="272" width="97" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="zho-bI-59f"/>
                     </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qx-uA-WPe">
                     <frame key="frameInset" minX="8" minY="406" width="62" height="30"/>
@@ -52,6 +51,7 @@
                         <constraint firstAttribute="height" constant="30" id="4WP-Qu-CGw"/>
                         <constraint firstAttribute="width" constant="62" id="At7-Ya-DFL"/>
                     </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <state key="normal" title="注册账号">
                         <color key="titleColor" red="0.15897391200538535" green="1" blue="0.90390892557709679" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
@@ -61,6 +61,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAv-pa-B7P">
                     <frame key="frameInset" minX="305" minY="406" width="62" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <state key="normal" title="忘记密码">
                         <color key="titleColor" red="0.15323925533580218" green="1" blue="0.89166095874958673" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
@@ -111,4 +112,7 @@
             <point key="canvasLocation" x="-10.5" y="25.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="people.png" width="194" height="210"/>
+    </resources>
 </document>

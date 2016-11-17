@@ -35,6 +35,7 @@
     // 注册微信 TO DO 跳转URL 未设置
 //    [WXApi registerApp:WXAppID];
     
+    [self loginInSucceed];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginInSucceed) name:@"WindowChangeRoot" object:nil];
     
@@ -75,21 +76,13 @@
     if (!_window) {
         _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
         
-
+//
+//
+//        
 //        LoginInViewController *loginIn = [[LoginInViewController alloc] initWithNibName:@"LoginInViewController" bundle:nil];
-//        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:loginIn];
+//        DLNavigationController *nav = [[DLNavigationController alloc]initWithRootViewController:loginIn];
 //        [_window setRootViewController:nav];
-        
-
-//        AboutMeViewController *aboutMe = [[AboutMeViewController alloc]init];
-//        DLNavigationController *nav = [[DLNavigationController alloc]initWithRootViewController:aboutMe];
-//        _window.rootViewController = nav;
-
-        
-        LoginInViewController *loginIn = [[LoginInViewController alloc] initWithNibName:@"LoginInViewController" bundle:nil];
-        DLNavigationController *nav = [[DLNavigationController alloc]initWithRootViewController:loginIn];
-        [_window setRootViewController:nav];
-
+//
         
         
     }
@@ -102,8 +95,10 @@
     
     UITabBarController *tab = [[UITabBarController alloc]init];
     UITabBar *tabBar = [tab tabBar];
-    [tabBar setTintColor:[UIColor whiteColor]];
-    tabBar.barTintColor = CustomColor;
+    //选中的颜色
+    [tabBar setTintColor:CustomColor];
+    //背景颜色
+//    tabBar.barTintColor = [UIColor whiteColor];
     
     
 //    [tabBar setSelectedImageTintColor:[UIColor orangeColor]];
@@ -111,11 +106,17 @@
     TaskListViewController *taskListView = [[TaskListViewController alloc]initWithNibName:@"TaskListViewController" bundle:nil];
     DLNavigationController *navOne = [[DLNavigationController alloc]initWithRootViewController:taskListView];
     taskListView.tabBarItem.title = @"任务";
+    taskListView.tabBarItem.image = [UIImage imageNamed:@"unselect_hot"];
+    taskListView.tabBarItem.selectedImage = [UIImage imageNamed:@"select_hot"];
+    
     
     //赏金列表
     MoneyRewardViewController * moneyReward= [[MoneyRewardViewController alloc] initWithNibName:@"MoneyRewardViewController" bundle:nil];
     DLNavigationController *navTwo = [[DLNavigationController alloc]initWithRootViewController:moneyReward];
     moneyReward.tabBarItem.title = @"赏金";
+    
+    moneyReward.tabBarItem.image = [UIImage imageNamed:@"unselect_reward"];
+    moneyReward.tabBarItem.selectedImage = [UIImage imageNamed:@"select_reward"];
     
     //个人页面
 //    AboutMeViewController *me = [[AboutMeViewController alloc] initWithNibName:@"AboutMeViewController" bundle:nil];
@@ -124,12 +125,13 @@
     AboutMeViewController *aboutMe = [[AboutMeViewController alloc]init];
     DLNavigationController *navThree = [[DLNavigationController alloc]initWithRootViewController:aboutMe];
     aboutMe.tabBarItem.title = @"我的";
-    
+    aboutMe.tabBarItem.image = [UIImage imageNamed:@"unselect_my@2x"];
+    aboutMe.tabBarItem.selectedImage = [UIImage imageNamed:@"select_my@2x"];
     [tab addChildViewController:navOne];
     [tab addChildViewController:navTwo];
     [tab addChildViewController:navThree];
     
-    [_window setRootViewController:tab];
+    [self.window setRootViewController:tab];
         
 }
 

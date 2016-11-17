@@ -13,7 +13,7 @@
 
 //一些第三方的接口需要的APPKEY等最好不要写在这里
 
-#define WXAppID         @""
+#define WXAppID         @"	"
 #define WXAppSecret     @""
 
 

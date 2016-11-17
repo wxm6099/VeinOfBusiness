@@ -43,9 +43,9 @@
     
     CGFloat tempWidth = DLScreenWidth / 2 - 1;
     
-    NSArray *array = @[@[@"qiandao", @"签到", @"最高可得100元"],
-                       @[@"积分兑换", @"积分兑换", @"当前积分0"],
-                       @[@"邀请好友", @"邀请好友", @"邀请好友"]];
+    NSArray *array = @[@[@"icon_checkIn", @"签到", @"最高可得100元"],
+                       @[@"icon_integral", @"积分兑换", @"当前积分0"],
+                       @[@"icon_invite", @"邀请好友", @"邀请好友"]];
     
     for (int i = 0; i < 3; i++) {
         
@@ -53,7 +53,7 @@
         
         RewardVIew *view = [[RewardVIew alloc]initWithFrame:
         CGRectMake(i % 2 * tempWidth, i / 2 * 112, tempWidth - 1, 112)
-    imageName:nil
+    imageName:temp[0]
     title:temp[1]
     detailTitle:temp[2]];
         

@@ -26,5 +26,13 @@
         <key>routeURL</key>
         <string>login/regsms</string>
     </dict>
+    <dict>
+        <key>routeMethod</key>
+        <string>POST</string>
+        <key>routeName</key>
+        <string>login_forget</string>
+        <key>routeURL</key>
+        <string>login/forget</string>
+    </dict>
 </array>
 </plist>
