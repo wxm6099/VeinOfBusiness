@@ -14,9 +14,7 @@
 
 #import "WXApi.h"
 
-
-
-
+#import "Account.h"
 #import "DLNavigationController.h"
 
 @interface AppDelegate ()
@@ -32,11 +30,15 @@
     //这儿是商脉APP的第一行代码
     [self.window makeKeyAndVisible];
     
+    
+    
     // 注册微信 TO DO 跳转URL 未设置
 //    [WXApi registerApp:WXAppID];
     
-    [self loginInSucceed];
-
+    //[self loginInSucceed];
+    
+    
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginInSucceed) name:@"WindowChangeRoot" object:nil];
     
     
@@ -78,11 +80,19 @@
         
 //
 //
-//        
-//        LoginInViewController *loginIn = [[LoginInViewController alloc] initWithNibName:@"LoginInViewController" bundle:nil];
-//        DLNavigationController *nav = [[DLNavigationController alloc]initWithRootViewController:loginIn];
-//        [_window setRootViewController:nav];
 //
+        
+        //判断是否登录
+        
+        NSArray *arr = [Account findAll];
+        if (arr.count > 0) {
+            [self loginInSucceed];
+        } else{
+        
+        LoginInViewController *loginIn = [[LoginInViewController alloc] initWithNibName:@"LoginInViewController" bundle:nil];
+        DLNavigationController *nav = [[DLNavigationController alloc]initWithRootViewController:loginIn];
+        [_window setRootViewController:nav];
+        }
         
         
     }

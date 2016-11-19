@@ -34,5 +34,13 @@
         <key>routeURL</key>
         <string>login/forget</string>
     </dict>
+    <dict>
+        <key>routeMethod</key>
+        <string>POST</string>
+        <key>routeName</key>
+        <string>ad_getad</string>
+        <key>routeURL</key>
+        <string>ad/getad</string>
+    </dict>
 </array>
 </plist>

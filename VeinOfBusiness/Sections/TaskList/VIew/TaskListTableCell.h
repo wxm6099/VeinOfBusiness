@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class AdvertiseModel;
 @interface TaskListTableCell : UITableViewCell
+
+@property (nonatomic, strong)AdvertiseModel *cellModel;
+
 
 @end

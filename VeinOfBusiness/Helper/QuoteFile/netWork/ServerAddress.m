@@ -45,7 +45,7 @@ static ServerAddress* imgServer = nil;
 - (NSString *)getImgServerAddress
 {
     if (!self.imgServerAddress) {
-        self.imgServerAddress = @"http://123.56.232.240:3003";
+        self.imgServerAddress = @"http://222.186.45.63/";
     }
     return self.imgServerAddress;
 }

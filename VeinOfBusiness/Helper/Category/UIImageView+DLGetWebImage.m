@@ -22,35 +22,11 @@
 }
 
 
-//拼接图片地址
-- (NSString *)getFinalUrlStringWithString:(NSString *)str AndSize:(CGSize)size
-{
-    if ([str hasPrefix:@"//"]) {
-        str = [str substringFromIndex:1];
-    }
-    if (![str hasPrefix:@"/"]) {
-        str = [NSString stringWithFormat:@"/%@", str];
-    }
-    NSString *route = [NSString stringWithFormat:@"%@", [ServerAddress imgServerAddress]];  //字符串拼接
-    
-    NSString *urlStr = [route stringByAppendingString:str];
-    
-    NSString *newUrlStr = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    
-    newUrlStr = [newUrlStr stringByAppendingString:[NSString stringWithFormat:@"/%d/%d",Float2Int(size.width * [UIScreen screenScale]), Float2Int(size.height * [UIScreen screenScale])]];
-    
-    return newUrlStr;
-}
 
 // 对图片链接进行拼取
 - (NSString *)getFinalUrlStringWithString:(NSString *)str
 {
-    if ([str hasPrefix:@"//"]) {
-        str = [str substringFromIndex:1];
-    }
-    if (![str hasPrefix:@"/"]) {
-        str = [NSString stringWithFormat:@"/%@", str];
-    }
+    
     NSString *route = [NSString stringWithFormat:@"%@", [ServerAddress imgServerAddress]];  //字符串拼接
     NSString *urlStr = [route stringByAppendingString:str];
     NSString *newUrlStr = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];

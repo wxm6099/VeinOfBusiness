@@ -16,11 +16,4 @@
 - (void)dlGetSpecialSizedWebImageWithString:(NSString *)str placeholderImage:(UIImage *)image;
 
 
-
-/**
- * 请求本地缓存的图片
- */
-- (void)dlGetLocalImageWithUrl:(NSString *)url size:(CGSize)size completed:(YYWebImageCompletionBlock)completedBlock;
-
-
 @end

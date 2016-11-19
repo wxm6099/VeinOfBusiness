@@ -10,6 +10,9 @@
 #import "ComObjectMethod.h"
 #import "PasswordOperationViewController.h"
 #import "RestfulAPIRequestTool.h"
+#import "Account.h"
+
+
 
 @interface LoginInViewController ()
 
@@ -68,6 +71,11 @@
             NSString *msg = json[@"msg"];
             
             if ([msg isEqualToString:@"登录成功"]) {
+                
+                [Account clearTable];
+                Account *acc = [[Account alloc]init];
+                acc.customerId = json[@"data"][@"customerId"];
+                [acc save];
                 [self JumpAction];
                 
             } else{

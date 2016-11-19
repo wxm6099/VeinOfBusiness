@@ -10,18 +10,24 @@
 #import "TaskListTableCell.h"
 #import "TaskWebViewController.h"
 #import "RedEnvelopeViewController.h"
-
+#import "RestfulAPIRequestTool.h"
+#import "Account.h"
+#import "AdvertiseModel.h"
 
 
 @interface TaskListViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
-
+@property (nonatomic, strong)NSMutableArray *modelArray;
 @end
 
 @implementation TaskListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self netRequest];
+    
+    
     
     [self.myTableView registerNib:[UINib nibWithNibName:@"TaskListTableCell" bundle:nil] forCellReuseIdentifier:@"TaskListTableCell"];
     self.myTableView.delegate = self;
@@ -40,11 +46,45 @@
 
 
 
+
+- (void)netRequest{
+    
+    NSArray *array = [Account findAll];
+    Account *acc = array[0];
+    
+    NSDictionary *dic = @{@"type": @"1",
+                          @"customerId": acc.customerId,
+                          @"userType": @"3"};
+    
+    
+    
+    [RestfulAPIRequestTool routeName:@"ad_getad" requestModel:dic useKeys:[dic allKeys] success:^(id json) {
+        
+        NSLog(@"获取的广告数据为 %@", json);
+        NSArray *dataArray = json[@"data"];
+        
+        for (NSDictionary *temp in dataArray) {
+            AdvertiseModel *model = [AdvertiseModel new];
+            [model setValuesForKeysWithDictionary:temp];
+            [self.modelArray addObject:model];
+        }
+        [self.myTableView reloadData];
+        
+    } failure:^(id errorJson) {
+        
+    }];
+    
+}
+
+
 - (void)redEnvelopButtonAction:(UIButton *)sender
 {
+    
+    [self netRequest];
+    /*
     RedEnvelopeViewController *red = [[RedEnvelopeViewController alloc]initWithNibName:@"RedEnvelopeViewController" bundle:nil];
     [self.navigationController pushViewController:red animated:YES];
-    
+    */
 }
 
 
@@ -53,7 +93,7 @@
 {
     
     TaskListTableCell *task = [tableView dequeueReusableCellWithIdentifier:@"TaskListTableCell"];
-    
+    task.cellModel = self.modelArray[indexPath.row];
     return task;
 }
 
@@ -67,7 +107,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return self.modelArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -75,5 +115,11 @@
     return 80;
 }
 
-
+- (NSMutableArray *)modelArray
+{
+    if (!_modelArray) {
+        _modelArray = [NSMutableArray array];
+    }
+    return _modelArray;
+}
 @end
