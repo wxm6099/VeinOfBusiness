@@ -48,14 +48,59 @@
     imageViewSecond.layer.borderColor = [UIColor redColor].CGColor;
     [self.view addSubview:imageViewSecond];
     
-    UILabel *labelSecond = [[UILabel alloc]initWithFrame:CGRectMake(36, 261, 56, 20)];
-    labelSecond.text = @"那夜很美";
-    [self.view addSubview:labelSecond];
+    UILabel *labelNameSecond = [[UILabel alloc]initWithFrame:CGRectMake(31, 261, 72, 20)];
+    labelNameSecond.textAlignment = NSTextAlignmentCenter;
+    labelNameSecond.font = [UIFont systemFontOfSize:14];
+    labelNameSecond.text = @"那夜很美";
+    [self.view addSubview:labelNameSecond];
     
-    UILabel *labelMoney = [[UILabel alloc]initWithFrame:CGRectMake(44, 287, 40, 16)];
-    labelMoney.text = @"537.2元";
-    [self.view addSubview:labelMoney];
+    UILabel *labelMoneySecond = [[UILabel alloc]initWithFrame:CGRectMake(31, 287, 72, 16)];
+    labelMoneySecond.textAlignment = NSTextAlignmentCenter;
+    labelMoneySecond.font = [UIFont systemFontOfSize:11];
+    labelMoneySecond.text = @"537.2元";
+    [self.view addSubview:labelMoneySecond];
     
+    
+    UIImageView *imageViewFirst = [[UIImageView alloc]initWithFrame:CGRectMake(134, 121, 112, 112)];
+    imageViewFirst.image = [UIImage imageNamed:@"Message"];
+    imageViewFirst.layer.cornerRadius = 56;
+    imageViewFirst.layer.masksToBounds = YES;
+    imageViewFirst.layer.borderWidth = 2;
+    imageViewFirst.layer.borderColor = [UIColor redColor].CGColor;
+    [self.view addSubview:imageViewFirst];
+    
+    UILabel *labelNameFirst = [[UILabel alloc]initWithFrame:CGRectMake(134, 260, 112, 22)];
+    labelNameFirst.textAlignment = NSTextAlignmentCenter;
+    labelNameFirst.font = [UIFont systemFontOfSize:16];
+    labelNameFirst.text = @"哎哟不错先生";
+    [self.view addSubview:labelNameFirst];
+    
+    UILabel *labelMoneyFirst = [[UILabel alloc]initWithFrame:CGRectMake(134, 286, 112, 17)];
+    labelMoneyFirst.textAlignment = NSTextAlignmentCenter;
+    labelMoneyFirst.font = [UIFont systemFontOfSize:12];
+    labelMoneyFirst.text = @"2699元";
+    [self.view addSubview:labelMoneyFirst];
+    
+    
+    UIImageView *imageViewThird = [[UIImageView alloc]initWithFrame:CGRectMake(276, 165, 66, 66)];
+    imageViewThird.image = [UIImage imageNamed:@"Message"];
+    imageViewThird.layer.cornerRadius = 33;
+    imageViewThird.layer.masksToBounds = YES;
+    imageViewThird.layer.borderWidth = 2;
+    imageViewThird.layer.borderColor = [UIColor redColor].CGColor;
+    [self.view addSubview:imageViewThird];
+    
+    UILabel *labelNameThird = [[UILabel alloc]initWithFrame:CGRectMake(276, 261, 66, 20)];
+    labelNameThird.textAlignment = NSTextAlignmentCenter;
+    labelNameThird.font = [UIFont systemFontOfSize:14];
+    labelNameThird.text = @"无名之火";
+    [self.view addSubview:labelNameThird];
+    
+    UILabel *labelMoneyThird = [[UILabel alloc]initWithFrame:CGRectMake(276, 287, 66, 16)];
+    labelMoneyThird.textAlignment = NSTextAlignmentCenter;
+    labelMoneyThird.font = [UIFont systemFontOfSize:11];
+    labelMoneyThird.text = @"142元";
+    [self.view addSubview:labelMoneyThird];
     
     UITableView *table = [[UITableView alloc]initWithFrame:CGRectMake(0, 325, DLScreenWidth, DLScreenHeight) style:UITableViewStyleGrouped];
 //    [table registerClass:[RankingCell class] forCellReuseIdentifier:@"ranking"];

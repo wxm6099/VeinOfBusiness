@@ -82,6 +82,7 @@
 		18985A7B1DD5F45300D0B702 /* UIScreen+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18985A7A1DD5F45300D0B702 /* UIScreen+Extension.m */; };
 		18985A7D1DD5FD1400D0B702 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 18985A7C1DD5FD1400D0B702 /* README.md */; };
 		18985A801DD8B49B00D0B702 /* ComObjectMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 18985A7F1DD8B49B00D0B702 /* ComObjectMethod.m */; };
+		706B9227812C3A38DD95C652 /* libPods-VeinOfBusiness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0E0D5730AC67B8AB90CBD /* libPods-VeinOfBusiness.a */; };
 		EF4E23C31DD4A02600B77017 /* RankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4E23C11DD4A02600B77017 /* RankingCell.m */; };
 		EF4E23C41DD4A02600B77017 /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF4E23C21DD4A02600B77017 /* RankingCell.xib */; };
 		EF54783D1DD0686000279E12 /* ShareUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5478321DD0686000279E12 /* ShareUtil.m */; };
@@ -112,7 +113,6 @@
 		EF999EC81DD17EF700C8D3F7 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF999EC61DD17EF700C8D3F7 /* MessageCell.m */; };
 		EF999EC91DD17EF700C8D3F7 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF999EC71DD17EF700C8D3F7 /* MessageCell.xib */; };
 		EF999ECC1DD185A100C8D3F7 /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF999ECB1DD185A100C8D3F7 /* MessageModel.m */; };
-		F85D7D6D00B4996CE174CE92 /* libPods-VeinOfBusiness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DC26B7FD20090109099671 /* libPods-VeinOfBusiness.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +133,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06DF21112277A9960E206003 /* Pods-VeinOfBusiness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeinOfBusiness.release.xcconfig"; path = "Pods/Target Support Files/Pods-VeinOfBusiness/Pods-VeinOfBusiness.release.xcconfig"; sourceTree = "<group>"; };
 		180569E01DDB38D9002CC3BC /* Bitmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bitmap.png; sourceTree = "<group>"; };
 		180569E11DDB38D9002CC3BC /* icon_backCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_backCircle.png; sourceTree = "<group>"; };
 		180569E21DDB38D9002CC3BC /* icon_checkIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_checkIn.png; sourceTree = "<group>"; };
@@ -249,9 +250,8 @@
 		18985A7C1DD5FD1400D0B702 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		18985A7E1DD8B49B00D0B702 /* ComObjectMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComObjectMethod.h; sourceTree = "<group>"; };
 		18985A7F1DD8B49B00D0B702 /* ComObjectMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComObjectMethod.m; sourceTree = "<group>"; };
-		439580931483652A1B9217ED /* Pods-VeinOfBusiness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeinOfBusiness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VeinOfBusiness/Pods-VeinOfBusiness.debug.xcconfig"; sourceTree = "<group>"; };
-		B4DC26B7FD20090109099671 /* libPods-VeinOfBusiness.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VeinOfBusiness.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3AA581EDC0B6303B05D4498 /* Pods-VeinOfBusiness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeinOfBusiness.release.xcconfig"; path = "Pods/Target Support Files/Pods-VeinOfBusiness/Pods-VeinOfBusiness.release.xcconfig"; sourceTree = "<group>"; };
+		37B0E0D5730AC67B8AB90CBD /* libPods-VeinOfBusiness.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VeinOfBusiness.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		560582BD17AAB10E22EB1715 /* Pods-VeinOfBusiness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeinOfBusiness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VeinOfBusiness/Pods-VeinOfBusiness.debug.xcconfig"; sourceTree = "<group>"; };
 		EF4E23C01DD4A02600B77017 /* RankingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RankingCell.h; path = VeinOfBusiness/Sections/AboutMy/Controller/RankingCell.h; sourceTree = SOURCE_ROOT; };
 		EF4E23C11DD4A02600B77017 /* RankingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RankingCell.m; path = VeinOfBusiness/Sections/AboutMy/Controller/RankingCell.m; sourceTree = SOURCE_ROOT; };
 		EF4E23C21DD4A02600B77017 /* RankingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RankingCell.xib; path = VeinOfBusiness/Sections/AboutMy/Controller/RankingCell.xib; sourceTree = SOURCE_ROOT; };
@@ -313,7 +313,7 @@
 				EF5478591DD0731200279E12 /* libsqlite3.0.tbd in Frameworks */,
 				EF5478571DD0730100279E12 /* libz.tbd in Frameworks */,
 				EF5478551DD072E400279E12 /* SystemConfiguration.framework in Frameworks */,
-				F85D7D6D00B4996CE174CE92 /* libPods-VeinOfBusiness.a in Frameworks */,
+				706B9227812C3A38DD95C652 /* libPods-VeinOfBusiness.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,8 +341,8 @@
 				1887AF1D1DCE38D2003BF6E4 /* VeinOfBusinessTests */,
 				1887AF281DCE38D2003BF6E4 /* VeinOfBusinessUITests */,
 				1887AF021DCE38D1003BF6E4 /* Products */,
-				B1B6547154A5379E2D5A6518 /* Pods */,
 				5B4AF68CFCE76B35918C9D69 /* Frameworks */,
+				6D11885B9268F78F86C73D89 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -704,16 +704,16 @@
 				EF5478581DD0731200279E12 /* libsqlite3.0.tbd */,
 				EF5478561DD0730100279E12 /* libz.tbd */,
 				EF5478541DD072E400279E12 /* SystemConfiguration.framework */,
-				B4DC26B7FD20090109099671 /* libPods-VeinOfBusiness.a */,
+				37B0E0D5730AC67B8AB90CBD /* libPods-VeinOfBusiness.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B1B6547154A5379E2D5A6518 /* Pods */ = {
+		6D11885B9268F78F86C73D89 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				439580931483652A1B9217ED /* Pods-VeinOfBusiness.debug.xcconfig */,
-				C3AA581EDC0B6303B05D4498 /* Pods-VeinOfBusiness.release.xcconfig */,
+				560582BD17AAB10E22EB1715 /* Pods-VeinOfBusiness.debug.xcconfig */,
+				06DF21112277A9960E206003 /* Pods-VeinOfBusiness.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -785,13 +785,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1887AF2E1DCE38D2003BF6E4 /* Build configuration list for PBXNativeTarget "VeinOfBusiness" */;
 			buildPhases = (
-				3CC77F6267D81A3C43317711 /* [CP] Check Pods Manifest.lock */,
+				34496DCF7B49AB79EC37D3E2 /* [CP] Check Pods Manifest.lock */,
 				1887AEFD1DCE38D1003BF6E4 /* Sources */,
 				1887AEFE1DCE38D1003BF6E4 /* Frameworks */,
 				1887AEFF1DCE38D1003BF6E4 /* Resources */,
-				40F781B68DC593326014FB1B /* [CP] Embed Pods Frameworks */,
-				9EBF36A23AF6A2A773EDC808 /* [CP] Copy Pods Resources */,
-				3CA33C716A13A00327794DFE /* Embed Pods Frameworks */,
+				9B9ACC39B7F6336EC59B4BEB /* [CP] Embed Pods Frameworks */,
+				A77D8BFA9A75B7E761E4FC00 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -955,22 +954,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3CA33C716A13A00327794DFE /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VeinOfBusiness/Pods-VeinOfBusiness-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3CC77F6267D81A3C43317711 /* [CP] Check Pods Manifest.lock */ = {
+		34496DCF7B49AB79EC37D3E2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -982,10 +966,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		40F781B68DC593326014FB1B /* [CP] Embed Pods Frameworks */ = {
+		9B9ACC39B7F6336EC59B4BEB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1000,7 +984,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VeinOfBusiness/Pods-VeinOfBusiness-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9EBF36A23AF6A2A773EDC808 /* [CP] Copy Pods Resources */ = {
+		A77D8BFA9A75B7E761E4FC00 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1217,7 +1201,7 @@
 		};
 		1887AF2F1DCE38D2003BF6E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 439580931483652A1B9217ED /* Pods-VeinOfBusiness.debug.xcconfig */;
+			baseConfigurationReference = 560582BD17AAB10E22EB1715 /* Pods-VeinOfBusiness.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P4B475T4GX;
@@ -1251,7 +1235,7 @@
 		};
 		1887AF301DCE38D2003BF6E4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3AA581EDC0B6303B05D4498 /* Pods-VeinOfBusiness.release.xcconfig */;
+			baseConfigurationReference = 06DF21112277A9960E206003 /* Pods-VeinOfBusiness.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P4B475T4GX;

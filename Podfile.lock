@@ -32,7 +32,7 @@ DEPENDENCIES:
   - FMDB (~> 2.6.2)
   - MJExtension (~> 3.0.13)
   - SOCKit (~> 1.1)
-  - YYWebImage
+  - YYWebImage (~> 1.0.4)
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
@@ -43,4 +43,6 @@ SPEC CHECKSUMS:
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 86c59821ffd7ab23c73ef68a20459786a6e6884a
+
+COCOAPODS: 1.1.1
