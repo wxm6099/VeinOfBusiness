@@ -23,7 +23,7 @@
         self.labelRank = [[UILabel alloc]initWithFrame:CGRectMake(70, 30, 50, 20)];
         [self.contentView addSubview:self.labelRank];
         
-        self.labelMoney = [[UILabel alloc]initWithFrame:CGRectMake(DLScreenWidth - 100, 15, 50, 30)];
+        self.labelMoney = [[UILabel alloc]initWithFrame:CGRectMake(DLScreenWidth - 60, 15, 50, 30)];
         [self.contentView addSubview:self.labelMoney];
 
     }

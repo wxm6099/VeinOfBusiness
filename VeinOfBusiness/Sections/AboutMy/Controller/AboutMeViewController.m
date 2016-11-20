@@ -13,10 +13,17 @@
 #import "RankingViewController.h"
 #import "DrawMoneyViewController.h"
 #import "UserViewController.h"
+#import "RestfulAPIRequestTool.h"
+#import "Account.h"
+#import "ShareUtil.h"
+#import "WXApi.h"
 
 @interface AboutMeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,retain) NSMutableArray *arraySource;
+
+@property (nonatomic,retain) UIImageView *imageViewHead;
+@property (nonatomic,retain) UILabel *labelName;
 
 
 @end
@@ -28,9 +35,57 @@
     self.navigationController.navigationBarHidden = YES;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // 耗时操作
+        Account *acc = [[Account findAll] objectAtIndex:0];
+        
+        NSDictionary *dic = @{@"customerId" : acc.customerId};
+        [RestfulAPIRequestTool routeName:Personalcenter_index_URL requestModel:dic useKeys:[dic allKeys] success:^(id json) {
+            
+            NSLog(@"请求结果为%@", json);
+            
+//            NSString *msg = json[@"msg"];
+            
+//            NSDictionary *dic= [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:nil];
+            
+            if (dic) {
+                NSString *status = [dic objectForKey:@"status"];
+//                NSString *msg = [dic objectForKey:@"msg"];
+                if ([status isEqualToString:@"success"]) {
+                    NSDictionary *dataUser = [dic objectForKey:@"data"];
+                    
+                    if (dataUser) {
+                        NSString *headImageUrl = [dataUser objectForKey:@"pic"];
+                        NSString *username = [dataUser objectForKey:@"username"];
+//                        NSString *unreadCount = [dataUser objectForKey:@"unreadCount"];
+                        
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            [self.imageViewHead setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:headImageUrl]]]];
+                            [self.labelName setText:username];
+                        });
+                    }
+
+                }
+            }
+            
+            
+        } failure:^(id errorJson) {
+            NSLog(@"登录结果为%@", errorJson);
+        }];
+        
+        
+        
+    });
+}
+
+
 - (void)viewDidDisappear:(BOOL)animated
 {
     self.navigationController.navigationBarHidden = NO;
+    
+
 }
 
 - (void)viewDidLoad {
@@ -47,22 +102,21 @@
     viewa.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:viewa];
     
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(18, 55, 62, 62)];
-    imageView.image = [UIImage imageNamed:@"Message"];
-    imageView.layer.cornerRadius = 30;
-    imageView.layer.masksToBounds = YES;
-    imageView.layer.borderWidth = 2;
-    imageView.layer.borderColor = [UIColor redColor].CGColor;
+    self.imageViewHead = [[UIImageView alloc]initWithFrame:CGRectMake(18, 55, 62, 62)];
+    _imageViewHead.image = [UIImage imageNamed:@"Message"];
+    _imageViewHead.layer.cornerRadius = 30;
+    _imageViewHead.layer.masksToBounds = YES;
+    _imageViewHead.layer.borderWidth = 2;
+    _imageViewHead.layer.borderColor = [UIColor redColor].CGColor;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapImage)];
-    imageView.userInteractionEnabled = YES;
-    [imageView addGestureRecognizer:tap];
+    _imageViewHead.userInteractionEnabled = YES;
+    [_imageViewHead addGestureRecognizer:tap];
+    [viewa addSubview:_imageViewHead];
     
-    [viewa addSubview:imageView];
-    
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(100, 75, 96, 22)];
-    label.text = @"哎哟不错先生";
-    [viewa addSubview:label];
+    self.labelName = [[UILabel alloc]initWithFrame:CGRectMake(100, 75, 96, 22)];
+    _labelName.text = @"哎哟不错先生";
+    [viewa addSubview:_labelName];
     
 
     UITableView *table = [[UITableView alloc]initWithFrame:CGRectMake(0, 164, DLScreenWidth, DLScreenHeight) style:UITableViewStyleGrouped];
@@ -123,6 +177,29 @@
 {
     UserViewController *user = [[UserViewController alloc]init];
     [self.navigationController pushViewController:user animated:YES];
+//    NSDictionary *dic = @{@"url":@"http://www.baidu.com",
+//                          @"title":@"这里是分享的标题",
+//                          @"description":@"这里是分享的描述",
+//                          @"imgUrl":@"这里是分享的图片"};
+//
+//    ShareUtil *share = [[ShareUtil alloc]init];
+//    if ([WXApi isWXAppInstalled]) {
+//        
+//        if ([WXApi isWXAppSupportApi]) {
+//            
+////            [share returnShareDic:^(NSDictionary *dicc) {
+////                
+////            }];
+//            [share shareFriend:dic];
+//            
+//            }
+//    
+//        } else {
+//            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"您的微信版本不支持此操作" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+//            [alert show];
+//            
+//        }
+    
 }
 
 
@@ -160,6 +237,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+//- (UIImageView *)imageViewHead
+//{
+//    if (_imageViewHead) {
+//        
+//    }
+//    return _imageViewHead;
+//}
+
 
 /*
 #pragma mark - Navigation

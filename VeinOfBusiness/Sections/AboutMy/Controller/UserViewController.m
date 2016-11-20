@@ -7,14 +7,144 @@
 //
 
 #import "UserViewController.h"
+#import "Account.h"
+#import "RestfulAPIRequestTool.h"
 
 @interface UserViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,retain) NSMutableArray *arraySource;
+@property (nonatomic,retain) UITableView *table;
 
 @end
 
 @implementation UserViewController
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // 耗时操作
+        Account *acc = [[Account findAll] objectAtIndex:0];
+        
+        NSDictionary *dic = @{@"customerId" : acc.customerId};
+        [RestfulAPIRequestTool routeName:Personalcenter_detail_URL requestModel:dic useKeys:[dic allKeys] success:^(id json) {
+            
+            NSLog(@"请求结果为%@", json);
+            
+//            NSDictionary *dic= [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:nil];
+            NSDictionary *dic = nil;
+//            {
+//            status:"success"，
+//                data：{username：用户名,
+//                gender:性别,
+//                birthday:生日,
+//                Idcode:身份证,
+//                    address:地址},
+//            Msg:""
+//            }
+            
+            if (dic) {
+                NSString *status = [dic objectForKey:@"status"];
+                NSString *msg = [dic objectForKey:@"Msg"];
+                if ([status isEqualToString:@"success"]) {
+                    NSDictionary *dataUser = [dic objectForKey:@"data"];
+                    
+                    if (dataUser) {
+                        
+                        NSString *username = [dataUser objectForKey:@"username"];
+                        NSString *gender = [dataUser objectForKey:@"gender"];
+                        NSString *birthday = [dataUser objectForKey:@"birthday"];
+                        NSString *address = [dataUser objectForKey:@"address"];
+                        
+                        NSString *Idcode = [dataUser objectForKey:@"Idcode"];
+
+                        NSString *major = [dataUser objectForKey:@"major"];
+                        NSString *money = [dataUser objectForKey:@"money"];
+                        NSString *education = [dataUser objectForKey:@"education"];
+                        NSString *interest = [dataUser objectForKey:@"interset"];
+                        
+                        
+                        for (int j = 0; j < self.arraySource.count; j++) {
+                            
+                            NSArray *arr = [self.arraySource objectAtIndex:j];
+                            switch (j) {
+                                case 0:
+                                    for (int i = 0; i <arr.count; i++) {
+                                        NSMutableDictionary *dic = [arr objectAtIndex:i];
+                                        switch (i) {
+                                            case 0:
+                                                [dic setObject:username forKey:@"header"];
+                                                break;
+                                            case 1:
+                                                [dic setObject:gender forKey:@"header"];
+                                                break;
+                                            case 2:
+                                                [dic setObject:birthday forKey:@"header"];
+                                                break;
+                                            case 3:
+                                                [dic setObject:address forKey:@"header"];
+                                                break;
+                                                
+                                            default:
+                                                break;
+                                        }
+                                    }
+                                    break;
+                                
+                                case 1:
+                                    for (int i = 0; i <arr.count; i++) {
+                                        NSMutableDictionary *dic = [arr objectAtIndex:i];
+                                        switch (i) {
+                                            case 0:
+                                                [dic setObject:major forKey:@"header"];
+                                                break;
+                                            case 1:
+                                                [dic setObject:money forKey:@"header"];
+                                                break;
+                                            case 2:
+                                                [dic setObject:education forKey:@"header"];
+                                                break;
+                                            case 3:
+                                                [dic setObject:interest forKey:@"header"];
+                                                break;
+                                                
+                                            default:
+                                                break;
+                                        }
+                                    }
+                                    break;
+                                    
+                                default:
+                                    break;
+                            }
+                        
+                        dispatch_async(dispatch_get_main_queue(), ^{
+//                            [self.table reloadData];
+                        });
+                    }
+                    
+                }
+                }
+            }
+            
+            
+        } failure:^(id errorJson) {
+            NSLog(@"登录结果为%@", errorJson);
+        }];
+        
+        
+        
+    });
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,13 +157,7 @@
 
 - (void)createUI
 {
-    UITableView *table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, DLScreenWidth, DLScreenHeight) style:UITableViewStyleGrouped];
-//    [table registerClass:[UITableViewCell class] forCellReuseIdentifier:@"user"];
-    //    [table registerClass:[AboutMeCell class] forCellReuseIdentifier:@"aboutMeFirst"];
-    table.scrollEnabled = NO;
-    table.delegate = self;
-    table.dataSource = self;
-    [self.view addSubview:table];
+    [self table];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -65,10 +189,10 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ident];
     }
     
-    NSArray *array = [_arraySource objectAtIndex:indexPath.section];
+    NSArray *array = [self.arraySource objectAtIndex:indexPath.section];
     NSDictionary *dic = [array objectAtIndex:indexPath.row];
-    cell.textLabel.text = [dic objectForKey:@"name"];
-    cell.detailTextLabel.text = [dic objectForKey:@"detail"];
+    cell.textLabel.text = [dic objectForKey:@"header"];
+    cell.detailTextLabel.text = [dic objectForKey:@"footer"];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
@@ -116,30 +240,30 @@
         //                               @"name":@"提现"};
         
         
-        NSDictionary *dic1_1 = @{@"name":@"昵称",
-                               @"detail":@"哎哟不错先生"};
+        NSDictionary *dic1_1 = @{@"header":@"昵称",
+                                 @"footer":@"哎哟不错先生"};
 
-        NSDictionary *dic1_2 = @{@"name":@"性别",
-                               @"detail":@"男"};
+        NSDictionary *dic1_2 = @{@"header":@"性别",
+                                 @"footer":@"男"};
         
-        NSDictionary *dic1_3 = @{@"name":@"我的排行榜",
-                               @"detail":@"1990-08-08"};
+        NSDictionary *dic1_3 = @{@"header":@"我的排行榜",
+                                 @"footer":@"1990-08-08"};
         
-        NSDictionary *dic1_4 = @{@"name":@"所在地区",
-                               @"detail":@"未设置"};
+        NSDictionary *dic1_4 = @{@"header":@"所在地区",
+                                 @"footer":@"未设置"};
         NSArray *arr1 = [NSArray arrayWithObjects:dic1_1,dic1_2,dic1_3,dic1_4, nil];
         
-        NSDictionary *dic2_1 = @{@"name":@"所属行业",
-                                 @"detail":@"未设置"};
+        NSDictionary *dic2_1 = @{@"header":@"所属行业",
+                                 @"footer":@"未设置"};
         
-        NSDictionary *dic2_2 = @{@"name":@"月收入",
-                                 @"detail":@"未设置"};
+        NSDictionary *dic2_2 = @{@"header":@"月收入",
+                                 @"footer":@"未设置"};
         
-        NSDictionary *dic2_3 = @{@"name":@"学历",
-                                 @"detail":@"本科"};
+        NSDictionary *dic2_3 = @{@"header":@"学历",
+                                 @"footer":@"本科"};
         
-        NSDictionary *dic2_4 = @{@"name":@"兴趣爱好",
-                                 @"detail":@"未设置"};
+        NSDictionary *dic2_4 = @{@"header":@"兴趣爱好",
+                                 @"footer":@"未设置"};
         NSArray *arr2 = [NSArray arrayWithObjects:dic2_1,dic2_2,dic2_3,dic2_4,nil];
         
         _arraySource = [NSMutableArray arrayWithObjects:arr1,arr2, nil];
@@ -147,8 +271,22 @@
     return _arraySource;
 }
 
-
-
+- (UITableView *)table
+{
+    if (!_table) {
+        _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, DLScreenWidth, DLScreenHeight) style:UITableViewStyleGrouped];
+        //    [table registerClass:[UITableViewCell class] forCellReuseIdentifier:@"user"];
+        //    [table registerClass:[AboutMeCell class] forCellReuseIdentifier:@"aboutMeFirst"];
+        _table.scrollEnabled = NO;
+        _table.delegate = self;
+        _table.dataSource = self;
+        [self.view addSubview:_table];
+    }
+    return _table;
+    
+}
+    
+        
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -78,10 +78,7 @@
     if (!_window) {
         _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
         
-//
-//
-//
-        
+
         //判断是否登录
         
         NSArray *arr = [Account findAll];
@@ -92,6 +89,7 @@
         LoginInViewController *loginIn = [[LoginInViewController alloc] initWithNibName:@"LoginInViewController" bundle:nil];
         DLNavigationController *nav = [[DLNavigationController alloc]initWithRootViewController:loginIn];
         [_window setRootViewController:nav];
+            
         }
         
         

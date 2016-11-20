@@ -8,6 +8,7 @@
 
 #import "RankingViewController.h"
 #import "RankingCell.h"
+#import "RestfulAPIRequestTool.h"
 
 @interface RankingViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -16,6 +17,65 @@
 @end
 
 @implementation RankingViewController
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // 耗时操作
+//        Account *acc = [[Account findAll] objectAtIndex:0];
+        
+//        NSDictionary *dic = @{@"customerId" : acc.customerId};
+        [RestfulAPIRequestTool routeName:Personalcenter_rank_URL requestModel:nil useKeys:nil success:^(id json) {
+            
+            NSLog(@"请求结果为%@", json);
+            
+            //            NSDictionary *dic= [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:nil];
+            NSDictionary *dic = nil;
+//            {
+//            status:"success"，
+//                data：[{pic:头像,
+//                        username:用户名,
+//                        sumMoney:总收益},
+//                      {pic:头像,
+//                      username:用户名,
+//                       sumMoney:总收益},
+//                      {pic:头像,
+//                      username:用户名,
+//                      sumMoney:总收益},],
+//            msg:""
+//            }
+            
+            if (dic) {
+                NSString *status = [dic objectForKey:@"status"];
+                NSString *msg = [dic objectForKey:@"Msg"];
+                if ([status isEqualToString:@"success"]) {
+                    NSMutableArray *dataUser = [dic objectForKey:@"data"];
+                    
+                    if (dataUser) {
+
+                    }
+                }
+            }
+            
+            
+        } failure:^(id errorJson) {
+            NSLog(@"登录结果为%@", errorJson);
+        }];
+        
+        
+        
+    });
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
