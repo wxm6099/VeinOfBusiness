@@ -12,10 +12,10 @@
 #import "TaskListViewController.h"
 #import "LoginInViewController.h"
 
-#import "WXApi.h"
-
 #import "Account.h"
 #import "DLNavigationController.h"
+#import "WXApiManager.h"
+#import "WXApi.h"
 
 @interface AppDelegate ()
 
@@ -29,11 +29,9 @@
     
     //这儿是商脉APP的第一行代码
     [self.window makeKeyAndVisible];
-    
-    
-    
-    // 注册微信 TO DO 跳转URL 未设置
-//    [WXApi registerApp:WXAppID];
+
+    // 注册微信
+    [WXApi registerApp:@"wxd3d906254db49ccd"];
     
     //[self loginInSucceed];
     
@@ -78,10 +76,7 @@
     if (!_window) {
         _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
         
-//
-//
-//
-        
+
         //判断是否登录
         
         NSArray *arr = [Account findAll];
@@ -92,6 +87,7 @@
         LoginInViewController *loginIn = [[LoginInViewController alloc] initWithNibName:@"LoginInViewController" bundle:nil];
         DLNavigationController *nav = [[DLNavigationController alloc]initWithRootViewController:loginIn];
         [_window setRootViewController:nav];
+            
         }
         
         
@@ -148,23 +144,20 @@
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    if ([sourceApplication isEqualToString:@"com.qq.www"]||[sourceApplication isEqualToString:@"com.tencent.mqq"]) {
-//        return [TencentOAuth HandleOpenURL:url]||[QQApiInterface handleOpenURL:url delegate:[MainViewController sharedManager]];
-    }
-    if ([sourceApplication isEqualToString:@"com.sina.weibo"]) {
-//        return [WeiboSDK handleOpenURL:url delegate:[LoginViewController sharedManager]];
-    }
-    if ([sourceApplication isEqualToString:@"com.tencent.xin"]) {
-//        return [WXApi handleOpenURL:url delegate:[LoginViewController sharedManager]];
-    }
-
-    return YES;
+//    if ([sourceApplication isEqualToString:@"com.qq.www"]||[sourceApplication isEqualToString:@"com.tencent.mqq"]) {
+//    }
+//    if ([sourceApplication isEqualToString:@"com.sina.weibo"]) {
+//    }
+//    if ([sourceApplication isEqualToString:@"com.tencent.xin"]) {
+//    }
+    
+    return [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];;
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
 //    return [WXApi handleOpenURL:url delegate:[LoginViewController sharedManager]];
-    return YES;
+    return [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
 }
 
 

@@ -13,8 +13,15 @@
 
 //一些第三方的接口需要的APPKEY等最好不要写在这里
 
-#define WXAppID         @"	"
+#define WXAppID         @"wxd3d906254db49ccd"
 #define WXAppSecret     @""
+
+#define Personalcenter_index_URL            @"personalcenter_index"
+#define Personalcenter_detail_URL           @"personalcenter_detail"
+#define Personalcenter_modifydetail_URL     @"personalcenter_modifydetail"
+#define Personalcenter_msg_URL              @"personalcenter/msg"
+#define Personalcenter_msginfo_URL          @"personalcenter/msginfo"
+#define Personalcenter_rank_URL             @"personalcenter/rank"
 
 
 
