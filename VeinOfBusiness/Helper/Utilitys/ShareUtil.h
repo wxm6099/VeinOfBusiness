@@ -13,9 +13,11 @@ typedef void (^SHARE_INFO)(NSDictionary *dicc);
 
 
 @property (nonatomic,copy) SHARE_INFO share_info;
+/** 分享到微信朋友 */
+- (void)shareWeChatSessionWithLink:(NSDictionary *)dataDic;
 
-- (void)shareWeChatList:(NSDictionary *)dataDic;
-- (void)shareFriend:(NSDictionary *)dataDic;
+/** 分享到微信朋友圈 */
+- (void)shareWeChatTimeLineWithLink:(NSDictionary *)dataDic;
 
 
 - (void)returnShareDic:(SHARE_INFO)block;

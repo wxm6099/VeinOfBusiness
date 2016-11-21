@@ -82,11 +82,8 @@
 		18985A7B1DD5F45300D0B702 /* UIScreen+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18985A7A1DD5F45300D0B702 /* UIScreen+Extension.m */; };
 		18985A7D1DD5FD1400D0B702 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 18985A7C1DD5FD1400D0B702 /* README.md */; };
 		18985A801DD8B49B00D0B702 /* ComObjectMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 18985A7F1DD8B49B00D0B702 /* ComObjectMethod.m */; };
-
-		706B9227812C3A38DD95C652 /* libPods-VeinOfBusiness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0E0D5730AC67B8AB90CBD /* libPods-VeinOfBusiness.a */; };
-
 		6FF24A621DE0997A00CCFE02 /* AdvertiseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF24A611DE0997A00CCFE02 /* AdvertiseModel.m */; };
-
+		706B9227812C3A38DD95C652 /* libPods-VeinOfBusiness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0E0D5730AC67B8AB90CBD /* libPods-VeinOfBusiness.a */; };
 		EF4E23C31DD4A02600B77017 /* RankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4E23C11DD4A02600B77017 /* RankingCell.m */; };
 		EF4E23C41DD4A02600B77017 /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF4E23C21DD4A02600B77017 /* RankingCell.xib */; };
 		EF54783D1DD0686000279E12 /* ShareUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5478321DD0686000279E12 /* ShareUtil.m */; };
@@ -99,7 +96,6 @@
 		EF54785D1DD0732E00279E12 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF54785C1DD0732E00279E12 /* Security.framework */; };
 		EF54785F1DD0734100279E12 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF54785E1DD0734100279E12 /* CoreTelephony.framework */; };
 		EF5478611DD0734C00279E12 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5478601DD0734C00279E12 /* CFNetwork.framework */; };
-		EF5478641DD08BA200279E12 /* requsetHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5478631DD08BA200279E12 /* requsetHandler.m */; };
 		EF5478681DD090A900279E12 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5478661DD090A900279E12 /* MessageViewController.m */; };
 		EF5478691DD090A900279E12 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5478671DD090A900279E12 /* MessageViewController.xib */; };
 		EF5478701DD090E700279E12 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF54786E1DD090E700279E12 /* SettingViewController.m */; };
@@ -117,6 +113,10 @@
 		EF999EC81DD17EF700C8D3F7 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF999EC61DD17EF700C8D3F7 /* MessageCell.m */; };
 		EF999EC91DD17EF700C8D3F7 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF999EC71DD17EF700C8D3F7 /* MessageCell.xib */; };
 		EF999ECC1DD185A100C8D3F7 /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF999ECB1DD185A100C8D3F7 /* MessageModel.m */; };
+		EFD330F31DE2874000D388E4 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD330F21DE2874000D388E4 /* WXApiManager.m */; };
+		EFD330F61DE28A1500D388E4 /* WXApiRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD330F51DE28A1500D388E4 /* WXApiRequestHandler.m */; };
+		EFD330F91DE28A6800D388E4 /* WXApiResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD330F81DE28A6800D388E4 /* WXApiResponseHandler.m */; };
+		EFD330FF1DE28C6700D388E4 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD330FE1DE28C6700D388E4 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -254,16 +254,10 @@
 		18985A7C1DD5FD1400D0B702 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		18985A7E1DD8B49B00D0B702 /* ComObjectMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComObjectMethod.h; sourceTree = "<group>"; };
 		18985A7F1DD8B49B00D0B702 /* ComObjectMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComObjectMethod.m; sourceTree = "<group>"; };
-
 		37B0E0D5730AC67B8AB90CBD /* libPods-VeinOfBusiness.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VeinOfBusiness.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		560582BD17AAB10E22EB1715 /* Pods-VeinOfBusiness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeinOfBusiness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VeinOfBusiness/Pods-VeinOfBusiness.debug.xcconfig"; sourceTree = "<group>"; };
-
-		439580931483652A1B9217ED /* Pods-VeinOfBusiness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeinOfBusiness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VeinOfBusiness/Pods-VeinOfBusiness.debug.xcconfig"; sourceTree = "<group>"; };
 		6FF24A601DE0997A00CCFE02 /* AdvertiseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertiseModel.h; sourceTree = "<group>"; };
 		6FF24A611DE0997A00CCFE02 /* AdvertiseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertiseModel.m; sourceTree = "<group>"; };
-		B4DC26B7FD20090109099671 /* libPods-VeinOfBusiness.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VeinOfBusiness.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3AA581EDC0B6303B05D4498 /* Pods-VeinOfBusiness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeinOfBusiness.release.xcconfig"; path = "Pods/Target Support Files/Pods-VeinOfBusiness/Pods-VeinOfBusiness.release.xcconfig"; sourceTree = "<group>"; };
-
 		EF4E23C01DD4A02600B77017 /* RankingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RankingCell.h; path = VeinOfBusiness/Sections/AboutMy/Controller/RankingCell.h; sourceTree = SOURCE_ROOT; };
 		EF4E23C11DD4A02600B77017 /* RankingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RankingCell.m; path = VeinOfBusiness/Sections/AboutMy/Controller/RankingCell.m; sourceTree = SOURCE_ROOT; };
 		EF4E23C21DD4A02600B77017 /* RankingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RankingCell.xib; path = VeinOfBusiness/Sections/AboutMy/Controller/RankingCell.xib; sourceTree = SOURCE_ROOT; };
@@ -280,8 +274,6 @@
 		EF54785C1DD0732E00279E12 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		EF54785E1DD0734100279E12 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		EF5478601DD0734C00279E12 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		EF5478621DD08BA200279E12 /* requsetHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = requsetHandler.h; sourceTree = "<group>"; };
-		EF5478631DD08BA200279E12 /* requsetHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = requsetHandler.m; sourceTree = "<group>"; };
 		EF5478651DD090A900279E12 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		EF5478661DD090A900279E12 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		EF5478671DD090A900279E12 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
@@ -310,6 +302,14 @@
 		EF999EC71DD17EF700C8D3F7 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessageCell.xib; path = VeinOfBusiness/Sections/AboutMy/Controller/MessageCell.xib; sourceTree = SOURCE_ROOT; };
 		EF999ECA1DD185A100C8D3F7 /* MessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageModel.h; path = VeinOfBusiness/Sections/AboutMy/Controller/MessageModel.h; sourceTree = SOURCE_ROOT; };
 		EF999ECB1DD185A100C8D3F7 /* MessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageModel.m; path = VeinOfBusiness/Sections/AboutMy/Controller/MessageModel.m; sourceTree = SOURCE_ROOT; };
+		EFD330F11DE2874000D388E4 /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiManager.h; sourceTree = "<group>"; };
+		EFD330F21DE2874000D388E4 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
+		EFD330F41DE28A1500D388E4 /* WXApiRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiRequestHandler.h; sourceTree = "<group>"; };
+		EFD330F51DE28A1500D388E4 /* WXApiRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiRequestHandler.m; sourceTree = "<group>"; };
+		EFD330F71DE28A6800D388E4 /* WXApiResponseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiResponseHandler.h; sourceTree = "<group>"; };
+		EFD330F81DE28A6800D388E4 /* WXApiResponseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiResponseHandler.m; sourceTree = "<group>"; };
+		EFD330FD1DE28C6700D388E4 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GetMessageFromWXResp+responseWithTextOrMediaMessage.h"; sourceTree = "<group>"; };
+		EFD330FE1DE28C6700D388E4 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GetMessageFromWXResp+responseWithTextOrMediaMessage.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -735,10 +735,14 @@
 		EF5478281DD0686000279E12 /* Utilitys */ = {
 			isa = PBXGroup;
 			children = (
-				EF5478621DD08BA200279E12 /* requsetHandler.h */,
-				EF5478631DD08BA200279E12 /* requsetHandler.m */,
 				EF5478311DD0686000279E12 /* ShareUtil.h */,
 				EF5478321DD0686000279E12 /* ShareUtil.m */,
+				EFD330F11DE2874000D388E4 /* WXApiManager.h */,
+				EFD330F21DE2874000D388E4 /* WXApiManager.m */,
+				EFD330F41DE28A1500D388E4 /* WXApiRequestHandler.h */,
+				EFD330F51DE28A1500D388E4 /* WXApiRequestHandler.m */,
+				EFD330F71DE28A6800D388E4 /* WXApiResponseHandler.h */,
+				EFD330F81DE28A6800D388E4 /* WXApiResponseHandler.m */,
 			);
 			path = Utilitys;
 			sourceTree = "<group>";
@@ -754,6 +758,8 @@
 				EF54784E1DD0716B00279E12 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */,
 				EF54784F1DD0716B00279E12 /* WXMediaMessage+messageConstruct.h */,
 				EF5478501DD0716B00279E12 /* WXMediaMessage+messageConstruct.m */,
+				EFD330FD1DE28C6700D388E4 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.h */,
+				EFD330FE1DE28C6700D388E4 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -862,7 +868,7 @@
 				TargetAttributes = {
 					1887AF001DCE38D1003BF6E4 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = P4B475T4GX;
+						DevelopmentTeam = V3E42VN24K;
 						ProvisioningStyle = Automatic;
 					};
 					1887AF191DCE38D2003BF6E4 = {
@@ -1023,6 +1029,7 @@
 				EF54783D1DD0686000279E12 /* ShareUtil.m in Sources */,
 				18985A701DD5E84A00D0B702 /* RouteManager.m in Sources */,
 				1887AF091DCE38D1003BF6E4 /* AppDelegate.m in Sources */,
+				EFD330F31DE2874000D388E4 /* WXApiManager.m in Sources */,
 				EF5478681DD090A900279E12 /* MessageViewController.m in Sources */,
 				18985A481DD355D500D0B702 /* UIViewController+DismissKeyboard.m in Sources */,
 				EF5478701DD090E700279E12 /* SettingViewController.m in Sources */,
@@ -1030,6 +1037,7 @@
 				1887AF4A1DCE3ED3003BF6E4 /* AboutMeViewController.m in Sources */,
 				EF5478521DD0716B00279E12 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */,
 				18985A751DD5EF3800D0B702 /* Account.m in Sources */,
+				EFD330FF1DE28C6700D388E4 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m in Sources */,
 				18985A711DD5E84A00D0B702 /* ServerAddress.m in Sources */,
 				18985A7D1DD5FD1400D0B702 /* README.md in Sources */,
 				18985A5F1DD5E7C100D0B702 /* JKDBModel.m in Sources */,
@@ -1059,7 +1067,6 @@
 				18985A801DD8B49B00D0B702 /* ComObjectMethod.m in Sources */,
 				18985A781DD5F21900D0B702 /* UIImageView+DLGetWebImage.m in Sources */,
 				1887AF061DCE38D1003BF6E4 /* main.m in Sources */,
-				EF5478641DD08BA200279E12 /* requsetHandler.m in Sources */,
 				1887AF5F1DCEF016003BF6E4 /* LoginInViewController.m in Sources */,
 				18985A521DD35A1C00D0B702 /* WithdrawRecordViewController.m in Sources */,
 				EF5478781DD0911500279E12 /* RankingViewController.m in Sources */,
@@ -1067,6 +1074,8 @@
 				18985A7B1DD5F45300D0B702 /* UIScreen+Extension.m in Sources */,
 				18985A181DD0B4FA00D0B702 /* MyIntegralViewController.m in Sources */,
 				18985A471DD355D500D0B702 /* UINavigationBar+DLNavigationBar.m in Sources */,
+				EFD330F61DE28A1500D388E4 /* WXApiRequestHandler.m in Sources */,
+				EFD330F91DE28A6800D388E4 /* WXApiResponseHandler.m in Sources */,
 				18985A0A1DCF747B00D0B702 /* RewardVIew.m in Sources */,
 				EF999EC81DD17EF700C8D3F7 /* MessageCell.m in Sources */,
 				6FF24A621DE0997A00CCFE02 /* AdvertiseModel.m in Sources */,
@@ -1219,7 +1228,8 @@
 			baseConfigurationReference = 560582BD17AAB10E22EB1715 /* Pods-VeinOfBusiness.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = P4B475T4GX;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = V3E42VN24K;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VeinOfBusiness/Helper/PchFile/VeinPrefixHeader.pch";
 				INFOPLIST_FILE = VeinOfBusiness/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1253,7 +1263,8 @@
 			baseConfigurationReference = 06DF21112277A9960E206003 /* Pods-VeinOfBusiness.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = P4B475T4GX;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = V3E42VN24K;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VeinOfBusiness/Helper/PchFile/VeinPrefixHeader.pch";
 				INFOPLIST_FILE = VeinOfBusiness/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
