@@ -5,4 +5,5 @@ target ‘VeinOfBusiness’ do
   pod 'MJExtension', '~> 3.0.13'
   pod 'SOCKit', '~> 1.1'
   pod 'YYWebImage', '~> 1.0.4'
+  pod 'MJRefresh', '~> 3.1.12'
 end

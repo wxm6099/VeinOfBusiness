@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class AdvertiseModel;
+
+
 @interface TaskWebViewController : UIViewController
+
+@property (nonatomic, strong)AdvertiseModel *model;
+
 
 @end

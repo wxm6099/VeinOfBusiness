@@ -5,8 +5,9 @@
 //  Created by Apple on 16/11/6.
 //  Copyright © 2016年 Apple. All rights reserved.
 //
-
+#import "AdvertiseModel.h"
 #import "TaskWebViewController.h"
+#import "RestfulAPIRequestTool.h"
 
 @interface TaskWebViewController ()
 @property (weak, nonatomic) IBOutlet UIWebView *myWebView;
@@ -24,10 +25,16 @@
     
     [button setTitle:@"分享" forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
-    
-    NSURL* url = [NSURL URLWithString:@"http://www.baidu.com"];//创建URL
+    NSURL* url = [NSURL URLWithString:self.model.link];//创建URL
     NSURLRequest* request = [NSURLRequest requestWithURL:url];//创建NSURLRequest
     [self.myWebView loadRequest:request];
+    
+    NSDictionary *dic = @{@"adId": self.model.adId};
+    [RestfulAPIRequestTool routeName:@"ad_open" requestModel:dic useKeys:[dic allKeys] success:^(id json) {
+        NSLog(@"反馈数据为%@", json);
+    } failure:^(id errorJson) {
+        
+    }];
     
 }
 
@@ -35,6 +42,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)setModel:(AdvertiseModel *)model
+{
+    _model = model;
+    
+    
+}
+
 
 
 

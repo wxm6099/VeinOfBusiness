@@ -42,5 +42,14 @@
         <key>routeURL</key>
         <string>ad/getad</string>
     </dict>
+    <dict>
+        <key>routeMethod</key>
+        <string>POST</string>
+        <key>routeName</key>
+        <string>ad_open</string>
+        <key>routeURL</key>
+        <string>ad/open</string>
+    </dict>
+    
 </array>
 </plist>

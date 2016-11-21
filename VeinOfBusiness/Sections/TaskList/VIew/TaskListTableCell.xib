@@ -34,7 +34,6 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LXo-Sk-FxY">
-                        <color key="backgroundColor" red="0.46335222898059747" green="0.12866419760820028" blue="0.098705597499493272" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="BSy-DO-oWL"/>
                         </constraints>

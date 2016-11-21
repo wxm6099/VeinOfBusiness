@@ -49,6 +49,8 @@
  * 标题
  */
 @property (nonatomic, copy)NSString *title;
-
-
+/**
+ * 添加时间
+ */
+@property (nonatomic, copy)NSString *addTime;
 @end

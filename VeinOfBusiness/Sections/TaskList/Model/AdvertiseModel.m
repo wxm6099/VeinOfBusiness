@@ -10,4 +10,10 @@
 
 @implementation AdvertiseModel
 
+
+- (id)valueForUndefinedKey:(NSString *)key
+{
+    return self;
+}
+
 @end
