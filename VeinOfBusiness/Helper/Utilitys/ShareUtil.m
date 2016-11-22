@@ -20,7 +20,7 @@
 //    NSString *tagName = [dataDic objectForKey:@"tagName"];
     NSString *title = [dataDic objectForKey:@"title"];
     NSString *descr = [dataDic objectForKey:@"description"];
-    NSString *imgUrl = [dataDic objectForKey:@"imgUrl"];
+//    NSString *imgUrl = [dataDic objectForKey:@"imgUrl"];
     
 //    if ([CommonUtil getByteOfString:title] > 512) {
 //        title = [CommonUtil getShareString:title];
@@ -29,11 +29,18 @@
 //        descr = [CommonUtil getShareString:descr];
 //    }
     
+//    BOOL share = [WXApiRequestHandler sendLinkURL:url
+//                                          TagName:nil
+//                                            Title:title
+//                                      Description:descr
+//                                       ThumbImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imgUrl]]]
+//                                          InScene:WXSceneSession];
+    
     BOOL share = [WXApiRequestHandler sendLinkURL:url
                                           TagName:nil
                                             Title:title
                                       Description:descr
-                                       ThumbImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imgUrl]]]
+                                       ThumbImage:[UIImage imageNamed:@"logo_96.png"]
                                           InScene:WXSceneSession];
     
     NSLog(@"share = %u",share);
@@ -53,7 +60,7 @@
 //    NSString *tagName = [dataDic objectForKey:@"tagName"];
     NSString *title = [dataDic objectForKey:@"title"];
     NSString *descr = [dataDic objectForKey:@"description"];
-    NSString *imgUrl = [dataDic objectForKey:@"imgUrl"];
+//    NSString *imgUrl = [dataDic objectForKey:@"imgUrl"];
     
 //    if ([CommonUtil getByteOfString:title] > 512) {
 //        title = [CommonUtil getShareString:title];
@@ -66,7 +73,7 @@
                                           TagName:nil
                                             Title:title
                                       Description:descr
-                                       ThumbImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imgUrl]]]
+                                       ThumbImage:[UIImage imageNamed:@"logo_96.png"]
                                           InScene:WXSceneTimeline];
     
     NSLog(@"share = %u",share);
