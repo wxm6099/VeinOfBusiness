@@ -90,5 +90,95 @@
 		<key>routeURL</key>
 		<string>personalcenter/msginfo</string>
 	</dict>
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <dict>
+         <key>routeMethod</key>
+         <string>POST</string>
+         <key>routeName</key>
+         <string>ad_forward</string>
+         <key>routeURL</key>
+         <string>ad/forward</string>
+     </dict>
+     <dict>
+         <key>routeMethod</key>
+         <string>POST</string>
+         <key>routeName</key>
+         <string>ad_open</string>
+         <key>routeURL</key>
+         <string>ad/open</string>
+     </dict>
 </array>
 </plist>

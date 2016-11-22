@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VeinOfBusiness/Sections/TaskList/Controller/TaskWebViewController.m"
-            timestampString = "501269137.850914"
+            timestampString = "501493109.364433"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -52,11 +52,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VeinOfBusiness/Sections/TaskList/Controller/TaskWebViewController.m"
-            timestampString = "501269137.850914"
+            timestampString = "501493109.364433"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "-setModel:"
             landmarkType = "7">
          </BreakpointContent>
