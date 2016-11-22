@@ -1,12 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RedEnvelopeViewController">
             <connections>
+                <outlet property="collectionHeight" destination="zTP-Gy-ipO" id="guR-7p-ooe"/>
+                <outlet property="collectionTop" destination="mUv-tn-fk8" id="o8v-ca-O9y"/>
+                <outlet property="collectionWidth" destination="0JZ-Cm-Jdo" id="YCI-u3-ufN"/>
+                <outlet property="myCollectionView" destination="b60-bo-m8y" id="PN3-GB-2PO"/>
+                <outlet property="myLabel" destination="l7l-AJ-Gnm" id="apj-dF-pEx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +20,73 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="红包.png" translatesAutoresizingMaskIntoConstraints="NO" id="RxR-9T-aUh"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcm-Kf-3ph">
+                    <color key="backgroundColor" red="0.99638372659683228" green="0.85274642705917358" blue="0.21388283371925354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="bhK-86-Pa9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="返  回">
+                        <color key="titleColor" red="0.51951569318771362" green="0.12512362003326416" blue="0.11156962066888809" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="returnButtonAction:" destination="-1" eventType="touchUpInside" id="xp9-y3-PXj"/>
+                    </connections>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="b60-bo-m8y">
+                    <frame key="frameInset" minX="67" minY="293" width="251" height="144"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="251" id="0JZ-Cm-Jdo"/>
+                        <constraint firstAttribute="height" constant="144" id="zTP-Gy-ipO"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TQK-qY-UaI">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7l-AJ-Gnm">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.75920337438583374" green="0.67236483097076416" blue="0.53342682123184204" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hcm-Kf-3ph" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="36" id="DpD-9j-HqG"/>
+                <constraint firstItem="RxR-9T-aUh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QgJ-bh-eu4"/>
+                <constraint firstItem="l7l-AJ-Gnm" firstAttribute="top" secondItem="b60-bo-m8y" secondAttribute="top" id="SVH-Vn-vNn"/>
+                <constraint firstItem="l7l-AJ-Gnm" firstAttribute="bottom" secondItem="b60-bo-m8y" secondAttribute="bottom" id="Sd3-aw-SHf"/>
+                <constraint firstAttribute="bottom" secondItem="hcm-Kf-3ph" secondAttribute="bottom" constant="60" id="Xju-dR-Goc"/>
+                <constraint firstAttribute="trailing" secondItem="RxR-9T-aUh" secondAttribute="trailing" id="a3X-1N-u63"/>
+                <constraint firstItem="b60-bo-m8y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="293" id="mUv-tn-fk8"/>
+                <constraint firstAttribute="bottom" secondItem="RxR-9T-aUh" secondAttribute="bottom" id="mYw-dv-uyU"/>
+                <constraint firstItem="l7l-AJ-Gnm" firstAttribute="centerX" secondItem="b60-bo-m8y" secondAttribute="centerX" id="maA-k7-oCl"/>
+                <constraint firstItem="l7l-AJ-Gnm" firstAttribute="width" secondItem="b60-bo-m8y" secondAttribute="width" id="pab-Yk-bbR"/>
+                <constraint firstItem="RxR-9T-aUh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="rpJ-t2-6Fg"/>
+                <constraint firstItem="b60-bo-m8y" firstAttribute="centerX" secondItem="RxR-9T-aUh" secondAttribute="centerX" id="yj7-pp-jm7"/>
+                <constraint firstAttribute="trailing" secondItem="hcm-Kf-3ph" secondAttribute="trailing" constant="36" id="zrx-xB-AB7"/>
+            </constraints>
+            <point key="canvasLocation" x="269.5" y="158.5"/>
         </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3pF-BK-hjd">
+            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <state key="normal" title="Button"/>
+        </button>
     </objects>
+    <resources>
+        <image name="红包.png" width="375" height="667"/>
+    </resources>
 </document>

@@ -10,4 +10,12 @@
 
 @implementation IntegralModel
 
+
+
+- (id)valueForUndefinedKey:(NSString *)key
+{
+    return self;
+}
+
+
 @end

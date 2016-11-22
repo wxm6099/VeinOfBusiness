@@ -83,6 +83,13 @@
 		18985A7D1DD5FD1400D0B702 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 18985A7C1DD5FD1400D0B702 /* README.md */; };
 		18985A801DD8B49B00D0B702 /* ComObjectMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 18985A7F1DD8B49B00D0B702 /* ComObjectMethod.m */; };
 		6F706E771DE42F6D004F3A38 /* logo_96.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F706E761DE42F6D004F3A38 /* logo_96.png */; };
+		6F706E831DE45D10004F3A38 /* 红包.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F706E821DE45D10004F3A38 /* 红包.png */; };
+		6F706E861DE47E43004F3A38 /* IntegralModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F706E851DE47E43004F3A38 /* IntegralModel.m */; };
+		6F706E8F1DE4AC01004F3A38 /* DBcommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F706E881DE4AC01004F3A38 /* DBcommonUtils.m */; };
+		6F706E901DE4AC01004F3A38 /* DBCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F706E8A1DE4AC01004F3A38 /* DBCollectionViewCell.m */; };
+		6F706E911DE4AC01004F3A38 /* HeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F706E8C1DE4AC01004F3A38 /* HeaderCollectionReusableView.m */; };
+		6F706E921DE4AC01004F3A38 /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F706E8E1DE4AC01004F3A38 /* CalendarView.m */; };
+		6F706E941DE4BDF2004F3A38 /* icon_checkInPage.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F706E931DE4BDF2004F3A38 /* icon_checkInPage.png */; };
 		6FF24A621DE0997A00CCFE02 /* AdvertiseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF24A611DE0997A00CCFE02 /* AdvertiseModel.m */; };
 		706B9227812C3A38DD95C652 /* libPods-VeinOfBusiness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0E0D5730AC67B8AB90CBD /* libPods-VeinOfBusiness.a */; };
 		EF4E23C31DD4A02600B77017 /* RankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4E23C11DD4A02600B77017 /* RankingCell.m */; };
@@ -322,6 +329,18 @@
 		560582BD17AAB10E22EB1715 /* Pods-VeinOfBusiness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeinOfBusiness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VeinOfBusiness/Pods-VeinOfBusiness.debug.xcconfig"; sourceTree = "<group>"; };
 		6F706E581DE33F73004F3A38 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		6F706E761DE42F6D004F3A38 /* logo_96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_96.png; sourceTree = "<group>"; };
+		6F706E821DE45D10004F3A38 /* 红包.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "红包.png"; sourceTree = "<group>"; };
+		6F706E841DE47E43004F3A38 /* IntegralModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegralModel.h; sourceTree = "<group>"; };
+		6F706E851DE47E43004F3A38 /* IntegralModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegralModel.m; sourceTree = "<group>"; };
+		6F706E871DE4AC01004F3A38 /* DBcommonUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBcommonUtils.h; sourceTree = "<group>"; };
+		6F706E881DE4AC01004F3A38 /* DBcommonUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBcommonUtils.m; sourceTree = "<group>"; };
+		6F706E891DE4AC01004F3A38 /* DBCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBCollectionViewCell.h; sourceTree = "<group>"; };
+		6F706E8A1DE4AC01004F3A38 /* DBCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBCollectionViewCell.m; sourceTree = "<group>"; };
+		6F706E8B1DE4AC01004F3A38 /* HeaderCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		6F706E8C1DE4AC01004F3A38 /* HeaderCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderCollectionReusableView.m; sourceTree = "<group>"; };
+		6F706E8D1DE4AC01004F3A38 /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
+		6F706E8E1DE4AC01004F3A38 /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
+		6F706E931DE4BDF2004F3A38 /* icon_checkInPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_checkInPage.png; sourceTree = "<group>"; };
 		6FF24A601DE0997A00CCFE02 /* AdvertiseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertiseModel.h; sourceTree = "<group>"; };
 		6FF24A611DE0997A00CCFE02 /* AdvertiseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertiseModel.m; sourceTree = "<group>"; };
 		EF4E23C01DD4A02600B77017 /* RankingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RankingCell.h; path = VeinOfBusiness/Sections/AboutMy/Controller/RankingCell.h; sourceTree = SOURCE_ROOT; };
@@ -610,6 +629,8 @@
 		1887AF411DCE3E9D003BF6E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6F706E841DE47E43004F3A38 /* IntegralModel.h */,
+				6F706E851DE47E43004F3A38 /* IntegralModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -625,6 +646,14 @@
 				18985A541DD35CBB00D0B702 /* WithdrawRecordTableCell.h */,
 				18985A551DD35CBB00D0B702 /* WithdrawRecordTableCell.m */,
 				18985A561DD35CBB00D0B702 /* WithdrawRecordTableCell.xib */,
+				6F706E871DE4AC01004F3A38 /* DBcommonUtils.h */,
+				6F706E881DE4AC01004F3A38 /* DBcommonUtils.m */,
+				6F706E891DE4AC01004F3A38 /* DBCollectionViewCell.h */,
+				6F706E8A1DE4AC01004F3A38 /* DBCollectionViewCell.m */,
+				6F706E8B1DE4AC01004F3A38 /* HeaderCollectionReusableView.h */,
+				6F706E8C1DE4AC01004F3A38 /* HeaderCollectionReusableView.m */,
+				6F706E8D1DE4AC01004F3A38 /* CalendarView.h */,
+				6F706E8E1DE4AC01004F3A38 /* CalendarView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -714,9 +743,11 @@
 		18985A491DD3561E00D0B702 /* icon */ = {
 			isa = PBXGroup;
 			children = (
+				6F706E821DE45D10004F3A38 /* 红包.png */,
 				6F706E761DE42F6D004F3A38 /* logo_96.png */,
 				180569FE1DDB3D60002CC3BC /* icon_rewardBlueLine.png */,
 				180569E01DDB38D9002CC3BC /* Bitmap.png */,
+				6F706E931DE4BDF2004F3A38 /* icon_checkInPage.png */,
 				180569E11DDB38D9002CC3BC /* icon_backCircle.png */,
 				180569E21DDB38D9002CC3BC /* icon_checkIn.png */,
 				180569E31DDB38D9002CC3BC /* icon_grayRight.png */,
@@ -952,8 +983,8 @@
 				TargetAttributes = {
 					1887AF001DCE38D1003BF6E4 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 9UXRRZ383G;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = P4B475T4GX;
+						ProvisioningStyle = Automatic;
 					};
 					1887AF191DCE38D2003BF6E4 = {
 						CreatedOnToolsVersion = 8.0;
@@ -1077,6 +1108,7 @@
 				18985A391DD1433E00D0B702 /* AccountBalanceViewController.xib in Resources */,
 				1887AF551DCE3EFA003BF6E4 /* TaskListViewController.xib in Resources */,
 				1887AF111DCE38D2003BF6E4 /* Assets.xcassets in Resources */,
+				6F706E941DE4BDF2004F3A38 /* icon_checkInPage.png in Resources */,
 				EF999EB71DD16C3300C8D3F7 /* PasswordOperationViewController.xib in Resources */,
 				1887AF601DCEF016003BF6E4 /* LoginInViewController.xib in Resources */,
 				180569F11DDB38D9002CC3BC /* icon_checkIn.png in Resources */,
@@ -1098,6 +1130,7 @@
 				18985A191DD0B4FA00D0B702 /* MyIntegralViewController.xib in Resources */,
 				18985A281DD1346700D0B702 /* InviteViewController.xib in Resources */,
 				180569F71DDB38D9002CC3BC /* Rectangle 28.png in Resources */,
+				6F706E831DE45D10004F3A38 /* 红包.png in Resources */,
 				18985A581DD35CBB00D0B702 /* WithdrawRecordTableCell.xib in Resources */,
 				180569F41DDB38D9002CC3BC /* icon_invite.png in Resources */,
 				EF999EC41DD175FB00C8D3F7 /* UserViewController.xib in Resources */,
@@ -1186,6 +1219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF54783D1DD0686000279E12 /* ShareUtil.m in Sources */,
+				6F706E861DE47E43004F3A38 /* IntegralModel.m in Sources */,
 				18985A701DD5E84A00D0B702 /* RouteManager.m in Sources */,
 				1887AF091DCE38D1003BF6E4 /* AppDelegate.m in Sources */,
 				EFD330F31DE2874000D388E4 /* WXApiManager.m in Sources */,
@@ -1212,8 +1246,10 @@
 				18985A6C1DD5E84A00D0B702 /* FixTemplateRouteTool.m in Sources */,
 				18985A381DD1433E00D0B702 /* AccountBalanceViewController.m in Sources */,
 				18985A1D1DD0BC2300D0B702 /* IntegralExchangeViewController.m in Sources */,
+				6F706E921DE4AC01004F3A38 /* CalendarView.m in Sources */,
 				18985A461DD355D500D0B702 /* UIBarButtonItem+Extension.m in Sources */,
 				18985A221DD0C26C00D0B702 /* CheckInViewController.m in Sources */,
+				6F706E901DE4AC01004F3A38 /* DBCollectionViewCell.m in Sources */,
 				18985A131DD0B01300D0B702 /* RewardListTableCell.m in Sources */,
 				EF999ECC1DD185A100C8D3F7 /* MessageModel.m in Sources */,
 				18985A0E1DD04D6700D0B702 /* RewardListViewController.m in Sources */,
@@ -1221,6 +1257,7 @@
 				18985A5E1DD5E7C100D0B702 /* JKDBHelper.m in Sources */,
 				18985A341DD13BCD00D0B702 /* DLNavigationController.m in Sources */,
 				18985A4E1DD3569300D0B702 /* UIView+Extension.m in Sources */,
+				6F706E8F1DE4AC01004F3A38 /* DBcommonUtils.m in Sources */,
 				1887AF6E1DCF1B82003BF6E4 /* TaskWebViewController.m in Sources */,
 				1887AF691DCF16BB003BF6E4 /* TaskListTableCell.m in Sources */,
 				18985A801DD8B49B00D0B702 /* ComObjectMethod.m in Sources */,
@@ -1236,6 +1273,7 @@
 				EFD330F61DE28A1500D388E4 /* WXApiRequestHandler.m in Sources */,
 				EFD330F91DE28A6800D388E4 /* WXApiResponseHandler.m in Sources */,
 				18985A0A1DCF747B00D0B702 /* RewardVIew.m in Sources */,
+				6F706E911DE4AC01004F3A38 /* HeaderCollectionReusableView.m in Sources */,
 				EF999EC81DD17EF700C8D3F7 /* MessageCell.m in Sources */,
 				6FF24A621DE0997A00CCFE02 /* AdvertiseModel.m in Sources */,
 			);
@@ -1394,8 +1432,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: hang xie (B4YZJ89JW8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hang xie (B4YZJ89JW8)";
-				DEVELOPMENT_TEAM = 9UXRRZ383G;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = P4B475T4GX;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VeinOfBusiness/Helper/PchFile/VeinPrefixHeader.pch";
 				INFOPLIST_FILE = VeinOfBusiness/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1421,8 +1459,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Today.app.VeinOfBusiness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "753e56eb-3292-4de3-afb9-d94f94a9a033";
-				PROVISIONING_PROFILE_SPECIFIER = Wildcard_Development;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1432,8 +1470,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: hang xie (B4YZJ89JW8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hang xie (B4YZJ89JW8)";
-				DEVELOPMENT_TEAM = 9UXRRZ383G;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = P4B475T4GX;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VeinOfBusiness/Helper/PchFile/VeinPrefixHeader.pch";
 				INFOPLIST_FILE = VeinOfBusiness/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1459,8 +1497,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Today.app.VeinOfBusiness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "753e56eb-3292-4de3-afb9-d94f94a9a033";
-				PROVISIONING_PROFILE_SPECIFIER = Wildcard_Development;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

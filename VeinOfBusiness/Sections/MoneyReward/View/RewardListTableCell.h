@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class AdvertiseModel;
 @interface RewardListTableCell : UITableViewCell
-
+@property (nonatomic, strong)AdvertiseModel *cellModel;
 @end

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="backViewThree" destination="Vzp-lX-AjQ" id="hvc-UG-S29"/>
                 <outlet property="backViewTwo" destination="rC3-tv-WFI" id="Hc3-uW-Ilc"/>
+                <outlet property="currentNum" destination="DDU-tR-aeV" id="KIg-mb-MCE"/>
                 <outlet property="historyIncome" destination="cwU-Ij-cGI" id="KDm-ON-vdl"/>
                 <outlet property="surplusMoneyLabel" destination="R35-ZN-ISW" id="HFN-vk-aIO"/>
                 <outlet property="todayIncome" destination="Yc6-xH-GyO" id="zES-Oa-TBY"/>
@@ -161,7 +162,7 @@
                                         <constraint firstAttribute="width" constant="42" id="uR9-DV-IEN"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <color key="textColor" red="0.13333333333333333" green="0.43137254901960786" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0,00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R35-ZN-ISW">
@@ -170,7 +171,7 @@
                                         <constraint firstAttribute="height" constant="33" id="bj7-vb-U3g"/>
                                         <constraint firstAttribute="width" constant="100" id="dxq-8x-JpA"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                     <color key="textColor" red="0.094117647058823528" green="0.74901960784313726" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>

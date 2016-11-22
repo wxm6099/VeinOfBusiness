@@ -125,9 +125,8 @@
 - (void)redEnvelopButtonAction:(UIButton *)sender
 {
     
-    
-    
     RedEnvelopeViewController *red = [[RedEnvelopeViewController alloc]initWithNibName:@"RedEnvelopeViewController" bundle:nil];
+    
     [self.navigationController pushViewController:red animated:YES];
     
 }

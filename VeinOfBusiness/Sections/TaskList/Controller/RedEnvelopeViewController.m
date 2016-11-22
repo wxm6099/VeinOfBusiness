@@ -9,6 +9,11 @@
 #import "RedEnvelopeViewController.h"
 
 @interface RedEnvelopeViewController ()
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionWidth;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionTop;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionHeight;
+@property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
+@property (weak, nonatomic) IBOutlet UILabel *myLabel;
 
 @end
 
@@ -16,22 +21,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.collectionWidth.constant = DLScreenWidth / (375 / 275.0);
+    
+    self.collectionHeight.constant = self.collectionWidth.constant / (309 / 181.0);
+    
+    //轻易不要动这行代码!!! 写的太牛逼了!!!
+    self.collectionTop.constant = ((DLScreenHeight - self.collectionHeight.constant) + (DLScreenHeight / (667 / (254.0 - 208.0)))) / 2.0  + ((DLScreenHeight / (667 / 181.0) - self.collectionHeight.constant)) / 2.0;
+    self.myLabel.text = @"\n你的红包库空空的\n\n\n快去阅读资讯,收获红包吧\n";
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+
+- (IBAction)returnButtonAction:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
-*/
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
 
 @end

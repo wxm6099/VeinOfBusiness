@@ -160,9 +160,30 @@
      
      
      
-     
-     
-     
+     <dict>
+         <key>routeMethod</key>
+         <string>POST</string>
+         <key>routeName</key>
+         <string>reward_sign</string>
+         <key>routeURL</key>
+         <string>reward/sign</string>
+     </dict>
+     <dict>
+         <key>routeMethod</key>
+         <string>GET</string>
+         <key>routeName</key>
+         <string>reward_signhistory</string>
+         <key>routeURL</key>
+         <string>reward/signhistory</string>
+     </dict>
+     <dict>
+         <key>routeMethod</key>
+         <string>GET</string>
+         <key>routeName</key>
+         <string>reward_index</string>
+         <key>routeURL</key>
+         <string>reward/index</string>
+     </dict>
      
      <dict>
          <key>routeMethod</key>

@@ -7,6 +7,9 @@
 //
 
 #import "RewardListTableCell.h"
+#import "AdvertiseModel.h"
+#import "UIImageView+DLGetWebImage.h"
+
 
 @interface RewardListTableCell()
 
@@ -30,7 +33,7 @@
     
     self.detail.text = @"发布时间:2016/12/23\n剩余次数:45457次\n任务单价:\n0.58元一次";
     
-    
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     
     
 }
@@ -40,5 +43,13 @@
 
     // Configure the view for the selected state
 }
-
+- (void)setCellModel:(AdvertiseModel *)cellModel
+{
+    _cellModel = cellModel;
+    
+    [self.myImageView dlGetSpecialSizedWebImageWithString:cellModel.pic placeholderImage:nil];
+    
+    self.title.text = cellModel.title;
+    self.detail.text = [NSString stringWithFormat:@"发布时间:%@\n转发次数:%@\n任务积分:%@", cellModel.addTime, cellModel.forwardTimes, cellModel.perEarn];
+}
 @end

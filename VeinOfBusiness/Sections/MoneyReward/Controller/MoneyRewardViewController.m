@@ -5,7 +5,7 @@
 //  Created by Apple on 16/11/6.
 //  Copyright © 2016年 Apple. All rights reserved.
 //
-
+#import "Account.h"
 #import "MoneyRewardViewController.h"
 #import "RewardVIew.h"
 #import "RewardListViewController.h"
@@ -13,8 +13,8 @@
 #import "CheckInViewController.h"
 #import "AccountBalanceViewController.h"
 #import "InviteViewController.h"
-
-
+#import "RestfulAPIRequestTool.h"
+#import "IntegralModel.h"
 @interface MoneyRewardViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *surplusMoneyLabel;
@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIView *backViewTwo;
 @property (weak, nonatomic) IBOutlet UIView *backViewThree;
 @property (weak, nonatomic) IBOutlet UIView *topBackTempView;
+@property (weak, nonatomic) IBOutlet UILabel *currentNum;
 
 @end
 
@@ -30,7 +31,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self netRequest];
+    
     // Do any additional setup after loading the view from its nib
+    
     
     
     UITapGestureRecognizer *topTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(topBackViewAction:)];
@@ -63,10 +68,58 @@
         [view addGestureRecognizer:tap];
         
         [self.backViewThree addSubview:view];
-        
+            }
+    NSArray *modelArray = [IntegralModel findAll];
+    if (modelArray.count > 0) {
+        IntegralModel *model = modelArray[0];
+        [self reloadInterfaceViewWithModel:model];
     }
     
+    
 }
+
+
+
+
+
+- (void)netRequest{
+    
+    Account *acc = [Account findAll][0];
+    
+    NSDictionary *dic = @{@"customerId": acc.customerId};
+    
+    [RestfulAPIRequestTool routeName:@"reward_index" requestModel:dic useKeys:[dic allKeys] success:^(id json) {
+        
+        NSLog(@"取得的积分页面数据为 %@", json);
+        
+        NSDictionary *dic = json[@"data"];
+        //先清一下表
+        [IntegralModel clearTable];
+        
+        IntegralModel *model = [IntegralModel new];
+        [model setValuesForKeysWithDictionary:dic];
+        [model save];
+        //刷新界面
+        [self reloadInterfaceViewWithModel:model];
+        
+    } failure:^(id errorJson) {
+        
+        
+    }];
+    
+}
+
+- (void)reloadInterfaceViewWithModel: (IntegralModel *)model{
+    
+    self.surplusMoneyLabel.text = model.curMoney;
+    self.todayIncome.text = [NSString stringWithFormat:@"今日收益(积分)\n\n%@", model.todayPoint];
+    self.historyIncome.text = [NSString stringWithFormat:@"累计收益(积分)\n\n%@", model.curPoint];
+    
+    self.currentNum.text = [NSString stringWithFormat:@"当前任务 %@", model.sumReward];
+    
+}
+
+
 
 - (void)topBackViewAction:(UITapGestureRecognizer *)sender{
     AccountBalanceViewController *ac = [[AccountBalanceViewController alloc]initWithNibName:@"AccountBalanceViewController" bundle:nil];
