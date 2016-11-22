@@ -35,6 +35,8 @@
     [self.myTableView registerNib:[UINib nibWithNibName:@"TaskListTableCell" bundle:nil] forCellReuseIdentifier:@"TaskListTableCell"];
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 10, 10)];
+    self.myTableView.tableFooterView = view;
     self.myTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self netRequest:0];
         
@@ -99,9 +101,17 @@
         [self.myTableView reloadData];
         [self endRefresh];
         
+        
         if (![page isEqualToString:@"1"] && dataArray.count == 0) {
             [self.myTableView.mj_footer endRefreshingWithNoMoreData];
         }
+        
+        // 在首次请求就不满足10条数据的情况下结束加载更多
+        
+        if ([page isEqualToString:@"1"] &&dataArray.count < 10){
+            [self.myTableView.mj_footer endRefreshingWithNoMoreData];
+        }
+        
         
     } failure:^(id errorJson) {
         

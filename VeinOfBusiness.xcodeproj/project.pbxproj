@@ -134,6 +134,69 @@
 			remoteGlobalIDString = 1887AF001DCE38D1003BF6E4;
 			remoteInfo = VeinOfBusiness;
 		};
+		6F706E641DE33F73004F3A38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F706E581DE33F73004F3A38 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5E9457000AD42331372DFD588206E9F3;
+			remoteInfo = AFNetworking;
+		};
+		6F706E661DE33F73004F3A38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F706E581DE33F73004F3A38 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6453DAD45A43F64FC347C41DD15573A0;
+			remoteInfo = FMDB;
+		};
+		6F706E681DE33F73004F3A38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F706E581DE33F73004F3A38 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B1B4417F52CE0CF5B665B1C06373B0A8;
+			remoteInfo = MJExtension;
+		};
+		6F706E6A1DE33F73004F3A38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F706E581DE33F73004F3A38 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DB9D433BA4BD92230899787636CC1528;
+			remoteInfo = MJRefresh;
+		};
+		6F706E6C1DE33F73004F3A38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F706E581DE33F73004F3A38 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C6254A821DCDC55C239CC0388EA17058;
+			remoteInfo = "Pods-VeinOfBusiness";
+		};
+		6F706E6E1DE33F73004F3A38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F706E581DE33F73004F3A38 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 740ACACE820D170E6934290729D7FDC2;
+			remoteInfo = SOCKit;
+		};
+		6F706E701DE33F73004F3A38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F706E581DE33F73004F3A38 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 82ADAA452630131E4CBFD0B406659A8E;
+			remoteInfo = YYCache;
+		};
+		6F706E721DE33F73004F3A38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F706E581DE33F73004F3A38 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E7507D369B1DA45BBA67CD62B9057710;
+			remoteInfo = YYImage;
+		};
+		6F706E741DE33F73004F3A38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F706E581DE33F73004F3A38 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2AA97692E0490869D144B6020A72515B;
+			remoteInfo = YYWebImage;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -256,6 +319,7 @@
 		18985A7F1DD8B49B00D0B702 /* ComObjectMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComObjectMethod.m; sourceTree = "<group>"; };
 		37B0E0D5730AC67B8AB90CBD /* libPods-VeinOfBusiness.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VeinOfBusiness.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		560582BD17AAB10E22EB1715 /* Pods-VeinOfBusiness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeinOfBusiness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VeinOfBusiness/Pods-VeinOfBusiness.debug.xcconfig"; sourceTree = "<group>"; };
+		6F706E581DE33F73004F3A38 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		6FF24A601DE0997A00CCFE02 /* AdvertiseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertiseModel.h; sourceTree = "<group>"; };
 		6FF24A611DE0997A00CCFE02 /* AdvertiseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertiseModel.m; sourceTree = "<group>"; };
 		EF4E23C01DD4A02600B77017 /* RankingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RankingCell.h; path = VeinOfBusiness/Sections/AboutMy/Controller/RankingCell.h; sourceTree = SOURCE_ROOT; };
@@ -726,10 +790,27 @@
 		6D11885B9268F78F86C73D89 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				6F706E581DE33F73004F3A38 /* Pods.xcodeproj */,
 				560582BD17AAB10E22EB1715 /* Pods-VeinOfBusiness.debug.xcconfig */,
 				06DF21112277A9960E206003 /* Pods-VeinOfBusiness.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6F706E591DE33F73004F3A38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F706E651DE33F73004F3A38 /* libAFNetworking.a */,
+				6F706E671DE33F73004F3A38 /* libFMDB.a */,
+				6F706E691DE33F73004F3A38 /* libMJExtension.a */,
+				6F706E6B1DE33F73004F3A38 /* libMJRefresh.a */,
+				6F706E6D1DE33F73004F3A38 /* libPods-VeinOfBusiness.a */,
+				6F706E6F1DE33F73004F3A38 /* libSOCKit.a */,
+				6F706E711DE33F73004F3A38 /* libYYCache.a */,
+				6F706E731DE33F73004F3A38 /* libYYImage.a */,
+				6F706E751DE33F73004F3A38 /* libYYWebImage.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		EF5478281DD0686000279E12 /* Utilitys */ = {
@@ -868,7 +949,7 @@
 				TargetAttributes = {
 					1887AF001DCE38D1003BF6E4 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = V3E42VN24K;
+						DevelopmentTeam = P4B475T4GX;
 						ProvisioningStyle = Automatic;
 					};
 					1887AF191DCE38D2003BF6E4 = {
@@ -894,6 +975,12 @@
 			mainGroup = 1887AEF81DCE38D1003BF6E4;
 			productRefGroup = 1887AF021DCE38D1003BF6E4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6F706E591DE33F73004F3A38 /* Products */;
+					ProjectRef = 6F706E581DE33F73004F3A38 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1887AF001DCE38D1003BF6E4 /* VeinOfBusiness */,
@@ -902,6 +989,72 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6F706E651DE33F73004F3A38 /* libAFNetworking.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAFNetworking.a;
+			remoteRef = 6F706E641DE33F73004F3A38 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6F706E671DE33F73004F3A38 /* libFMDB.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFMDB.a;
+			remoteRef = 6F706E661DE33F73004F3A38 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6F706E691DE33F73004F3A38 /* libMJExtension.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMJExtension.a;
+			remoteRef = 6F706E681DE33F73004F3A38 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6F706E6B1DE33F73004F3A38 /* libMJRefresh.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMJRefresh.a;
+			remoteRef = 6F706E6A1DE33F73004F3A38 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6F706E6D1DE33F73004F3A38 /* libPods-VeinOfBusiness.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-VeinOfBusiness.a";
+			remoteRef = 6F706E6C1DE33F73004F3A38 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6F706E6F1DE33F73004F3A38 /* libSOCKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSOCKit.a;
+			remoteRef = 6F706E6E1DE33F73004F3A38 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6F706E711DE33F73004F3A38 /* libYYCache.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libYYCache.a;
+			remoteRef = 6F706E701DE33F73004F3A38 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6F706E731DE33F73004F3A38 /* libYYImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libYYImage.a;
+			remoteRef = 6F706E721DE33F73004F3A38 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6F706E751DE33F73004F3A38 /* libYYWebImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libYYWebImage.a;
+			remoteRef = 6F706E741DE33F73004F3A38 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1887AEFF1DCE38D1003BF6E4 /* Resources */ = {
@@ -1229,7 +1382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = V3E42VN24K;
+				DEVELOPMENT_TEAM = P4B475T4GX;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VeinOfBusiness/Helper/PchFile/VeinPrefixHeader.pch";
 				INFOPLIST_FILE = VeinOfBusiness/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1264,7 +1417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = V3E42VN24K;
+				DEVELOPMENT_TEAM = P4B475T4GX;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VeinOfBusiness/Helper/PchFile/VeinPrefixHeader.pch";
 				INFOPLIST_FILE = VeinOfBusiness/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
