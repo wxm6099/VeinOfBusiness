@@ -10,4 +10,6 @@
 
 @interface MyIntegralViewController : UIViewController
 
+@property (nonatomic, copy)NSString *myIntegral;
+
 @end

@@ -150,16 +150,31 @@
      
      
      
+     <dict>
+         <key>routeMethod</key>
+         <string>POST</string>
+         <key>routeName</key>
+         <string>reward_change</string>
+         <key>routeURL</key>
+         <string>reward/change</string>
+     </dict>
      
-     
-     
-     
-     
-     
-     
-     
-     
-     
+     <dict>
+         <key>routeMethod</key>
+         <string>POST</string>
+         <key>routeName</key>
+         <string>reward_withdraw</string>
+         <key>routeURL</key>
+         <string>reward/withdraw</string>
+     </dict>
+     <dict>
+         <key>routeMethod</key>
+         <string>POST</string>
+         <key>routeName</key>
+         <string>reward_pointhistory</string>
+         <key>routeURL</key>
+         <string>reward/pointhistory</string>
+     </dict>
      <dict>
          <key>routeMethod</key>
          <string>POST</string>

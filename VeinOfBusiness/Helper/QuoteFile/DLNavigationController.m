@@ -49,6 +49,15 @@
         // 设置左边的返回按钮
         viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(back) image:@"return2" highImage:@""];
     }
+    
+    
+    //所有得页面都进行键盘隐藏事件的监听
+    [viewController setupForDismissKeyboard];
+    if ([[UIApplication sharedApplication].keyWindow viewWithTag:49526]) {
+        [[[UIApplication sharedApplication].keyWindow viewWithTag:49526] removeFromSuperview];
+        [[[UIApplication sharedApplication].keyWindow viewWithTag:49527] removeFromSuperview];
+    }
+    
     [super pushViewController:viewController animated:YES];
     
 }

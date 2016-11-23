@@ -37,7 +37,7 @@
     
     self.money = [[UILabel alloc]initWithFrame:CGRectMake(20, 0, DLScreenWidth, 50)];
     self.money.font = [UIFont systemFontOfSize:14];
-    self.money.text = @"你本月签到已获得:1545";
+    self.money.text = @"你本月签到已获得:0";
     [tempView addSubview:self.money];
     [self.myScrollView addSubview:tempView];
     
@@ -70,10 +70,11 @@
         NSString *status = json[@"status"];
         
         if ([status isEqualToString:@"success"]) {
-            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"签到成功!" message:[NSString stringWithFormat:@"今天获取%@积分,再接再厉!", json[@"data"][@"signHistory"][@"point"]] delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil];
+            NSDictionary * todayDic = [json[@"data"][@"signHistory"] lastObject];
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"签到成功!" message:[NSString stringWithFormat:@"今天获取%@积分,再接再厉!", todayDic[@"point"]] delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil];
             [alert show];
         }
-        
+        NSLog(@"");
         
     } failure:^(id errorJson) {
         

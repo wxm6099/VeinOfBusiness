@@ -56,7 +56,7 @@
     NSDate *dateB = [dateFormatter dateFromString:anotherDay];
     
     NSComparisonResult result = [dateA compare:dateB];
-    NSLog(@"date1 : %@, date2 : %@", oneDay, anotherDay);
+//    NSLog(@"date1 : %@, date2 : %@", oneDay, anotherDay);
     if (result == NSOrderedDescending) {
         //NSLog(@"Date1  is in the future");
         return 1;

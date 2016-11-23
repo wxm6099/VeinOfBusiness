@@ -24,7 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIView *backViewThree;
 @property (weak, nonatomic) IBOutlet UIView *topBackTempView;
 @property (weak, nonatomic) IBOutlet UILabel *currentNum;
-
+@property (nonatomic, strong)IntegralModel *model;
 @end
 
 @implementation MoneyRewardViewController
@@ -48,7 +48,7 @@
     
     CGFloat tempWidth = DLScreenWidth / 2 - 1;
     
-    NSArray *array = @[@[@"icon_checkIn", @"签到", @"最高可得100元"],
+    NSArray *array = @[@[@"icon_checkIn", @"签到", @"最高可得1元"],
                        @[@"icon_integral", @"积分兑换", @"当前积分0"],
                        @[@"icon_invite", @"邀请好友", @"邀请好友"]];
     
@@ -71,15 +71,12 @@
             }
     NSArray *modelArray = [IntegralModel findAll];
     if (modelArray.count > 0) {
-        IntegralModel *model = modelArray[0];
-        [self reloadInterfaceViewWithModel:model];
+        self.model = modelArray[0];
+        [self reloadInterfaceViewWithModel:self.model];
     }
     
     
 }
-
-
-
 
 
 - (void)netRequest{
@@ -138,6 +135,8 @@
         case 2:
         {
             MyIntegralViewController *my = [[MyIntegralViewController alloc] initWithNibName:@"MyIntegralViewController" bundle:nil];
+            my.myIntegral = self.model.curPoint;
+            
             [self.navigationController pushViewController:my animated:YES];
             
         }

@@ -52,18 +52,22 @@
 {
     
     ShareUtil * share = [ShareUtil new];
-    [share shareWeChatTimeLineWithLink:@{@"url":self.model.link, @"title":@"我在商脉发现了这个,来看看吧!", @"description":@"it is the description of balabala", @"imgUrl": @"http://img.25pp.com/uploadfile/soft/images/2015/0403/20150403125433810.jpg"}];
+    [share shareWeChatTimeLineWithLink:@{@"url":self.model.link, @"title":@"我在商脉发现了这个,来看看吧!", @"description":@"it is the description of balabala"}];
     NSLog(@"分享!");
     
     Account *acc = [Account findAll][0];
-    NSDictionary *dic = @{@"customerId": acc.customerId};
+    NSDictionary *dic = @{@"customerId": acc.customerId,@"adId": self.model.adId};
     [RestfulAPIRequestTool routeName:@"ad_forward" requestModel:dic useKeys:[dic allKeys] success:^(id json) {
         
         NSLog(@"转发结果为 %@", json);
         
+        
     } failure:^(id errorJson) {
         
     }];
+    
+    
+    
     
     
 }

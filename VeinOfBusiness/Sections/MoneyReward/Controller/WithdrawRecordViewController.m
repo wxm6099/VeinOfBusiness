@@ -27,6 +27,8 @@
     self.myTableVIew.dataSource = self;
     
     [self.myTableVIew registerNib:[UINib nibWithNibName:@"WithdrawRecordTableCell" bundle:nil] forCellReuseIdentifier:@"WithdrawRecordTableCell"];
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 1, 1)];
+    self.myTableVIew.tableFooterView = view;
 }
 
 - (void)didReceiveMemoryWarning {

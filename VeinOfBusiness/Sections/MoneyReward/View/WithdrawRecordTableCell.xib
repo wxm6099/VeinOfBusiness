@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -12,10 +12,10 @@
             <rect key="frame" x="0.0" y="0.0" width="341" height="242"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="341" height="242"/>
+                <frame key="frameInset" width="341" height="241"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2016-11-6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXc-4l-8Xa">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2016-11-6" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXc-4l-8Xa">
                         <frame key="frameInset" minX="29" minY="82" width="65" height="52"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="65" id="TaM-UJ-CZ0"/>
@@ -52,6 +52,9 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="numLabel" destination="yVb-DS-xg2" id="9rr-A2-M9H"/>
+                <outlet property="stateLabel" destination="AL8-J6-Tef" id="scK-EV-9cQ"/>
+                <outlet property="timeLabel" destination="ZXc-4l-8Xa" id="1ai-wi-Mix"/>
                 <outlet property="timeLabelWidth" destination="TaM-UJ-CZ0" id="aUl-Vy-yuZ"/>
             </connections>
             <point key="canvasLocation" x="35.5" y="-26"/>

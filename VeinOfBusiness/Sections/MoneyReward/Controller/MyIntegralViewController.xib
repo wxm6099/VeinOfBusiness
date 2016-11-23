@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -8,6 +8,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyIntegralViewController">
             <connections>
+                <outlet property="exchangeNumTextField" destination="TdX-y9-qJa" id="sd5-aj-zm6"/>
+                <outlet property="myIntegralLabel" destination="A3f-B8-rFA" id="lnB-Cc-pkE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,7 +28,7 @@
                                         <constraint firstAttribute="height" constant="21" id="mdd-0s-5SB"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                    <color key="textColor" red="0.23529411764705882" green="0.52156862745098043" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3f-B8-rFA">
@@ -34,8 +36,8 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="58" id="CXx-7D-4up"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="48"/>
-                                    <color key="textColor" red="0.13333333333333333" green="0.43137254901960786" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="35"/>
+                                    <color key="textColor" red="0.19056376382479223" green="0.72837818445955016" blue="0.83720206998172819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -60,19 +62,18 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10000积分=人民币1.00元" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUa-1D-LnV">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000积分=人民币1.00元" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUa-1D-LnV">
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZE-rD-sto">
-                            <frame key="frameInset" minY="280" width="212" height="44"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZE-rD-sto">
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="zTU-pv-e3R"/>
                             </constraints>
                             <state key="normal" title="兑  换">
-                                <color key="titleColor" red="0.56256024792331327" green="0.98118222765741225" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.18381971120834351" green="0.69732731580734253" blue="0.79846340417861938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -84,18 +85,29 @@
                                 <action selector="integralExchange:" destination="-1" eventType="touchUpInside" id="teH-EC-OrS"/>
                             </connections>
                         </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入兑换积分数(&gt;1000)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TdX-y9-qJa">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Goc-8c-cb1"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                        </textField>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="352" id="7UZ-xC-71c"/>
+                        <constraint firstAttribute="height" constant="380" id="7UZ-xC-71c"/>
                         <constraint firstItem="0LZ-CA-Mrd" firstAttribute="leading" secondItem="5NX-dW-RFD" secondAttribute="leading" id="GWb-xj-l1e"/>
+                        <constraint firstItem="sZE-rD-sto" firstAttribute="top" secondItem="TdX-y9-qJa" secondAttribute="bottom" constant="25" id="Jxe-Qs-oLY"/>
                         <constraint firstAttribute="width" constant="212" id="Uc8-GX-B7A"/>
+                        <constraint firstItem="TdX-y9-qJa" firstAttribute="centerX" secondItem="5NX-dW-RFD" secondAttribute="centerX" id="b6S-YC-RlB"/>
+                        <constraint firstItem="TdX-y9-qJa" firstAttribute="width" secondItem="5NX-dW-RFD" secondAttribute="width" id="caw-MW-2S5"/>
                         <constraint firstItem="AUa-1D-LnV" firstAttribute="leading" secondItem="5NX-dW-RFD" secondAttribute="leading" id="dC7-Tj-xOL"/>
                         <constraint firstItem="sZE-rD-sto" firstAttribute="leading" secondItem="5NX-dW-RFD" secondAttribute="leading" id="eZ6-bF-Sno"/>
                         <constraint firstItem="0LZ-CA-Mrd" firstAttribute="top" secondItem="5NX-dW-RFD" secondAttribute="top" id="efl-YL-ScQ"/>
                         <constraint firstItem="AUa-1D-LnV" firstAttribute="centerX" secondItem="sZE-rD-sto" secondAttribute="centerX" id="gNB-uQ-1AU"/>
                         <constraint firstAttribute="trailing" secondItem="0LZ-CA-Mrd" secondAttribute="trailing" id="hY1-nY-hO9"/>
-                        <constraint firstAttribute="bottom" secondItem="AUa-1D-LnV" secondAttribute="bottom" constant="89" id="l7t-8c-UTi"/>
-                        <constraint firstItem="AUa-1D-LnV" firstAttribute="top" secondItem="0LZ-CA-Mrd" secondAttribute="bottom" constant="30" id="lKR-Tv-Q68"/>
+                        <constraint firstItem="AUa-1D-LnV" firstAttribute="top" secondItem="0LZ-CA-Mrd" secondAttribute="bottom" constant="15" id="lKR-Tv-Q68"/>
                         <constraint firstAttribute="trailing" secondItem="sZE-rD-sto" secondAttribute="trailing" id="nNo-Y9-j8F"/>
                         <constraint firstAttribute="bottom" secondItem="sZE-rD-sto" secondAttribute="bottom" id="peJ-jt-K27"/>
                         <constraint firstAttribute="trailing" secondItem="AUa-1D-LnV" secondAttribute="trailing" id="yk1-4W-1j5"/>
@@ -107,7 +119,7 @@
                 <constraint firstItem="5NX-dW-RFD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="102" id="GJx-8X-Jxp"/>
                 <constraint firstItem="5NX-dW-RFD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="w8f-dW-HhV"/>
             </constraints>
-            <point key="canvasLocation" x="24.5" y="51.5"/>
+            <point key="canvasLocation" x="-46" y="118"/>
         </view>
     </objects>
 </document>

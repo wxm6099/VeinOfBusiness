@@ -90,6 +90,9 @@
 		6F706E911DE4AC01004F3A38 /* HeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F706E8C1DE4AC01004F3A38 /* HeaderCollectionReusableView.m */; };
 		6F706E921DE4AC01004F3A38 /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F706E8E1DE4AC01004F3A38 /* CalendarView.m */; };
 		6F706E941DE4BDF2004F3A38 /* icon_checkInPage.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F706E931DE4BDF2004F3A38 /* icon_checkInPage.png */; };
+		6FBC19A31DE5F551004DD670 /* IntegralExchangeHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC19A11DE5F551004DD670 /* IntegralExchangeHistoryView.m */; };
+		6FBC19A41DE5F551004DD670 /* IntegralExchangeHistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FBC19A21DE5F551004DD670 /* IntegralExchangeHistoryView.xib */; };
+		6FBC19B01DE605A9004DD670 /* UIViewController+DismissKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC19AF1DE605A9004DD670 /* UIViewController+DismissKeyboard.m */; };
 		6FF24A621DE0997A00CCFE02 /* AdvertiseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF24A611DE0997A00CCFE02 /* AdvertiseModel.m */; };
 		706B9227812C3A38DD95C652 /* libPods-VeinOfBusiness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0E0D5730AC67B8AB90CBD /* libPods-VeinOfBusiness.a */; };
 		EF4E23C31DD4A02600B77017 /* RankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4E23C11DD4A02600B77017 /* RankingCell.m */; };
@@ -341,6 +344,11 @@
 		6F706E8D1DE4AC01004F3A38 /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
 		6F706E8E1DE4AC01004F3A38 /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
 		6F706E931DE4BDF2004F3A38 /* icon_checkInPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_checkInPage.png; sourceTree = "<group>"; };
+		6FBC19A01DE5F551004DD670 /* IntegralExchangeHistoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegralExchangeHistoryView.h; sourceTree = "<group>"; };
+		6FBC19A11DE5F551004DD670 /* IntegralExchangeHistoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegralExchangeHistoryView.m; sourceTree = "<group>"; };
+		6FBC19A21DE5F551004DD670 /* IntegralExchangeHistoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntegralExchangeHistoryView.xib; sourceTree = "<group>"; };
+		6FBC19AE1DE605A9004DD670 /* UIViewController+DismissKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DismissKeyboard.h"; sourceTree = "<group>"; };
+		6FBC19AF1DE605A9004DD670 /* UIViewController+DismissKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DismissKeyboard.m"; sourceTree = "<group>"; };
 		6FF24A601DE0997A00CCFE02 /* AdvertiseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertiseModel.h; sourceTree = "<group>"; };
 		6FF24A611DE0997A00CCFE02 /* AdvertiseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertiseModel.m; sourceTree = "<group>"; };
 		EF4E23C01DD4A02600B77017 /* RankingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RankingCell.h; path = VeinOfBusiness/Sections/AboutMy/Controller/RankingCell.h; sourceTree = SOURCE_ROOT; };
@@ -622,6 +630,9 @@
 				18985A4F1DD35A1C00D0B702 /* WithdrawRecordViewController.h */,
 				18985A501DD35A1C00D0B702 /* WithdrawRecordViewController.m */,
 				18985A511DD35A1C00D0B702 /* WithdrawRecordViewController.xib */,
+				6FBC19A01DE5F551004DD670 /* IntegralExchangeHistoryView.h */,
+				6FBC19A11DE5F551004DD670 /* IntegralExchangeHistoryView.m */,
+				6FBC19A21DE5F551004DD670 /* IntegralExchangeHistoryView.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -904,6 +915,8 @@
 		EF999EB81DD16C4B00C8D3F7 /* WeChatSDK */ = {
 			isa = PBXGroup;
 			children = (
+				6FBC19AE1DE605A9004DD670 /* UIViewController+DismissKeyboard.h */,
+				6FBC19AF1DE605A9004DD670 /* UIViewController+DismissKeyboard.m */,
 				EF999EB91DD16C4B00C8D3F7 /* libWeChatSDK.a */,
 				EF999EBA1DD16C4B00C8D3F7 /* README.txt */,
 				EF999EBB1DD16C4B00C8D3F7 /* WechatAuthSDK.h */,
@@ -1143,6 +1156,7 @@
 				180569F61DDB38D9002CC3BC /* Rectangle 2.png in Resources */,
 				18985A0F1DD04D6700D0B702 /* RewardListViewController.xib in Resources */,
 				1887AF6F1DCF1B82003BF6E4 /* TaskWebViewController.xib in Resources */,
+				6FBC19A41DE5F551004DD670 /* IntegralExchangeHistoryView.xib in Resources */,
 				180569F91DDB38D9002CC3BC /* select_my@2x.png in Resources */,
 				EF999EBF1DD16C4B00C8D3F7 /* README.txt in Resources */,
 				18985A231DD0C26C00D0B702 /* CheckInViewController.xib in Resources */,
@@ -1248,6 +1262,7 @@
 				18985A1D1DD0BC2300D0B702 /* IntegralExchangeViewController.m in Sources */,
 				6F706E921DE4AC01004F3A38 /* CalendarView.m in Sources */,
 				18985A461DD355D500D0B702 /* UIBarButtonItem+Extension.m in Sources */,
+				6FBC19B01DE605A9004DD670 /* UIViewController+DismissKeyboard.m in Sources */,
 				18985A221DD0C26C00D0B702 /* CheckInViewController.m in Sources */,
 				6F706E901DE4AC01004F3A38 /* DBCollectionViewCell.m in Sources */,
 				18985A131DD0B01300D0B702 /* RewardListTableCell.m in Sources */,
@@ -1257,6 +1272,7 @@
 				18985A5E1DD5E7C100D0B702 /* JKDBHelper.m in Sources */,
 				18985A341DD13BCD00D0B702 /* DLNavigationController.m in Sources */,
 				18985A4E1DD3569300D0B702 /* UIView+Extension.m in Sources */,
+				6FBC19A31DE5F551004DD670 /* IntegralExchangeHistoryView.m in Sources */,
 				6F706E8F1DE4AC01004F3A38 /* DBcommonUtils.m in Sources */,
 				1887AF6E1DCF1B82003BF6E4 /* TaskWebViewController.m in Sources */,
 				1887AF691DCF16BB003BF6E4 /* TaskListTableCell.m in Sources */,

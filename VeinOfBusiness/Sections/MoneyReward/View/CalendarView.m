@@ -34,6 +34,8 @@
 //时间
 @property (nonatomic,strong)NSMutableString * date ;
 
+@property (nonatomic, strong)NSArray *checkInArray;
+
 
 @end
 
@@ -51,9 +53,6 @@
         
         //初始化当前时间
         [self setDate];
-        
-        
-        
         
     }
     return self;
@@ -127,22 +126,25 @@
 
 - (void)reloadCollectionViewWithArray:(NSArray *)array{
     
-    for (NSString *str in array) {
-        for (NSString *tempStr in self.daysArray) {
-            if ([tempStr isEqualToString:str]) {
-                
-                NSInteger index = [self.daysArray indexOfObject:tempStr];
-                
-                DBCollectionViewCell *cell = (DBCollectionViewCell *)[self.collcetionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
-                
-                cell.dateLabel.backgroundColor = [UIColor redColor];
-                cell.dateLabel.layer.cornerRadius = DLScreenWidth / 7.0 / 2;
-                cell.dateLabel.layer.masksToBounds = YES;
-                
-                break;
-            }
-        }
-    }
+    self.checkInArray = [NSArray arrayWithArray:array];
+    
+//    
+//    for (NSString *str in array) {
+//        for (NSString *tempStr in self.daysArray) {
+//            if ([tempStr isEqualToString:str]) {
+//                
+//                NSInteger index = [self.daysArray indexOfObject:tempStr];
+//                
+//                DBCollectionViewCell *cell = (DBCollectionViewCell *)[self.collcetionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
+//                
+//                cell.dateLabel.backgroundColor = [UIColor redColor];
+//                cell.dateLabel.layer.cornerRadius = DLScreenWidth / 7.0 / 2;
+//                cell.dateLabel.layer.masksToBounds = YES;
+//                
+//                break;
+//            }
+//        }
+//    }
     
     [self.collcetionView reloadData];
 }
@@ -253,6 +255,20 @@
         
         
         cell.dateLabel.text = _daysArray[indexPath.row];
+        
+        for (NSString *tempStr in self.checkInArray) {
+            if ([_daysArray[indexPath.row] isEqualToString:tempStr]) {
+//                UIView *circle = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DLScreenWidth / 9.0, DLScreenWidth / 9.0)];
+//                circle.center = cell.center;
+//                circle.backgroundColor = [UIColor redColor];
+//                [cell addSubview:circle];
+//                [cell sendSubviewToBack:circle];
+                cell.dateLabel.layer.cornerRadius = DLScreenWidth / 14.0;
+                cell.dateLabel.layer.masksToBounds = YES;
+                cell.dateLabel.backgroundColor = [UIColor redColor];
+            }
+        }
+        
         
     }
     
