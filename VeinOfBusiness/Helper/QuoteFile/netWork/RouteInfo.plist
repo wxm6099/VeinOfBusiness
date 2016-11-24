@@ -148,7 +148,22 @@
      
      
      
-     
+     <dict>
+         <key>routeMethod</key>
+         <string>GET</string>
+         <key>routeName</key>
+         <string>reward_withdraw</string>
+         <key>routeURL</key>
+         <string>reward/withdraw</string>
+     </dict>
+     <dict>
+         <key>routeMethod</key>
+         <string>GET</string>
+         <key>routeName</key>
+         <string>reward_moneyhistory</string>
+         <key>routeURL</key>
+         <string>reward/moneyhistory</string>
+     </dict>
      
      <dict>
          <key>routeMethod</key>

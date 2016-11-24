@@ -47,6 +47,20 @@
     
 }
 
+
+- (void)setWithdrawDic:(NSDictionary *)withdrawDic
+{
+    self.timeLabel.text = [self getBrackString:withdrawDic[@"logTime"]];
+    //1转发，2签到，3邀请，4积分兑换
+    NSInteger a = [withdrawDic[@"type"] integerValue];
+    self.stateLabel.text = a == 5 ? @"积分兑换" : @"提现";
+    if (a == 6) {
+        self.numLabel.text = [NSString stringWithFormat:@"-%@", withdrawDic[@"changeData" ]];
+    } else
+        self.numLabel.text = withdrawDic[@"changeData"];
+}
+
+
 - (NSString *)getBrackString:(NSString *)str{
     return [str stringByReplacingOccurrencesOfString:@" " withString:@"\n"];
 }

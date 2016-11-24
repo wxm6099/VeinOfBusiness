@@ -8,10 +8,16 @@
 
 #import "WithdrawRecordViewController.h"
 #import "WithdrawRecordTableCell.h"
+#import "RestfulAPIRequestTool.h"
+#import "Account.h"
+
 @interface WithdrawRecordViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *timeButtonWidth;
 @property (weak, nonatomic) IBOutlet UITableView *myTableVIew;
+
+@property (nonatomic, strong)NSArray *dataArray;
+
 
 @end
 
@@ -29,24 +35,44 @@
     [self.myTableVIew registerNib:[UINib nibWithNibName:@"WithdrawRecordTableCell" bundle:nil] forCellReuseIdentifier:@"WithdrawRecordTableCell"];
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 1, 1)];
     self.myTableVIew.tableFooterView = view;
+    
+    [self netRequest];
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void)netRequest{
+    
+    
+    Account *acc = [Account findAll][0];
+    NSDictionary *dic = @{@"customerId": acc.customerId};
+    
+    [RestfulAPIRequestTool routeName:@"reward_moneyhistory" requestModel:dic useKeys:[dic allKeys] success:^(id json) {
+        NSLog(@"提现记录为 %@", json);
+        
+        if ([json[@"status"] isEqualToString:@"success"]) {
+            self.dataArray = [NSArray arrayWithArray:json[@"data"]];
+            [self.myTableVIew reloadData];
+        }
+        
+    } failure:^(id errorJson) {
+        
+    }];
 }
+
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     WithdrawRecordTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WithdrawRecordTableCell"];
-    
-    
+    cell.withdrawDic = self.dataArray[indexPath.row];
     return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return self.dataArray.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {

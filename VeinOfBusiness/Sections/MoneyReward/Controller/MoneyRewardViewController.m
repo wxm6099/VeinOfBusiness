@@ -34,9 +34,10 @@
     
     [self netRequest];
     
-    // Do any additional setup after loading the view from its nib
     
     
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(netRequest) name:@"RefreshUserRewardMoneyData" object:nil];
     
     UITapGestureRecognizer *topTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(topBackViewAction:)];
     [self.topBackTempView addGestureRecognizer:topTap];
@@ -45,6 +46,15 @@
     self.title = @"赏金";
     [self.backViewTwo addGestureRecognizer:backTwoTap];
     
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:@"刷新" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    button.titleLabel.font = [UIFont systemFontOfSize:14];
+    button.frame = CGRectMake(0, 0, 44, 44);
+    
+    [button addTarget:self action:@selector(refreshButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
     
     CGFloat tempWidth = DLScreenWidth / 2 - 1;
     
@@ -78,6 +88,10 @@
     
 }
 
+
+- (void)refreshButtonAction:(UIButton *)sender{
+    [self netRequest];
+}
 
 - (void)netRequest{
     
@@ -120,6 +134,7 @@
 
 - (void)topBackViewAction:(UITapGestureRecognizer *)sender{
     AccountBalanceViewController *ac = [[AccountBalanceViewController alloc]initWithNibName:@"AccountBalanceViewController" bundle:nil];
+    ac.myMoney = self.model.curMoney;
     [self.navigationController pushViewController:ac animated:YES];
 }
 

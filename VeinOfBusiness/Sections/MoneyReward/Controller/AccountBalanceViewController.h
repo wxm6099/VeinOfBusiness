@@ -10,4 +10,8 @@
 
 @interface AccountBalanceViewController : UIViewController
 
+
+@property (nonatomic, copy)NSString *myMoney;
+
+
 @end

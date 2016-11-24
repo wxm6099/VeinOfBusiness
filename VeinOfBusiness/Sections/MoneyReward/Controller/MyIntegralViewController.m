@@ -94,6 +94,9 @@
                     self.myIntegralLabel.text = [NSString stringWithFormat:@"%ld", nowIntegral - money * 1000];
                     self.exchangeNumTextField.text = @"";
                     
+                    [[NSNotificationCenter defaultCenter] postNotificationName:@"RefreshUserRewardMoneyData" object:nil];
+                    
+                    
                     UIAlertView *successAlert = [[UIAlertView alloc] initWithTitle:@"兑换成功!" message:@"去提现吧" delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil];
                     [successAlert show];
                     

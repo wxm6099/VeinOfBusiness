@@ -56,7 +56,6 @@
     label.numberOfLines = 0;
     [self.myScrollView addSubview:label];
     
-    
 }
 
 - (void)netRequest{
