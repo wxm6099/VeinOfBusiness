@@ -17,6 +17,7 @@
 #import "Account.h"
 #import "ShareUtil.h"
 #import "WXApi.h"
+#import "AccountBalanceViewController.h"
 
 @interface AboutMeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -42,31 +43,38 @@
         Account *acc = [[Account findAll] objectAtIndex:0];
         
         NSDictionary *dic = @{@"customerId" : acc.customerId};
-        [RestfulAPIRequestTool routeName:Personalcenter_index_URL requestModel:dic useKeys:[dic allKeys] success:^(id json) {
+        [RestfulAPIRequestTool routeName:Personalcenter_detail_URL requestModel:dic useKeys:[dic allKeys] success:^(id json) {
             
             NSLog(@"请求结果为%@", json);
+//            {
+//            status:"success"，
+//                data：{username：用户名,
+//                    mobile：
+//                    Pic：},
+//            Msg:""
+//            }
             
-//            NSString *msg = json[@"msg"];
+            NSString *status = [json objectForKey:@"status"];
+            NSDictionary *dicData = [json objectForKey:@"data"];
             
-//            NSDictionary *dic= [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:nil];
-            
-            if (dic) {
-                NSString *status = [dic objectForKey:@"status"];
-//                NSString *msg = [dic objectForKey:@"msg"];
+            if (status) {
+                
                 if ([status isEqualToString:@"success"]) {
-                    NSDictionary *dataUser = [dic objectForKey:@"data"];
                     
-                    if (dataUser) {
-                        NSString *headImageUrl = [dataUser objectForKey:@"pic"];
-                        NSString *username = [dataUser objectForKey:@"username"];
-//                        NSString *unreadCount = [dataUser objectForKey:@"unreadCount"];
+                    if (dicData) {
+                        NSString *imgUrl = [dicData objectForKey:@"pic"];
+                        NSString *username = [dicData objectForKey:@"username"];
+//                        NSString *mobile = [dicData objectForKey:@"mobile"];
                         
                         dispatch_async(dispatch_get_main_queue(), ^{
-                            [self.imageViewHead setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:headImageUrl]]]];
+                            if ([imgUrl isKindOfClass:[NSNull class]] || !imgUrl) {
+//                                self.imageViewHead.image = [UIImage imageNamed:@"Message"];
+                            } else {
+                                [self.imageViewHead setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imgUrl]]]];
+                            }
                             [self.labelName setText:username];
                         });
                     }
-
                 }
             }
             
@@ -80,12 +88,13 @@
     });
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.navigationController.navigationBarHidden = NO;    
+}
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-    self.navigationController.navigationBarHidden = NO;
-    
-
 }
 
 - (void)viewDidLoad {
@@ -114,7 +123,7 @@
     [_imageViewHead addGestureRecognizer:tap];
     [viewa addSubview:_imageViewHead];
     
-    self.labelName = [[UILabel alloc]initWithFrame:CGRectMake(100, 75, 96, 22)];
+    self.labelName = [[UILabel alloc]initWithFrame:CGRectMake(100, 75, 300, 22)];
     _labelName.text = @"哎哟不错先生";
     [viewa addSubview:_labelName];
     
@@ -156,8 +165,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
-        DrawMoneyViewController *draw = [[DrawMoneyViewController alloc]init];
-        [self.navigationController pushViewController:draw animated:YES];
+//        DrawMoneyViewController *draw = [[DrawMoneyViewController alloc]init];
+//        [self.navigationController pushViewController:draw animated:YES];
+        AccountBalanceViewController *account = [[AccountBalanceViewController alloc]init];
+        [self.navigationController pushViewController:account animated:YES];
     }
     if (indexPath.row == 1) {
         MessageViewController *message = [[MessageViewController alloc]init];

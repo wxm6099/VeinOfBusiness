@@ -46,190 +46,129 @@
 		<key>routeMethod</key>
 		<string>GET</string>
 		<key>routeName</key>
-		<string>personalcenter_index</string>
+		<string>personal_index</string>
 		<key>routeURL</key>
-		<string>personalcenter/index</string>
+		<string>personal/index</string>
 	</dict>
 	<dict>
 		<key>routeMethod</key>
 		<string>GET</string>
 		<key>routeName</key>
-		<string>personalcenter_detail</string>
+		<string>personal_detail</string>
 		<key>routeURL</key>
-		<string>personalcenter/detail</string>
+		<string>personal/detail</string>
 	</dict>
 	<dict>
 		<key>routeMethod</key>
 		<string>POST</string>
 		<key>routeName</key>
-		<string>personalcenter_modifydetail</string>
+		<string>personal_modify</string>
 		<key>routeURL</key>
-		<string>personalcenter/modifydetail</string>
+		<string>personal/modify</string>
 	</dict>
 	<dict>
 		<key>routeMethod</key>
 		<string>GET</string>
 		<key>routeName</key>
-		<string>personalcenter_rank</string>
+		<string>personal_rank</string>
 		<key>routeURL</key>
-		<string>personalcenter/rank</string>
+		<string>personal/rank</string>
 	</dict>
 	<dict>
 		<key>routeMethod</key>
 		<string>GET</string>
 		<key>routeName</key>
-		<string>personalcenter_msg</string>
+		<string>personal_msg</string>
 		<key>routeURL</key>
-		<string>personalcenter/msg</string>
+		<string>personal/msg</string>
 	</dict>
 	<dict>
 		<key>routeMethod</key>
 		<string>GET</string>
 		<key>routeName</key>
-		<string>personalcenter_msginfo</string>
+		<string>personal_msginfo</string>
 		<key>routeURL</key>
-		<string>personalcenter/msginfo</string>
+		<string>personal/msginfo</string>
 	</dict>
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     <dict>
-         <key>routeMethod</key>
-         <string>GET</string>
-         <key>routeName</key>
-         <string>reward_withdraw</string>
-         <key>routeURL</key>
-         <string>reward/withdraw</string>
-     </dict>
-     <dict>
-         <key>routeMethod</key>
-         <string>GET</string>
-         <key>routeName</key>
-         <string>reward_moneyhistory</string>
-         <key>routeURL</key>
-         <string>reward/moneyhistory</string>
-     </dict>
-     
-     <dict>
-         <key>routeMethod</key>
-         <string>POST</string>
-         <key>routeName</key>
-         <string>reward_change</string>
-         <key>routeURL</key>
-         <string>reward/change</string>
-     </dict>
-     
-     <dict>
-         <key>routeMethod</key>
-         <string>POST</string>
-         <key>routeName</key>
-         <string>reward_withdraw</string>
-         <key>routeURL</key>
-         <string>reward/withdraw</string>
-     </dict>
-     <dict>
-         <key>routeMethod</key>
-         <string>POST</string>
-         <key>routeName</key>
-         <string>reward_pointhistory</string>
-         <key>routeURL</key>
-         <string>reward/pointhistory</string>
-     </dict>
-     <dict>
-         <key>routeMethod</key>
-         <string>POST</string>
-         <key>routeName</key>
-         <string>reward_sign</string>
-         <key>routeURL</key>
-         <string>reward/sign</string>
-     </dict>
-     <dict>
-         <key>routeMethod</key>
-         <string>GET</string>
-         <key>routeName</key>
-         <string>reward_signhistory</string>
-         <key>routeURL</key>
-         <string>reward/signhistory</string>
-     </dict>
-     <dict>
-         <key>routeMethod</key>
-         <string>GET</string>
-         <key>routeName</key>
-         <string>reward_index</string>
-         <key>routeURL</key>
-         <string>reward/index</string>
-     </dict>
-     
-     <dict>
-         <key>routeMethod</key>
-         <string>POST</string>
-         <key>routeName</key>
-         <string>ad_forward</string>
-         <key>routeURL</key>
-         <string>ad/forward</string>
-     </dict>
-     <dict>
-         <key>routeMethod</key>
-         <string>POST</string>
-         <key>routeName</key>
-         <string>ad_open</string>
-         <key>routeURL</key>
-         <string>ad/open</string>
-     </dict>
+	<dict>
+		<key>routeMethod</key>
+		<string>GET</string>
+		<key>routeName</key>
+		<string>reward_withdraw</string>
+		<key>routeURL</key>
+		<string>reward/withdraw</string>
+	</dict>
+	<dict>
+		<key>routeMethod</key>
+		<string>GET</string>
+		<key>routeName</key>
+		<string>reward_moneyhistory</string>
+		<key>routeURL</key>
+		<string>reward/moneyhistory</string>
+	</dict>
+	<dict>
+		<key>routeMethod</key>
+		<string>POST</string>
+		<key>routeName</key>
+		<string>reward_change</string>
+		<key>routeURL</key>
+		<string>reward/change</string>
+	</dict>
+	<dict>
+		<key>routeMethod</key>
+		<string>POST</string>
+		<key>routeName</key>
+		<string>reward_withdraw</string>
+		<key>routeURL</key>
+		<string>reward/withdraw</string>
+	</dict>
+	<dict>
+		<key>routeMethod</key>
+		<string>POST</string>
+		<key>routeName</key>
+		<string>reward_pointhistory</string>
+		<key>routeURL</key>
+		<string>reward/pointhistory</string>
+	</dict>
+	<dict>
+		<key>routeMethod</key>
+		<string>POST</string>
+		<key>routeName</key>
+		<string>reward_sign</string>
+		<key>routeURL</key>
+		<string>reward/sign</string>
+	</dict>
+	<dict>
+		<key>routeMethod</key>
+		<string>GET</string>
+		<key>routeName</key>
+		<string>reward_signhistory</string>
+		<key>routeURL</key>
+		<string>reward/signhistory</string>
+	</dict>
+	<dict>
+		<key>routeMethod</key>
+		<string>GET</string>
+		<key>routeName</key>
+		<string>reward_index</string>
+		<key>routeURL</key>
+		<string>reward/index</string>
+	</dict>
+	<dict>
+		<key>routeMethod</key>
+		<string>POST</string>
+		<key>routeName</key>
+		<string>ad_forward</string>
+		<key>routeURL</key>
+		<string>ad/forward</string>
+	</dict>
+	<dict>
+		<key>routeMethod</key>
+		<string>POST</string>
+		<key>routeName</key>
+		<string>ad_open</string>
+		<key>routeURL</key>
+		<string>ad/open</string>
+	</dict>
 </array>
 </plist>
