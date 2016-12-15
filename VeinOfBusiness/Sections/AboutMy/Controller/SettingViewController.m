@@ -92,11 +92,10 @@
                         [[NSFileManager defaultManager] removeItemAtPath:path error:&error];
                     }
                 }
-                
-                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"清理缓存成功" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
-                [alert show];
-                
             });
+            
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"清理缓存成功" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+            [alert show];
         }
         
     }

@@ -34,28 +34,48 @@
         [RestfulAPIRequestTool routeName:Personalcenter_rank_URL requestModel:dic useKeys:[dic allKeys] success:^(id json) {
             
             NSLog(@"请求结果为%@", json);
-            
-//            {
-//            status:"success"，
-//                data：[{pic:头像,
-//                username:用户名,
-//                    sumPoint:总收益},
-//                      {pic:头像,
-//                      username:用户名,
-//                          sumPoint:总收益},
-//                      {pic:头像,
-//                      username:用户名,
-//                          SumPoint:总收益},],
-//            msg:""
-//            }
+            if (json == nil || [json isEqualToString:@""]) {
+                json =
+                @{@"status":@"success",
+                  @"data":@[@{@"pic":@"",
+                              @"username":@"sense",
+                              @"sumPoint":@"363654545"},
+                            @{@"pic":@"",
+                              @"username":@"sense",
+                              @"sumPoint":@"254546"},
+                            @{@"pic":@"",
+                              @"username":@"sense",
+                              @"sumPoint":@"567"},
+                            @{@"pic":@"",
+                              @"username":@"sense",
+                              @"sumPoint":@"254546"},
+                            @{@"pic":@"",
+                              @"username":@"sense",
+                              @"sumPoint":@"254546"},
+                            @{@"pic":@"",
+                              @"username":@"sense",
+                              @"sumPoint":@"254546"},
+                            @{@"pic":@"",
+                              @"username":@"sense",
+                              @"sumPoint":@"254546"},
+                            @{@"pic":@"",
+                              @"username":@"sense",
+                              @"sumPoint":@"254546"},
+                            ],
+                  @"msg":@"",
+                  };
+            }
             NSString *status = [json objectForKey:@"status"];
-            NSString *msg = [json objectForKey:@"msg"];
-            NSArray *arrData = [json objectForKey:@"data"];
-            self.arraySource = [NSMutableArray arrayWithArray:arrData];
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.table reloadData];
-            });
+            if ([status isEqualToString:@"success"]) {
+                
+                NSString *msg = [json objectForKey:@"msg"];
+                NSArray *arrData = [json objectForKey:@"data"];
+                self.arraySource = [NSMutableArray arrayWithArray:arrData];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.table reloadData];
+                });
+            }
             
         } failure:^(id errorJson) {
             NSLog(@"登录结果为%@", errorJson);
@@ -98,16 +118,17 @@
 
 - (void)createUI
 {
-    UILabel *labelNum = [[UILabel alloc]initWithFrame:CGRectMake(0, 64, DLScreenWidth, 33)];
-    labelNum.backgroundColor = [UIColor grayColor];
+    UILabel *labelNum = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, DLScreenWidth, 33)];
+    labelNum.backgroundColor = [UIColor colorWithWhite:0.8 alpha:0.8];
     labelNum.font = [UIFont systemFontOfSize:14];
     labelNum.textColor = [UIColor blackColor];
     labelNum.text = @"总人数:7,386,389";
     labelNum.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:labelNum];
+//    [self.view addSubview:labelNum];
     
     
-    self.table = [[UITableView alloc]initWithFrame:CGRectMake(0, 100, DLScreenWidth, DLScreenHeight) style:UITableViewStyleGrouped];
+    self.table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, DLScreenWidth, DLScreenHeight) style:UITableViewStyleGrouped];
+    self.table.tableHeaderView = labelNum;
 //    [table registerClass:[RankingCell class] forCellReuseIdentifier:@"ranking"];
     //    [table registerClass:[AboutMeCell class] forCellReuseIdentifier:@"aboutMeFirst"];
     _table.scrollEnabled = YES;
@@ -146,7 +167,7 @@
     
     NSDictionary *dic = [self.arraySource objectAtIndex:indexPath.row];
     NSString *imgUrl = [dic objectForKey:@"pic"];
-    if ([imgUrl isKindOfClass:[NSNull class]] || !imgUrl) {
+    if ([imgUrl isKindOfClass:[NSNull class]] || !imgUrl||[imgUrl isEqualToString:@""]) {
         cell.imageView.image = [UIImage imageNamed:@"Message"];
     } else {
         cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imgUrl]]];

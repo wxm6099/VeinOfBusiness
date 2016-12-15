@@ -128,6 +128,8 @@
 		EFD330F61DE28A1500D388E4 /* WXApiRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD330F51DE28A1500D388E4 /* WXApiRequestHandler.m */; };
 		EFD330F91DE28A6800D388E4 /* WXApiResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD330F81DE28A6800D388E4 /* WXApiResponseHandler.m */; };
 		EFD330FF1DE28C6700D388E4 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD330FE1DE28C6700D388E4 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m */; };
+		EFE983B51E0307D7007E5CC8 /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE983B31E0307D7007E5CC8 /* CommonViewController.m */; };
+		EFE983B61E0307D7007E5CC8 /* CommonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFE983B41E0307D7007E5CC8 /* CommonViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -403,6 +405,9 @@
 		EFD330F81DE28A6800D388E4 /* WXApiResponseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiResponseHandler.m; sourceTree = "<group>"; };
 		EFD330FD1DE28C6700D388E4 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GetMessageFromWXResp+responseWithTextOrMediaMessage.h"; sourceTree = "<group>"; };
 		EFD330FE1DE28C6700D388E4 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GetMessageFromWXResp+responseWithTextOrMediaMessage.m"; sourceTree = "<group>"; };
+		EFE983B21E0307D7007E5CC8 /* CommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonViewController.h; sourceTree = "<group>"; };
+		EFE983B31E0307D7007E5CC8 /* CommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonViewController.m; sourceTree = "<group>"; };
+		EFE983B41E0307D7007E5CC8 /* CommonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -567,6 +572,9 @@
 				EF999EC01DD175FB00C8D3F7 /* UserViewController.h */,
 				EF999EC11DD175FB00C8D3F7 /* UserViewController.m */,
 				EF999EC21DD175FB00C8D3F7 /* UserViewController.xib */,
+				EFE983B21E0307D7007E5CC8 /* CommonViewController.h */,
+				EFE983B31E0307D7007E5CC8 /* CommonViewController.m */,
+				EFE983B41E0307D7007E5CC8 /* CommonViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1139,6 +1147,7 @@
 				180569FC1DDB38D9002CC3BC /* unselect_my@2x.png in Resources */,
 				EF5478791DD0911500279E12 /* RankingViewController.xib in Resources */,
 				180569F01DDB38D9002CC3BC /* icon_backCircle.png in Resources */,
+				EFE983B61E0307D7007E5CC8 /* CommonViewController.xib in Resources */,
 				18985A4B1DD3562700D0B702 /* return2.png in Resources */,
 				18985A191DD0B4FA00D0B702 /* MyIntegralViewController.xib in Resources */,
 				18985A281DD1346700D0B702 /* InviteViewController.xib in Resources */,
@@ -1192,7 +1201,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9B9ACC39B7F6336EC59B4BEB /* [CP] Embed Pods Frameworks */ = {
@@ -1289,6 +1298,7 @@
 				EFD330F61DE28A1500D388E4 /* WXApiRequestHandler.m in Sources */,
 				EFD330F91DE28A6800D388E4 /* WXApiResponseHandler.m in Sources */,
 				18985A0A1DCF747B00D0B702 /* RewardVIew.m in Sources */,
+				EFE983B51E0307D7007E5CC8 /* CommonViewController.m in Sources */,
 				6F706E911DE4AC01004F3A38 /* HeaderCollectionReusableView.m in Sources */,
 				EF999EC81DD17EF700C8D3F7 /* MessageCell.m in Sources */,
 				6FF24A621DE0997A00CCFE02 /* AdvertiseModel.m in Sources */,

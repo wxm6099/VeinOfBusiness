@@ -19,7 +19,7 @@
 #import "WXApi.h"
 #import "AccountBalanceViewController.h"
 
-@interface AboutMeViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface AboutMeViewController ()<UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @property (nonatomic,retain) NSMutableArray *arraySource;
 
@@ -111,6 +111,10 @@
     viewa.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:viewa];
     
+    UITapGestureRecognizer *tap0 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapHeadView)];
+    viewa.userInteractionEnabled = YES;
+    [viewa addGestureRecognizer:tap0];
+    
     self.imageViewHead = [[UIImageView alloc]initWithFrame:CGRectMake(18, 55, 62, 62)];
     _imageViewHead.image = [UIImage imageNamed:@"Message"];
     _imageViewHead.layer.cornerRadius = 30;
@@ -186,31 +190,88 @@
 
 - (void)tapImage
 {
+    NSString *title = NSLocalizedString(@"提示", nil);
+    NSString *str = [NSString stringWithFormat:@"%@将会访问您的图库或相机",[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]];
+    NSString *message = NSLocalizedString(str, nil);
+    NSString *cameraTitle = NSLocalizedString(@"相机", nil);
+    NSString *photoTitle = NSLocalizedString(@"图库", nil);
+    
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    // 相机 按钮
+    UIAlertAction *cameraAction = [UIAlertAction actionWithTitle:cameraTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+        UIImagePickerController *caPicker = [[UIImagePickerController alloc]init];
+        caPicker.delegate = self;
+        caPicker.allowsEditing = YES;
+        caPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        [self presentViewController:caPicker animated:YES completion:nil];
+    }];
+    
+    // 图库 按钮
+    UIAlertAction *photoAction = [UIAlertAction actionWithTitle:photoTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+        
+        UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
+        imagePicker.delegate = self;
+        imagePicker.allowsEditing = YES;
+        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentViewController:imagePicker animated:YES completion:nil];
+    }];
+    
+    // 取消 按钮
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"取消");
+        
+    }];
+    
+    // Add the actions.
+    [alertController addAction:cancelAction];
+    [alertController addAction:photoAction];
+    [alertController addAction:cameraAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+}
+
+- (void)tapHeadView
+{
     UserViewController *user = [[UserViewController alloc]init];
     [self.navigationController pushViewController:user animated:YES];
-//    NSDictionary *dic = @{@"url":@"http://www.baidu.com",
-//                          @"title":@"这里是分享的标题",
-//                          @"description":@"这里是分享的描述",
-//                          @"imgUrl":@"这里是分享的图片"};
-//
-//    ShareUtil *share = [[ShareUtil alloc]init];
-//    if ([WXApi isWXAppInstalled]) {
-//        
-//        if ([WXApi isWXAppSupportApi]) {
-//            
-////            [share returnShareDic:^(NSDictionary *dicc) {
-////                
-////            }];
-//            [share shareFriend:dic];
-//            
-//            }
-//    
-//        } else {
-//            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"您的微信版本不支持此操作" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
-//            [alert show];
-//            
-//        }
+}
+
+// 当得到照片或者视频后，调用该方法
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    //    NSLog(@"选中图片");
+    //    NSLog(@"%@",info);
+    NSString *type = [info objectForKey:UIImagePickerControllerMediaType];
     
+    // 判断获取类型 : 图片
+    if ([type isEqualToString:@""]) {
+//        self.selectImage = [UIImage imageNamed:@"3"];
+        // 判断, 图片是否允许修改
+        if ([picker allowsEditing]) {
+            // 获取用户编辑过后的图片
+//            self.selectImage = [info objectForKey:UIImagePickerControllerEditedImage];
+//            [self.headImage setImage:self.selectImage forState:UIControlStateNormal];
+            
+        } else {
+            // 获取编辑前的图片
+//            self.headImage.imageView.image = [info objectForKey:UIImagePickerControllerOriginalImage];
+//            [self.headImage setImage:self.selectImage forState:UIControlStateNormal];
+        }
+        
+    }
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+// 当用户取消时，调用该方法
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    NSLog(@"取消选中");
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 

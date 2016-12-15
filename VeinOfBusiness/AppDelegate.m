@@ -78,16 +78,16 @@
         
         //判断是否登录
         
-//        NSArray *arr = [Account findAll];
-//        if (arr.count > 0) {
+        NSArray *arr = [Account findAll];
+        if (arr.count > 0) {
             [self loginInSucceed];
-//        } else{
-//        
-//        LoginInViewController *loginIn = [[LoginInViewController alloc] initWithNibName:@"LoginInViewController" bundle:nil];
-//        DLNavigationController *nav = [[DLNavigationController alloc]initWithRootViewController:loginIn];
-//        [_window setRootViewController:nav];
-//            
-//        }
+        } else{
+        
+        LoginInViewController *loginIn = [[LoginInViewController alloc] initWithNibName:@"LoginInViewController" bundle:nil];
+        DLNavigationController *nav = [[DLNavigationController alloc]initWithRootViewController:loginIn];
+        [_window setRootViewController:nav];
+            
+        }
         
     }
     return _window;
