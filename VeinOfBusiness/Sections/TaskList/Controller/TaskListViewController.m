@@ -51,7 +51,7 @@
     
     [button setTitle:@"红包" forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
-    
+    button.titleLabel.font = [UIFont systemFontOfSize:14];
     
     [button addTarget:self action:@selector(redEnvelopButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     self.title = @"任务";
