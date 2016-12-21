@@ -82,9 +82,7 @@
         } failure:^(id errorJson) {
             NSLog(@"登录结果为%@", errorJson);
         }];
-        
-        
-        
+
     });
 }
 
@@ -235,6 +233,7 @@
     
 }
 
+// 点击用户头像
 - (void)tapHeadView
 {
     UserViewController *user = [[UserViewController alloc]init];
@@ -248,19 +247,21 @@
     //    NSLog(@"%@",info);
     NSString *type = [info objectForKey:UIImagePickerControllerMediaType];
     
-    // 判断获取类型 : 图片
-    if ([type isEqualToString:@""]) {
-//        self.selectImage = [UIImage imageNamed:@"3"];
+    // 判断获取类型 : 图片  public.image
+    if ([type isEqualToString:@"public.image"]) {
+
         // 判断, 图片是否允许修改
         if ([picker allowsEditing]) {
             // 获取用户编辑过后的图片
 //            self.selectImage = [info objectForKey:UIImagePickerControllerEditedImage];
 //            [self.headImage setImage:self.selectImage forState:UIControlStateNormal];
+            [self uploadImage:[info objectForKey:UIImagePickerControllerEditedImage]];
             
         } else {
             // 获取编辑前的图片
 //            self.headImage.imageView.image = [info objectForKey:UIImagePickerControllerOriginalImage];
 //            [self.headImage setImage:self.selectImage forState:UIControlStateNormal];
+            [self uploadImage:[info objectForKey:UIImagePickerControllerOriginalImage]];
         }
         
     }
@@ -274,6 +275,44 @@
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)uploadImage:(UIImage *)image
+{
+    NSData *data = UIImageJPEGRepresentation(image,1);
+//    NSString *imageString = [NSString st]
+    NSString *imageString = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    [RestfulAPIRequestTool routeName:Personalcenter_upload requestModel:imageString useKeys:nil success:^(id json) {
+        
+        NSLog(@"请求结果为%@", json);
+        
+        NSString *status = [json objectForKey:@"status"];
+        NSDictionary *dicData = [json objectForKey:@"data"];
+        
+        if (status) {
+            
+            if ([status isEqualToString:@"success"]) {
+                
+                if (dicData) {
+                    NSString *imgUrl = [dicData objectForKey:@"pic"];
+                    NSString *username = [dicData objectForKey:@"username"];
+                    //                        NSString *mobile = [dicData objectForKey:@"mobile"];
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        if ([imgUrl isKindOfClass:[NSNull class]] || !imgUrl) {
+                            //                                self.imageViewHead.image = [UIImage imageNamed:@"Message"];
+                        } else {
+                            [self.imageViewHead setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imgUrl]]]];
+                        }
+                        [self.labelName setText:username];
+                    });
+                }
+            }
+        }
+        
+        
+    } failure:^(id errorJson) {
+        NSLog(@"登录结果为%@", errorJson);
+    }];
+}
 
 - (NSMutableArray *)arraySource
 {

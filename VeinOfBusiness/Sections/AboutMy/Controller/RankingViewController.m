@@ -118,17 +118,17 @@
 
 - (void)createUI
 {
-    UILabel *labelNum = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, DLScreenWidth, 33)];
-    labelNum.backgroundColor = [UIColor colorWithWhite:0.8 alpha:0.8];
-    labelNum.font = [UIFont systemFontOfSize:14];
-    labelNum.textColor = [UIColor blackColor];
-    labelNum.text = @"总人数:7,386,389";
-    labelNum.textAlignment = NSTextAlignmentCenter;
+//    UILabel *labelNum = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, DLScreenWidth, 33)];
+//    labelNum.backgroundColor = [UIColor colorWithWhite:0.8 alpha:0.8];
+//    labelNum.font = [UIFont systemFontOfSize:14];
+//    labelNum.textColor = [UIColor blackColor];
+//    labelNum.text = @"总人数:7,386,389";
+//    labelNum.textAlignment = NSTextAlignmentCenter;
 //    [self.view addSubview:labelNum];
     
     
     self.table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, DLScreenWidth, DLScreenHeight) style:UITableViewStyleGrouped];
-    self.table.tableHeaderView = labelNum;
+//    self.table.tableHeaderView = labelNum;
 //    [table registerClass:[RankingCell class] forCellReuseIdentifier:@"ranking"];
     //    [table registerClass:[AboutMeCell class] forCellReuseIdentifier:@"aboutMeFirst"];
     _table.scrollEnabled = YES;

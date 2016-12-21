@@ -15,8 +15,8 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         
-        self.labelTitle = [[UILabel alloc]initWithFrame:CGRectMake(5, 5, 50, 30)];
-//        self.labelTitle.backgroundColor = [UIColor grayColor];
+        self.labelTitle = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, 100, 30)];
+        self.labelTitle.textAlignment = NSTextAlignmentLeft;
         [self.contentView addSubview:self.labelTitle];
         
 //        self.labelNew = [[UILabel alloc]initWithFrame:CGRectMake(60, 5, 50, 30)];
@@ -34,7 +34,7 @@
         self.labelTime.textAlignment = NSTextAlignmentRight;
         [self.contentView addSubview:self.labelTime];
         
-        self.labelContent = [[UILabel alloc]initWithFrame:CGRectMake(5, 40, DLScreenWidth - 10, 100)];
+        self.labelContent = [[UILabel alloc]initWithFrame:CGRectMake(10, 40, DLScreenWidth - 20, 70)];
 //        self.labelContent.backgroundColor = [UIColor yellowColor];
         [self.contentView addSubview:self.labelContent];
         

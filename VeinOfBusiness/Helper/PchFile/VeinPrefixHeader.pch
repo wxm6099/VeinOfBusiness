@@ -22,6 +22,7 @@
 #define Personalcenter_msg_URL              @"personalcenter/msg"
 #define Personalcenter_msginfo_URL          @"personalcenter/msginfo"
 #define Personalcenter_rank_URL             @"personalcenter/rank"
+#define Personalcenter_upload               @"personal/upload"
 
 
 
