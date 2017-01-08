@@ -9,8 +9,10 @@
 #import "UserViewController.h"
 #import "Account.h"
 #import "RestfulAPIRequestTool.h"
+#import "AuthViewController.h"
 
-@interface UserViewController ()<UITableViewDataSource,UITableViewDelegate>
+
+@interface UserViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
 
 @property (nonatomic,retain) NSMutableArray *arraySource;
 @property (nonatomic,retain) UITableView *table;
@@ -34,68 +36,48 @@
         [RestfulAPIRequestTool routeName:Personalcenter_detail_URL requestModel:dic useKeys:[dic allKeys] success:^(id json) {
             
             NSLog(@"请求结果为%@", json);
-            
-            //            {
-            //            status:"success"，
-            //                data：{username：用户名,
-            //                    mobile：
-            //                    Pic：},
-            //            Msg:""
-            //            }
-            
+
             NSString *status = [json objectForKey:@"status"];
             NSString *msg = [json objectForKey:@"Msg"];
-            NSDictionary *dicData= json[@"data"];
+            NSDictionary *dicData= [json objectForKey:@"data"];
             
             if ([status isEqualToString:@"success"]) {
-                
                 if (dicData) {
-                    
-                    //                        NSString *username = [dataUser objectForKey:@"username"];
-                    
-                    NSString *username = [self setNullString:[dicData objectForKey:@"username"]];
-                    NSString *gender = [self setNullString:[dicData objectForKey:@"gender"]];
-                    NSString *birthday = [self setNullString:[dicData objectForKey:@"birthday"]];
-                    NSString *address = [self setNullString:[dicData objectForKey:@"address"]];
-                    
-                    NSString *Idcode = [dicData objectForKey:@"Idcode"];
-                    
-                    NSString *major = [self setNullString:[dicData objectForKey:@"major"]];
-                    NSString *money = [self setNullString:[dicData objectForKey:@"money"]];
-                    NSString *education = [self setNullString: [dicData objectForKey:@"education"]];
-                    NSString *interest = [self setNullString:[dicData objectForKey:@"interset"]];
-                    
-                    
-                    NSDictionary *dic1_1 = @{@"header":@"昵称",
-                                             @"footer":username};
-                    
-                    NSDictionary *dic1_2 = @{@"header":@"性别",
-                                             @"footer":gender};
-                    
-                    NSDictionary *dic1_3 = @{@"header":@"我的排行榜",
-                                             @"footer":birthday};
-                    
-                    NSDictionary *dic1_4 = @{@"header":@"所在地区",
-                                             @"footer":address};
-                    NSArray *arr1 = [NSArray arrayWithObjects:dic1_1,dic1_2,dic1_3,dic1_4, nil];
-                    
-                    NSDictionary *dic2_1 = @{@"header":@"所属行业",
-                                             @"footer":major};
-                    
-                    NSDictionary *dic2_2 = @{@"header":@"月收入",
-                                             @"footer":money};
-                    
-                    NSDictionary *dic2_3 = @{@"header":@"学历",
-                                             @"footer":education};
-                    
-                    NSDictionary *dic2_4 = @{@"header":@"兴趣爱好",
-                                             @"footer":interest};
-                    NSArray *arr2 = [NSArray arrayWithObjects:dic2_1,dic2_2,dic2_3,dic2_4,nil];
-                    
-                    _arraySource = [NSMutableArray arrayWithObjects:arr1,arr2, nil];
-                    
+                    NSString *user_name = [dicData objectForKey:@"username"];
+                    NSString *area_info = [dicData objectForKey:@"areaInfo"];
+                    NSString *verify_status = [dicData objectForKey:@"verifyStatus"];
                     dispatch_async(dispatch_get_main_queue(), ^{
+                        NSMutableDictionary *dic0 = [NSMutableDictionary dictionaryWithDictionary:self.arraySource[0]];
+                        [dic0 setObject:user_name forKey:@"footer"];
+                        
+                        NSMutableDictionary *dic1 = [NSMutableDictionary dictionaryWithDictionary:self.arraySource[1]];
+                        [dic1 setObject:area_info forKey:@"footer"];
+                        
+                        NSMutableDictionary *dic2 = [NSMutableDictionary dictionaryWithDictionary:self.arraySource[2]];
+                        NSString *verify = @"";
+                        switch (verify_status.integerValue) {
+                            case 0:
+                                verify = @"未提交";
+                                break;
+                            case 1:
+                                verify = @"待审核";
+                                break;
+                            case 2:
+                                verify = @"通过";
+                                break;
+                            case 3:
+                                verify = @"失败";
+                                break;
+                                
+                            default:
+                                break;
+                        }
+                        [dic2 setObject:verify forKey:@"footer"];
+                        
+                        [self.arraySource removeAllObjects];
+                        self.arraySource = [NSMutableArray arrayWithObjects:dic0,dic1,dic2, nil];
                         [self.table reloadData];
+                        
                     });
                     
                 }
@@ -123,34 +105,16 @@
     
     self.navigationItem.title = @"基本资料";
     
+    NSDictionary *dic1 = @{@"header":@"昵称",
+                             @"footer":@""};
     
-    NSDictionary *dic1_1 = @{@"header":@"昵称",
-                             @"footer":@"哎哟不错先生"};
+    NSDictionary *dic2 = @{@"header":@"所在地区",
+                             @"footer":@""};
     
-    NSDictionary *dic1_2 = @{@"header":@"性别",
-                             @"footer":@"男"};
+    NSDictionary *dic3 = @{@"header":@"身份验证",
+                             @"footer":@""};
     
-    NSDictionary *dic1_3 = @{@"header":@"我的排行榜",
-                             @"footer":@"1990-08-08"};
-    
-    NSDictionary *dic1_4 = @{@"header":@"所在地区",
-                             @"footer":@"未设置"};
-    NSArray *arr1 = [NSArray arrayWithObjects:dic1_1,dic1_2,dic1_3,dic1_4, nil];
-    
-    NSDictionary *dic2_1 = @{@"header":@"所属行业",
-                             @"footer":@"未设置"};
-    
-    NSDictionary *dic2_2 = @{@"header":@"月收入",
-                             @"footer":@"未设置"};
-    
-    NSDictionary *dic2_3 = @{@"header":@"学历",
-                             @"footer":@"本科"};
-    
-    NSDictionary *dic2_4 = @{@"header":@"兴趣爱好",
-                             @"footer":@"未设置"};
-    NSArray *arr2 = [NSArray arrayWithObjects:dic2_1,dic2_2,dic2_3,dic2_4,nil];
-    
-    _arraySource = [NSMutableArray arrayWithObjects:arr1,arr2, nil];
+    _arraySource = [NSMutableArray arrayWithObjects:dic1,dic2,dic3, nil];
     
     [self createUI];
 }
@@ -162,13 +126,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return self.arraySource.count;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSArray *array = [self.arraySource objectAtIndex:section];
-    return array.count;
+    return self.arraySource.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -189,8 +152,7 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ident];
     }
     
-    NSArray *array = [self.arraySource objectAtIndex:indexPath.section];
-    NSDictionary *dic = [array objectAtIndex:indexPath.row];
+    NSDictionary *dic = [self.arraySource objectAtIndex:indexPath.row];
     cell.textLabel.text = [dic objectForKey:@"header"];
     cell.detailTextLabel.text = [dic objectForKey:@"footer"];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -200,35 +162,38 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 0) {
+    
+    if (indexPath.row == 0) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"修改昵称" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        alert.tag = 25;
+        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+        [alert show];
+    }
+    if (indexPath.row == 1) {
         
-        if (indexPath.row == 0) {
-        
-        }
-        if (indexPath.row == 1) {
-        
-        }
-        if (indexPath.row == 2) {
-        
-        }
-        if (indexPath.row == 3) {
-        
+    }
+    if (indexPath.row == 2) {
+        AuthViewController *auth = [[AuthViewController alloc]init];
+        [self.navigationController pushViewController:auth animated:YES];
+    }
+    
+    
+}
+
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView.tag == 25) {
+        if (buttonIndex == 1) {
+            UITextField *field = [alertView textFieldAtIndex:0];
+            NSString *name = field.text;
         }
     }
-    if (indexPath.section == 1) {
-        if (indexPath.row == 0) {
-            
-        }
-        if (indexPath.row == 1) {
-            
-        }
-        if (indexPath.row == 2) {
-            
-        }
-        if (indexPath.row == 3) {
-            
-        }
-    }
+}
+
+// 变更资料
+- (void)modifyUserDetail{
+    
 }
 
 
@@ -248,16 +213,7 @@
 }
 
 
-- (NSString *)setNullString:(NSString *)str
-{
-    if (!str) {
-        str = @"未设置";
-    }
-    if ([str isKindOfClass:[NSNull class]]) {
-        str = @"未设置";
-    }
-    return str;
-}
+
         
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -95,6 +95,10 @@
 		6FBC19B01DE605A9004DD670 /* UIViewController+DismissKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC19AF1DE605A9004DD670 /* UIViewController+DismissKeyboard.m */; };
 		6FF24A621DE0997A00CCFE02 /* AdvertiseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF24A611DE0997A00CCFE02 /* AdvertiseModel.m */; };
 		706B9227812C3A38DD95C652 /* libPods-VeinOfBusiness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0E0D5730AC67B8AB90CBD /* libPods-VeinOfBusiness.a */; };
+		EF0E569C1E22B5430029FE4F /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0E569A1E22B5430029FE4F /* AuthViewController.m */; };
+		EF0E569D1E22B5430029FE4F /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0E569B1E22B5430029FE4F /* AuthViewController.xib */; };
+		EF0E56AD1E22B5E90029FE4F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0E56AB1E22B5E90029FE4F /* ListViewController.m */; };
+		EF0E56AE1E22B5E90029FE4F /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0E56AC1E22B5E90029FE4F /* ListViewController.xib */; };
 		EF4E23C31DD4A02600B77017 /* RankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4E23C11DD4A02600B77017 /* RankingCell.m */; };
 		EF4E23C41DD4A02600B77017 /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF4E23C21DD4A02600B77017 /* RankingCell.xib */; };
 		EF54783D1DD0686000279E12 /* ShareUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5478321DD0686000279E12 /* ShareUtil.m */; };
@@ -353,6 +357,12 @@
 		6FBC19AF1DE605A9004DD670 /* UIViewController+DismissKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DismissKeyboard.m"; sourceTree = "<group>"; };
 		6FF24A601DE0997A00CCFE02 /* AdvertiseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertiseModel.h; sourceTree = "<group>"; };
 		6FF24A611DE0997A00CCFE02 /* AdvertiseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertiseModel.m; sourceTree = "<group>"; };
+		EF0E56991E22B5430029FE4F /* AuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
+		EF0E569A1E22B5430029FE4F /* AuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthViewController.m; sourceTree = "<group>"; };
+		EF0E569B1E22B5430029FE4F /* AuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
+		EF0E56AA1E22B5E90029FE4F /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		EF0E56AB1E22B5E90029FE4F /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		EF0E56AC1E22B5E90029FE4F /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 		EF4E23C01DD4A02600B77017 /* RankingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RankingCell.h; path = VeinOfBusiness/Sections/AboutMy/Controller/RankingCell.h; sourceTree = SOURCE_ROOT; };
 		EF4E23C11DD4A02600B77017 /* RankingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RankingCell.m; path = VeinOfBusiness/Sections/AboutMy/Controller/RankingCell.m; sourceTree = SOURCE_ROOT; };
 		EF4E23C21DD4A02600B77017 /* RankingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RankingCell.xib; path = VeinOfBusiness/Sections/AboutMy/Controller/RankingCell.xib; sourceTree = SOURCE_ROOT; };
@@ -575,6 +585,12 @@
 				EFE983B21E0307D7007E5CC8 /* CommonViewController.h */,
 				EFE983B31E0307D7007E5CC8 /* CommonViewController.m */,
 				EFE983B41E0307D7007E5CC8 /* CommonViewController.xib */,
+				EF0E56991E22B5430029FE4F /* AuthViewController.h */,
+				EF0E569A1E22B5430029FE4F /* AuthViewController.m */,
+				EF0E569B1E22B5430029FE4F /* AuthViewController.xib */,
+				EF0E56AA1E22B5E90029FE4F /* ListViewController.h */,
+				EF0E56AB1E22B5E90029FE4F /* ListViewController.m */,
+				EF0E56AC1E22B5E90029FE4F /* ListViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1126,6 +1142,7 @@
 				1887AF141DCE38D2003BF6E4 /* LaunchScreen.storyboard in Resources */,
 				EF5478811DD0918D00279E12 /* DrawMoneyViewController.xib in Resources */,
 				180569F21DDB38D9002CC3BC /* icon_grayRight.png in Resources */,
+				EF0E569D1E22B5430029FE4F /* AuthViewController.xib in Resources */,
 				18985A391DD1433E00D0B702 /* AccountBalanceViewController.xib in Resources */,
 				1887AF551DCE3EFA003BF6E4 /* TaskListViewController.xib in Resources */,
 				1887AF111DCE38D2003BF6E4 /* Assets.xcassets in Resources */,
@@ -1134,6 +1151,7 @@
 				1887AF601DCEF016003BF6E4 /* LoginInViewController.xib in Resources */,
 				180569F11DDB38D9002CC3BC /* icon_checkIn.png in Resources */,
 				180569EF1DDB38D9002CC3BC /* Bitmap.png in Resources */,
+				EF0E56AE1E22B5E90029FE4F /* ListViewController.xib in Resources */,
 				EF4E23C41DD4A02600B77017 /* RankingCell.xib in Resources */,
 				1887AF6A1DCF16BB003BF6E4 /* TaskListTableCell.xib in Resources */,
 				180569FD1DDB38D9002CC3BC /* unselect_reward@2x.png in Resources */,
@@ -1243,6 +1261,7 @@
 			files = (
 				EF54783D1DD0686000279E12 /* ShareUtil.m in Sources */,
 				6F706E861DE47E43004F3A38 /* IntegralModel.m in Sources */,
+				EF0E56AD1E22B5E90029FE4F /* ListViewController.m in Sources */,
 				18985A701DD5E84A00D0B702 /* RouteManager.m in Sources */,
 				1887AF091DCE38D1003BF6E4 /* AppDelegate.m in Sources */,
 				EFD330F31DE2874000D388E4 /* WXApiManager.m in Sources */,
@@ -1273,6 +1292,7 @@
 				18985A461DD355D500D0B702 /* UIBarButtonItem+Extension.m in Sources */,
 				6FBC19B01DE605A9004DD670 /* UIViewController+DismissKeyboard.m in Sources */,
 				18985A221DD0C26C00D0B702 /* CheckInViewController.m in Sources */,
+				EF0E569C1E22B5430029FE4F /* AuthViewController.m in Sources */,
 				6F706E901DE4AC01004F3A38 /* DBCollectionViewCell.m in Sources */,
 				18985A131DD0B01300D0B702 /* RewardListTableCell.m in Sources */,
 				EF999ECC1DD185A100C8D3F7 /* MessageModel.m in Sources */,

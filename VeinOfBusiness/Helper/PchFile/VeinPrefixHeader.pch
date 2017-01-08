@@ -16,13 +16,13 @@
 #define WXAppID         @"wxd3d906254db49ccd"
 #define WXAppSecret     @""
 
-#define Personalcenter_index_URL            @"personalcenter_index"
-#define Personalcenter_detail_URL           @"personalcenter_detail"
-#define Personalcenter_modifydetail_URL     @"personalcenter_modifydetail"
-#define Personalcenter_msg_URL              @"personalcenter/msg"
-#define Personalcenter_msginfo_URL          @"personalcenter/msginfo"
-#define Personalcenter_rank_URL             @"personalcenter/rank"
-#define Personalcenter_upload               @"personal/upload"
+#define Personalcenter_index_URL            @"personal_index"
+#define Personalcenter_detail_URL           @"personal_detail"
+#define Personalcenter_modifydetail_URL     @"personal_modifydetail"
+#define Personalcenter_msg_URL              @"personal_msg"
+#define Personalcenter_msginfo_URL          @"personal_msginfo"
+#define Personalcenter_rank_URL             @"personal_rank"
+#define Personalcenter_upload               @"personal_upload"
 
 
 
