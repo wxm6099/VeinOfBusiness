@@ -31,40 +31,10 @@
 //        Account *acc = [[Account findAll] objectAtIndex:0];
         
         NSDictionary *dic = @{@"index" : @"10"};
-        [RestfulAPIRequestTool routeName:Personalcenter_rank_URL requestModel:dic useKeys:[dic allKeys] success:^(id json) {
+        [RestfulAPIRequestTool routeName:Personal_rank_URL requestModel:dic useKeys:[dic allKeys] success:^(id json) {
             
             NSLog(@"请求结果为%@", json);
-            if (json == nil || [json isEqualToString:@""]) {
-                json =
-                @{@"status":@"success",
-                  @"data":@[@{@"pic":@"",
-                              @"username":@"sense",
-                              @"sumPoint":@"363654545"},
-                            @{@"pic":@"",
-                              @"username":@"sense",
-                              @"sumPoint":@"254546"},
-                            @{@"pic":@"",
-                              @"username":@"sense",
-                              @"sumPoint":@"567"},
-                            @{@"pic":@"",
-                              @"username":@"sense",
-                              @"sumPoint":@"254546"},
-                            @{@"pic":@"",
-                              @"username":@"sense",
-                              @"sumPoint":@"254546"},
-                            @{@"pic":@"",
-                              @"username":@"sense",
-                              @"sumPoint":@"254546"},
-                            @{@"pic":@"",
-                              @"username":@"sense",
-                              @"sumPoint":@"254546"},
-                            @{@"pic":@"",
-                              @"username":@"sense",
-                              @"sumPoint":@"254546"},
-                            ],
-                  @"msg":@"",
-                  };
-            }
+            
             NSString *status = [json objectForKey:@"status"];
             if ([status isEqualToString:@"success"]) {
                 
@@ -97,19 +67,6 @@
     
     self.navigationItem.title = @"排行";
     
-//    NSDictionary *dic1_1 = @{@"name":@"昵称",
-//                             @"detail":@"哎哟不错先生"};
-//    
-//    NSDictionary *dic1_2 = @{@"name":@"性别",
-//                             @"detail":@"男"};
-//    
-//    NSDictionary *dic1_3 = @{@"name":@"我的排行榜",
-//                             @"detail":@"1990-08-08"};
-//    
-//    NSDictionary *dic1_4 = @{@"name":@"所在地区",
-//                             @"detail":@"未设置"};
-//    
-//    _arraySource = [NSMutableArray arrayWithObjects:dic1_1,dic1_2,dic1_3,dic1_4, nil];
     self.arraySource = [NSMutableArray array];
     
     [self createUI];
@@ -170,7 +127,7 @@
     if ([imgUrl isKindOfClass:[NSNull class]] || !imgUrl||[imgUrl isEqualToString:@""]) {
         cell.imageView.image = [UIImage imageNamed:@"Message"];
     } else {
-        cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imgUrl]]];
+        cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",URL_host,imgUrl]]]];
     }
     cell.textLabel.text = [dic objectForKey:@"username"];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"第%ld名",indexPath.row + 1];

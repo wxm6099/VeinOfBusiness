@@ -16,14 +16,23 @@
 #define WXAppID         @"wxd3d906254db49ccd"
 #define WXAppSecret     @""
 
-#define Personalcenter_index_URL            @"personal_index"
-#define Personalcenter_detail_URL           @"personal_detail"
-#define Personalcenter_modifydetail_URL     @"personal_modifydetail"
-#define Personalcenter_msg_URL              @"personal_msg"
-#define Personalcenter_msginfo_URL          @"personal_msginfo"
-#define Personalcenter_rank_URL             @"personal_rank"
-#define Personalcenter_upload               @"personal_upload"
+#define Personal_index_URL            @"personal_index"
+#define Personal_detail_URL           @"personal_detail"
+#define Personal_modify_URL           @"personal_modify"
+#define Personal_msg_URL              @"personal_msg"
+#define Personal_msginfo_URL          @"personal_msginfo"
+#define Personal_rank_URL             @"personal_rank"
+#define Personal_upload               @"personal_upload"
 
+#define Personal_province              @"common_province"
+#define Personal_city               @"common_city"
+#define Personal_district               @"common_district"
+#define Personal_vupload               @"personal_vupload"
+#define Personal_verify               @"personal_verify"
+#define Personal_vstatus               @"personal_vstatus"
+
+#define NOTIFY_Personal         @"NOTIFY_Personal"
+#define URL_host   @"http://222.186.45.63/"
 
 
 //预定义一些工具宏

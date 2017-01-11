@@ -10,5 +10,7 @@
 
 @interface ListViewController : UIViewController
 
+@property (nonatomic,retain) NSDictionary *dic;
+
 
 @end

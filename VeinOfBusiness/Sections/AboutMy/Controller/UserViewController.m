@@ -10,6 +10,7 @@
 #import "Account.h"
 #import "RestfulAPIRequestTool.h"
 #import "AuthViewController.h"
+#import "ListViewController.h"
 
 
 @interface UserViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
@@ -17,86 +18,40 @@
 @property (nonatomic,retain) NSMutableArray *arraySource;
 @property (nonatomic,retain) UITableView *table;
 
+//@property (nonatomic,copy) NSString *province_id;
+//@property (nonatomic,copy) NSString *city_id;
+//@property (nonatomic,copy) NSString *district_id;
+//@property (nonatomic,copy) NSString *ali_account;
+//@property (nonatomic,copy) NSString *area_Info;
+//@property (nonatomic,copy) NSString *user_name;
+//@property (nonatomic,copy) NSString *verify;
+
+
 @end
 
 @implementation UserViewController
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    Account *acc = [[Account findAll] objectAtIndex:0];
+    NSDictionary *dic1 = @{@"header":@"昵称",
+                           @"footer":acc.username};
+    NSDictionary *dic2 = @{@"header":@"所在地区",
+                           @"footer":acc.areaInfo};
+    NSDictionary *dic3 = @{@"header":@"身份验证",
+                           @"footer":acc.verify};
+    _arraySource = [NSMutableArray arrayWithObjects:dic1,dic2,dic3, nil];
+    [self.table reloadData];
     
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        // 耗时操作
-        Account *acc = [[Account findAll] objectAtIndex:0];
-        
-        NSDictionary *dic = @{@"customerId" : acc.customerId};
-        [RestfulAPIRequestTool routeName:Personalcenter_detail_URL requestModel:dic useKeys:[dic allKeys] success:^(id json) {
-            
-            NSLog(@"请求结果为%@", json);
-
-            NSString *status = [json objectForKey:@"status"];
-            NSString *msg = [json objectForKey:@"Msg"];
-            NSDictionary *dicData= [json objectForKey:@"data"];
-            
-            if ([status isEqualToString:@"success"]) {
-                if (dicData) {
-                    NSString *user_name = [dicData objectForKey:@"username"];
-                    NSString *area_info = [dicData objectForKey:@"areaInfo"];
-                    NSString *verify_status = [dicData objectForKey:@"verifyStatus"];
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        NSMutableDictionary *dic0 = [NSMutableDictionary dictionaryWithDictionary:self.arraySource[0]];
-                        [dic0 setObject:user_name forKey:@"footer"];
-                        
-                        NSMutableDictionary *dic1 = [NSMutableDictionary dictionaryWithDictionary:self.arraySource[1]];
-                        [dic1 setObject:area_info forKey:@"footer"];
-                        
-                        NSMutableDictionary *dic2 = [NSMutableDictionary dictionaryWithDictionary:self.arraySource[2]];
-                        NSString *verify = @"";
-                        switch (verify_status.integerValue) {
-                            case 0:
-                                verify = @"未提交";
-                                break;
-                            case 1:
-                                verify = @"待审核";
-                                break;
-                            case 2:
-                                verify = @"通过";
-                                break;
-                            case 3:
-                                verify = @"失败";
-                                break;
-                                
-                            default:
-                                break;
-                        }
-                        [dic2 setObject:verify forKey:@"footer"];
-                        
-                        [self.arraySource removeAllObjects];
-                        self.arraySource = [NSMutableArray arrayWithObjects:dic0,dic1,dic2, nil];
-                        [self.table reloadData];
-                        
-                    });
-                    
-                }
-                
-            }
-            
-            
-        } failure:^(id errorJson) {
-            NSLog(@"登录结果为%@", errorJson);
-        }];
-        
-        
-        
-    });
+    
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-    
 }
 
 - (void)viewDidLoad {
@@ -104,17 +59,6 @@
     // Do any additional setup after loading the view from its nib.
     
     self.navigationItem.title = @"基本资料";
-    
-    NSDictionary *dic1 = @{@"header":@"昵称",
-                             @"footer":@""};
-    
-    NSDictionary *dic2 = @{@"header":@"所在地区",
-                             @"footer":@""};
-    
-    NSDictionary *dic3 = @{@"header":@"身份验证",
-                             @"footer":@""};
-    
-    _arraySource = [NSMutableArray arrayWithObjects:dic1,dic2,dic3, nil];
     
     [self createUI];
 }
@@ -154,15 +98,22 @@
     
     NSDictionary *dic = [self.arraySource objectAtIndex:indexPath.row];
     cell.textLabel.text = [dic objectForKey:@"header"];
-    cell.detailTextLabel.text = [dic objectForKey:@"footer"];
+    NSString *footer = [dic objectForKey:@"footer"];
+    cell.detailTextLabel.text = footer;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    if (indexPath.row == 2) {
+        if ([footer isEqualToString:@"待审核"]||[footer isEqualToString:@"通过"]) {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+    }
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    NSDictionary *dic = [self.arraySource objectAtIndex:indexPath.row];
+    NSString *footer = [dic objectForKey:@"footer"];
     if (indexPath.row == 0) {
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"修改昵称" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
         alert.tag = 25;
@@ -170,13 +121,20 @@
         [alert show];
     }
     if (indexPath.row == 1) {
+        ListViewController *list = [[ListViewController alloc]init];
+        list.dic = @{@"title":@"地区选择(省)",
+                     @"area_id":@"",
+                     @"page":@"province"};
+        [self.navigationController pushViewController:list animated:YES];
         
     }
     if (indexPath.row == 2) {
+        if ([footer isEqualToString:@"待审核"]||[footer isEqualToString:@"通过"]) {
+            return;
+        }
         AuthViewController *auth = [[AuthViewController alloc]init];
         [self.navigationController pushViewController:auth animated:YES];
     }
-    
     
 }
 
@@ -186,14 +144,25 @@
     if (alertView.tag == 25) {
         if (buttonIndex == 1) {
             UITextField *field = [alertView textFieldAtIndex:0];
-            NSString *name = field.text;
+            
+            Account *acc = [[Account findAll] objectAtIndex:0];
+            NSDictionary *dic = @{@"customerId":acc.customerId,
+                                  @"username":field.text,
+                                  @"getAccount":acc.aliAccount,
+                                  @"provinceId":acc.provinceId,
+                                  @"cityId":acc.cityId,
+                                  @"districtId":acc.districtId,
+                                  @"areaInfo":acc.areaInfo,
+                                  @"pic":acc.photo};
+            [[NSNotificationCenter defaultCenter]postNotificationName:NOTIFY_Personal object:@{@"type":@"modify"} userInfo:dic];
+         
+            NSMutableDictionary *dic0 = [NSMutableDictionary dictionaryWithDictionary:self.arraySource[0]];
+            [dic0 setObject:field.text forKey:@"footer"];
+            
+            [self.arraySource replaceObjectAtIndex:0 withObject:dic0];
+            [self.table reloadData];
         }
     }
-}
-
-// 变更资料
-- (void)modifyUserDetail{
-    
 }
 
 

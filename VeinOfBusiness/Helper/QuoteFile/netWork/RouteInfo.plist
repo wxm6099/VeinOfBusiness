@@ -102,6 +102,54 @@
 		<key>routeMethod</key>
 		<string>GET</string>
 		<key>routeName</key>
+		<string>common_province</string>
+		<key>routeURL</key>
+		<string>common/province</string>
+	</dict>
+	<dict>
+		<key>routeMethod</key>
+		<string>GET</string>
+		<key>routeName</key>
+		<string>common_city</string>
+		<key>routeURL</key>
+		<string>common/city</string>
+	</dict>
+	<dict>
+		<key>routeMethod</key>
+		<string>GET</string>
+		<key>routeName</key>
+		<string>common_district</string>
+		<key>routeURL</key>
+		<string>common/district</string>
+	</dict>
+	<dict>
+		<key>routeMethod</key>
+		<string>POST</string>
+		<key>routeName</key>
+		<string>personal_vupload</string>
+		<key>routeURL</key>
+		<string>personal/vupload</string>
+	</dict>
+	<dict>
+		<key>routeMethod</key>
+		<string>POST</string>
+		<key>routeName</key>
+		<string>personal_verify</string>
+		<key>routeURL</key>
+		<string>personal/verify</string>
+	</dict>
+	<dict>
+		<key>routeMethod</key>
+		<string>GET</string>
+		<key>routeName</key>
+		<string>personal_vstatus</string>
+		<key>routeURL</key>
+		<string>personal/vstatus</string>
+	</dict>
+	<dict>
+		<key>routeMethod</key>
+		<string>GET</string>
+		<key>routeName</key>
 		<string>reward_withdraw</string>
 		<key>routeURL</key>
 		<string>reward/withdraw</string>

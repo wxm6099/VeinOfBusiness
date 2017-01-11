@@ -104,8 +104,7 @@
     if (indexPath.section == 1) {
         if (indexPath.row == 1) {
             // 退出登录
-            
-//            [Account clearTable];
+            [Account clearTable];
         }
     }
     

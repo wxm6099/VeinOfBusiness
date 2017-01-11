@@ -21,8 +21,6 @@
 
 #import <AFNetworking.h>
 
-//self.imgServerAddress = @"http://222.186.45.63/";
-#define imageHost   @"http://222.186.45.63/"
 
 #define COLOR_AboutMe    [UIColor colorWithRed:42/255.0f green:135/255.0f blue:255/255.0f alpha:1.0]
 
@@ -61,6 +59,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(notify:) name:NOTIFY_Personal object:nil];
+    
+    
     
     [self createUI];
     [self getPersonDetail];
@@ -72,7 +73,7 @@
         Account *acc = [[Account findAll] objectAtIndex:0];
         
         NSDictionary *dic = @{@"customerId" : acc.customerId};
-        [RestfulAPIRequestTool routeName:Personalcenter_detail_URL requestModel:dic useKeys:[dic allKeys] success:^(id json) {
+        [RestfulAPIRequestTool routeName:Personal_detail_URL requestModel:dic useKeys:[dic allKeys] success:^(id json) {
             
             NSLog(@"请求结果为%@", json);
             NSString *status = [json objectForKey:@"status"];
@@ -80,8 +81,28 @@
             if ([status isEqualToString:@"success"]) {
                 
                 if (dicData) {
-                    NSString *imgUrl = [NSString stringWithFormat:@"%@%@",imageHost,[dicData objectForKey:@"pic"]];
+                    NSString *imgUrl = [NSString stringWithFormat:@"%@%@",URL_host,[dicData objectForKey:@"pic"]];
                     NSString *username = [dicData objectForKey:@"username"];
+//                    NSString *province_id = [dicData objectForKey:@"provinceId"];
+//                    NSString *city_id = [dicData objectForKey:@"cityId"];
+//                    NSString *district_id = [dicData objectForKey:@"districtId"];
+//                    NSString *ali_account = [dicData objectForKey:@"getAccount"];
+//                    NSString *area_Info = [dicData objectForKey:@"areaInfo"];
+//                    NSString *verify_status = [dicData objectForKey:@"verifyStatus"];
+//                    
+//                    acc.province_id = province_id;
+//                    acc.city_id = city_id;
+//                    acc.district_id = district_id;
+//                    acc.area_Info = area_Info;
+//                    acc.ali_account = ali_account;
+//                    acc.name = username;
+//                    acc.photo = imgUrl;
+//                    acc.verify = verify_status;
+                    
+                    [acc setValuesForKeysWithDictionary:dicData];
+//                    [acc save];
+                    [acc update];
+                    
                     
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [self.imageViewHead setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imgUrl]]]];
@@ -121,8 +142,9 @@
     [_imageViewHead addGestureRecognizer:tap];
     [viewa addSubview:_imageViewHead];
     
+    Account *acc = [[Account findAll] objectAtIndex:0];
     self.labelName = [[UILabel alloc]initWithFrame:CGRectMake(100, 75, 300, 22)];
-    _labelName.text = @"哎哟不错先生";
+    _labelName.text = acc.username;
     [viewa addSubview:_labelName];
     
 
@@ -266,7 +288,7 @@
 // 上传图片
 - (void)uploadImage:(UIImage *)image
 {
-    NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
+    NSData *imageData = UIImageJPEGRepresentation(image, 0.1);
     NSLog(@"image:%@",image);
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     // 允许 https , 并且不验证主机域名
@@ -274,8 +296,8 @@
     manager.securityPolicy.validatesDomainName = NO;
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    
-    [manager POST:Personalcenter_upload parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    NSString *url = @"http://222.186.45.63/personal/upload";
+    [manager POST:url parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [formData appendPartWithFileData:imageData
                                     name:@"1"
                                 fileName:@"image.jpg"
@@ -298,8 +320,12 @@
                     
                     dispatch_async(dispatch_get_main_queue(), ^{
                         if (imgUrl) {
-                            NSString *pic_url = [NSString stringWithFormat:@"%@%@",imageHost,imgUrl];
+                            NSString *pic_url = [NSString stringWithFormat:@"%@%@",URL_host,imgUrl];
                             [self.imageViewHead setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:pic_url]]]];
+                            
+                            Account *acc = [[Account findAll] objectAtIndex:0];
+                            acc.photo = pic_url;
+                            [acc save];
                         }
                         
                     });
@@ -316,10 +342,6 @@
 - (NSMutableArray *)arraySource
 {
     if (!_arraySource) {
-        
-//        UIImage *image0 = [UIImage imageNamed:@"DrawMoney"];
-//        NSDictionary *dic0 = @{@"image":image0,
-//                               @"name":@"提现"};
         
         UIImage *image1 = [UIImage imageNamed:@"DrawMoney"];
         NSDictionary *dic1 = @{@"image":image1,
@@ -340,6 +362,34 @@
     }
     return _arraySource;
 }
+
+
+- (void)notify:(NSNotification *)sender
+{
+        NSLog(@"sender = %@",sender);
+    
+    if ([[sender.object objectForKey:@"type"] isEqualToString:@"modify"]) {
+        [self modifyUserDetail:sender.userInfo];
+    }
+}
+
+// 变更资料
+- (void)modifyUserDetail:(NSDictionary *)dic{
+    
+    [RestfulAPIRequestTool routeName:Personal_modify_URL requestModel:dic useKeys:nil success:^(id json) {
+        
+        NSLog(@"请求结果为%@", json);
+        NSString *status = [json objectForKey:@"status"];
+        if ([status isEqualToString:@"success"]) {
+            // TO DO 显示修改成功
+        }
+        
+        
+    } failure:^(id errorJson) {
+        NSLog(@"登录结果为%@", errorJson);
+    }];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
