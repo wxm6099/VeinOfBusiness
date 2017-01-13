@@ -17,6 +17,8 @@
 #import "WXApiManager.h"
 #import "WXApi.h"
 
+#import "RestfulAPIRequestTool.h"
+
 @interface AppDelegate ()
 
 @end
@@ -39,7 +41,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginInSucceed) name:@"WindowChangeRoot" object:nil];
     
-    
+    [self tempMethod];
     return YES;
 }
 
@@ -76,7 +78,6 @@
     if (!_window) {
         _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
         
-
         //判断是否登录
         
         NSArray *arr = [Account findAll];
@@ -89,7 +90,6 @@
         [_window setRootViewController:nav];
             
         }
-        
         
     }
     return _window;
@@ -160,7 +160,16 @@
     return [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
 }
 
-
-
+// 临时方法 用来测试图片上传
+- (void)tempMethod
+{
+    UIImage *image = [UIImage imageNamed:@"logo_96"];
+    NSDictionary *dic = @{@"photoArray":@[image]};
+    [RestfulAPIRequestTool routeName:@"personal_upload" requestModel:dic useKeys:[dic allKeys] success:^(id json) {
+        NSLog(@"图片上传结果为%@", json);
+    } failure:^(id errorJson) {
+        
+    }];
+}
 
 @end

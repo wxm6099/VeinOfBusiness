@@ -93,6 +93,8 @@
 		6FBC19A31DE5F551004DD670 /* IntegralExchangeHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC19A11DE5F551004DD670 /* IntegralExchangeHistoryView.m */; };
 		6FBC19A41DE5F551004DD670 /* IntegralExchangeHistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FBC19A21DE5F551004DD670 /* IntegralExchangeHistoryView.xib */; };
 		6FBC19B01DE605A9004DD670 /* UIViewController+DismissKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC19AF1DE605A9004DD670 /* UIViewController+DismissKeyboard.m */; };
+		6FBF98291E124CB00000E7BA /* HistoryTaskListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBF98271E124CB00000E7BA /* HistoryTaskListViewController.m */; };
+		6FBF982A1E124CB00000E7BA /* HistoryTaskListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FBF98281E124CB00000E7BA /* HistoryTaskListViewController.xib */; };
 		6FF24A621DE0997A00CCFE02 /* AdvertiseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF24A611DE0997A00CCFE02 /* AdvertiseModel.m */; };
 		706B9227812C3A38DD95C652 /* libPods-VeinOfBusiness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0E0D5730AC67B8AB90CBD /* libPods-VeinOfBusiness.a */; };
 		EF4E23C31DD4A02600B77017 /* RankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4E23C11DD4A02600B77017 /* RankingCell.m */; };
@@ -128,6 +130,8 @@
 		EFD330F61DE28A1500D388E4 /* WXApiRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD330F51DE28A1500D388E4 /* WXApiRequestHandler.m */; };
 		EFD330F91DE28A6800D388E4 /* WXApiResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD330F81DE28A6800D388E4 /* WXApiResponseHandler.m */; };
 		EFD330FF1DE28C6700D388E4 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD330FE1DE28C6700D388E4 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m */; };
+		EFE983B51E0307D7007E5CC8 /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE983B31E0307D7007E5CC8 /* CommonViewController.m */; };
+		EFE983B61E0307D7007E5CC8 /* CommonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFE983B41E0307D7007E5CC8 /* CommonViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -349,6 +353,9 @@
 		6FBC19A21DE5F551004DD670 /* IntegralExchangeHistoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntegralExchangeHistoryView.xib; sourceTree = "<group>"; };
 		6FBC19AE1DE605A9004DD670 /* UIViewController+DismissKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DismissKeyboard.h"; sourceTree = "<group>"; };
 		6FBC19AF1DE605A9004DD670 /* UIViewController+DismissKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DismissKeyboard.m"; sourceTree = "<group>"; };
+		6FBF98261E124CB00000E7BA /* HistoryTaskListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTaskListViewController.h; sourceTree = "<group>"; };
+		6FBF98271E124CB00000E7BA /* HistoryTaskListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTaskListViewController.m; sourceTree = "<group>"; };
+		6FBF98281E124CB00000E7BA /* HistoryTaskListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryTaskListViewController.xib; sourceTree = "<group>"; };
 		6FF24A601DE0997A00CCFE02 /* AdvertiseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertiseModel.h; sourceTree = "<group>"; };
 		6FF24A611DE0997A00CCFE02 /* AdvertiseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertiseModel.m; sourceTree = "<group>"; };
 		EF4E23C01DD4A02600B77017 /* RankingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RankingCell.h; path = VeinOfBusiness/Sections/AboutMy/Controller/RankingCell.h; sourceTree = SOURCE_ROOT; };
@@ -403,6 +410,9 @@
 		EFD330F81DE28A6800D388E4 /* WXApiResponseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiResponseHandler.m; sourceTree = "<group>"; };
 		EFD330FD1DE28C6700D388E4 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GetMessageFromWXResp+responseWithTextOrMediaMessage.h"; sourceTree = "<group>"; };
 		EFD330FE1DE28C6700D388E4 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GetMessageFromWXResp+responseWithTextOrMediaMessage.m"; sourceTree = "<group>"; };
+		EFE983B21E0307D7007E5CC8 /* CommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonViewController.h; sourceTree = "<group>"; };
+		EFE983B31E0307D7007E5CC8 /* CommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonViewController.m; sourceTree = "<group>"; };
+		EFE983B41E0307D7007E5CC8 /* CommonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -567,6 +577,9 @@
 				EF999EC01DD175FB00C8D3F7 /* UserViewController.h */,
 				EF999EC11DD175FB00C8D3F7 /* UserViewController.m */,
 				EF999EC21DD175FB00C8D3F7 /* UserViewController.xib */,
+				EFE983B21E0307D7007E5CC8 /* CommonViewController.h */,
+				EFE983B31E0307D7007E5CC8 /* CommonViewController.m */,
+				EFE983B41E0307D7007E5CC8 /* CommonViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -691,6 +704,9 @@
 				1887AF701DCF1F6D003BF6E4 /* RedEnvelopeViewController.h */,
 				1887AF711DCF1F6D003BF6E4 /* RedEnvelopeViewController.m */,
 				1887AF721DCF1F6D003BF6E4 /* RedEnvelopeViewController.xib */,
+				6FBF98261E124CB00000E7BA /* HistoryTaskListViewController.h */,
+				6FBF98271E124CB00000E7BA /* HistoryTaskListViewController.m */,
+				6FBF98281E124CB00000E7BA /* HistoryTaskListViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1139,6 +1155,8 @@
 				180569FC1DDB38D9002CC3BC /* unselect_my@2x.png in Resources */,
 				EF5478791DD0911500279E12 /* RankingViewController.xib in Resources */,
 				180569F01DDB38D9002CC3BC /* icon_backCircle.png in Resources */,
+				EFE983B61E0307D7007E5CC8 /* CommonViewController.xib in Resources */,
+				6FBF982A1E124CB00000E7BA /* HistoryTaskListViewController.xib in Resources */,
 				18985A4B1DD3562700D0B702 /* return2.png in Resources */,
 				18985A191DD0B4FA00D0B702 /* MyIntegralViewController.xib in Resources */,
 				18985A281DD1346700D0B702 /* InviteViewController.xib in Resources */,
@@ -1192,7 +1210,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9B9ACC39B7F6336EC59B4BEB /* [CP] Embed Pods Frameworks */ = {
@@ -1288,7 +1306,9 @@
 				18985A471DD355D500D0B702 /* UINavigationBar+DLNavigationBar.m in Sources */,
 				EFD330F61DE28A1500D388E4 /* WXApiRequestHandler.m in Sources */,
 				EFD330F91DE28A6800D388E4 /* WXApiResponseHandler.m in Sources */,
+				6FBF98291E124CB00000E7BA /* HistoryTaskListViewController.m in Sources */,
 				18985A0A1DCF747B00D0B702 /* RewardVIew.m in Sources */,
+				EFE983B51E0307D7007E5CC8 /* CommonViewController.m in Sources */,
 				6F706E911DE4AC01004F3A38 /* HeaderCollectionReusableView.m in Sources */,
 				EF999EC81DD17EF700C8D3F7 /* MessageCell.m in Sources */,
 				6FF24A621DE0997A00CCFE02 /* AdvertiseModel.m in Sources */,

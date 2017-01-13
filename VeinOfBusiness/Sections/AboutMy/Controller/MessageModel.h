@@ -10,4 +10,11 @@
 
 @interface MessageModel : NSObject
 
+@property (nonatomic,copy) NSString *msgId;
+@property (nonatomic,copy) NSString *title;
+@property (nonatomic,copy) NSString *addTime;
+@property (nonatomic,copy) NSString *link;
+@property (nonatomic,copy) NSString *summary;
+
+
 @end

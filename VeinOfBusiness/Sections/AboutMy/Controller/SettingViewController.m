@@ -77,22 +77,34 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {
-//        DrawMoneyViewController *draw = [[DrawMoneyViewController alloc]init];
-//        [self.navigationController pushViewController:draw animated:YES];
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            // 清理缓存
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                NSString *cachPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES) objectAtIndex:0];
+                
+                NSArray *files = [[NSFileManager defaultManager] subpathsAtPath:cachPath];
+                NSLog(@"files :%lu",[files count]);
+                for (NSString *p in files) {
+                    NSError *error;
+                    NSString *path = [cachPath stringByAppendingPathComponent:p];
+                    if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+                        [[NSFileManager defaultManager] removeItemAtPath:path error:&error];
+                    }
+                }
+            });
+            
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"清理缓存成功" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+            [alert show];
+        }
+        
     }
-    if (indexPath.row == 1) {
-//        MessageViewController *message = [[MessageViewController alloc]init];
-//        [self.navigationController pushViewController:message animated:YES];
+    if (indexPath.section == 1) {
+        if (indexPath.row == 1) {
+            // 退出登录
+        }
     }
-    if (indexPath.row == 2) {
-//        RankingViewController *rank = [[RankingViewController alloc]init];
-//        [self.navigationController pushViewController:rank animated:YES];
-    }
-    if (indexPath.row == 3) {
-//        SettingViewController *setting = [[SettingViewController alloc]init];
-//        [self.navigationController pushViewController:setting animated:YES];
-    }
+    
 }
 
 - (NSMutableArray *)arraySource
@@ -102,13 +114,11 @@
         //        UIImage *image0 = [UIImage imageNamed:@"DrawMoney"];
         //        NSDictionary *dic0 = @{@"image":image0,
         //                               @"name":@"提现"};
-        
-        
-        NSDictionary *dic1 = @{@"name":@"登录密码"};
+
         NSDictionary *dic2 = @{@"name":@"缓存清理"};
         NSDictionary *dic3 = @{@"name":@"退出登录"};
         
-        NSArray *arr1 = [NSArray arrayWithObjects:dic1,dic2, nil];
+        NSArray *arr1 = [NSArray arrayWithObjects:dic2, nil];
         NSArray *arr2 = [NSArray arrayWithObject:dic3];
         _arraySource = [NSMutableArray arrayWithObjects:arr1,arr2, nil];
     }

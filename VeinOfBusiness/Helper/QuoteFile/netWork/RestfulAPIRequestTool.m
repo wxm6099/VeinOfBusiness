@@ -66,9 +66,9 @@ static AFHTTPSessionManager *_mgr;
     NSURL *baseUrl = [NSURL URLWithString:[ServerAddress serverAddress]];
     _mgr = [[AFHTTPSessionManager alloc]initWithBaseURL:baseUrl];
     _mgr.responseSerializer  = [AFHTTPResponseSerializer serializer];
-    //    if (!flag) {
-    //        _mgr.requestSerializer  = [AFJSONRequestSerializer serializer];
-    //    }
+//        if (!flag) {
+//            _mgr.requestSerializer  = [AFJSONRequestSerializer serializer];
+//        }
     //    if ([AccountTool account].userToken) {
     //        [_mgr.requestSerializer setValue:[AccountTool account].userToken forHTTPHeaderField:@"x-access-token"];
     //    }
