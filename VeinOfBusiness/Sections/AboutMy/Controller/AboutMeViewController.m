@@ -19,6 +19,11 @@
 #import "WXApi.h"
 #import "AccountBalanceViewController.h"
 
+#import <AFNetworking.h>
+
+
+#define COLOR_AboutMe    [UIColor colorWithRed:42/255.0f green:135/255.0f blue:255/255.0f alpha:1.0]
+
 @interface AboutMeViewController ()<UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @property (nonatomic,retain) NSMutableArray *arraySource;
@@ -38,54 +43,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        // 耗时操作
-        Account *acc = [[Account findAll] objectAtIndex:0];
-        
-        NSDictionary *dic = @{@"customerId" : acc.customerId};
-        [RestfulAPIRequestTool routeName:Personalcenter_detail_URL requestModel:dic useKeys:[dic allKeys] success:^(id json) {
-            
-            NSLog(@"请求结果为%@", json);
-//            {
-//            status:"success"，
-//                data：{username：用户名,
-//                    mobile：
-//                    Pic：},
-//            Msg:""
-//            }
-            
-            NSString *status = [json objectForKey:@"status"];
-            NSDictionary *dicData = [json objectForKey:@"data"];
-            
-            if (status) {
-                
-                if ([status isEqualToString:@"success"]) {
-                    
-                    if (dicData) {
-                        NSString *imgUrl = [dicData objectForKey:@"pic"];
-                        NSString *username = [dicData objectForKey:@"username"];
-//                        NSString *mobile = [dicData objectForKey:@"mobile"];
-                        
-                        dispatch_async(dispatch_get_main_queue(), ^{
-                            if ([imgUrl isKindOfClass:[NSNull class]] || !imgUrl) {
-//                                self.imageViewHead.image = [UIImage imageNamed:@"Message"];
-                            } else {
-                                [self.imageViewHead setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imgUrl]]]];
-                            }
-                            [self.labelName setText:username];
-                        });
-                    }
-                }
-            }
-            
-            
-        } failure:^(id errorJson) {
-            NSLog(@"登录结果为%@", errorJson);
-        }];
-        
-        
-        
-    });
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -101,14 +59,71 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(notify:) name:NOTIFY_Personal object:nil];
+    
+    
     
     [self createUI];
+    [self getPersonDetail];
 }
+
+- (void)getPersonDetail{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // 耗时操作
+        Account *acc = [[Account findAll] objectAtIndex:0];
+        
+        NSDictionary *dic = @{@"customerId" : acc.customerId};
+        [RestfulAPIRequestTool routeName:Personal_detail_URL requestModel:dic useKeys:[dic allKeys] success:^(id json) {
+            
+            NSLog(@"请求结果为%@", json);
+            NSString *status = [json objectForKey:@"status"];
+            NSDictionary *dicData = [json objectForKey:@"data"];
+            if ([status isEqualToString:@"success"]) {
+                
+                if (dicData) {
+                    NSString *imgUrl = [NSString stringWithFormat:@"%@%@",URL_host,[dicData objectForKey:@"pic"]];
+                    NSString *username = [dicData objectForKey:@"username"];
+//                    NSString *province_id = [dicData objectForKey:@"provinceId"];
+//                    NSString *city_id = [dicData objectForKey:@"cityId"];
+//                    NSString *district_id = [dicData objectForKey:@"districtId"];
+//                    NSString *ali_account = [dicData objectForKey:@"getAccount"];
+//                    NSString *area_Info = [dicData objectForKey:@"areaInfo"];
+//                    NSString *verify_status = [dicData objectForKey:@"verifyStatus"];
+//                    
+//                    acc.province_id = province_id;
+//                    acc.city_id = city_id;
+//                    acc.district_id = district_id;
+//                    acc.area_Info = area_Info;
+//                    acc.ali_account = ali_account;
+//                    acc.name = username;
+//                    acc.photo = imgUrl;
+//                    acc.verify = verify_status;
+                    
+                    [acc setValuesForKeysWithDictionary:dicData];
+//                    [acc save];
+                    [acc update];
+                    
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.imageViewHead setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imgUrl]]]];
+                        [self.labelName setText:username];
+                    });
+                }
+            }
+
+        } failure:^(id errorJson) {
+            NSLog(@"登录结果为%@", errorJson);
+        }];
+        
+    });
+}
+
+
 
 - (void)createUI
 {
     UIView *viewa = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DLScreenWidth, 164)];
-    viewa.backgroundColor = [UIColor whiteColor];
+    viewa.backgroundColor = COLOR_AboutMe;
     [self.view addSubview:viewa];
     
     UITapGestureRecognizer *tap0 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapHeadView)];
@@ -120,15 +135,16 @@
     _imageViewHead.layer.cornerRadius = 30;
     _imageViewHead.layer.masksToBounds = YES;
     _imageViewHead.layer.borderWidth = 2;
-    _imageViewHead.layer.borderColor = [UIColor redColor].CGColor;
+    _imageViewHead.layer.borderColor = [UIColor whiteColor].CGColor;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapImage)];
     _imageViewHead.userInteractionEnabled = YES;
     [_imageViewHead addGestureRecognizer:tap];
     [viewa addSubview:_imageViewHead];
     
+    Account *acc = [[Account findAll] objectAtIndex:0];
     self.labelName = [[UILabel alloc]initWithFrame:CGRectMake(100, 75, 300, 22)];
-    _labelName.text = @"哎哟不错先生";
+    _labelName.text = acc.username;
     [viewa addSubview:_labelName];
     
 
@@ -138,6 +154,7 @@
     table.scrollEnabled = NO;
     table.delegate = self;
     table.dataSource = self;
+    
     [self.view addSubview:table];
 }
 
@@ -235,6 +252,7 @@
     
 }
 
+// 点击用户头像
 - (void)tapHeadView
 {
     UserViewController *user = [[UserViewController alloc]init];
@@ -248,21 +266,14 @@
     //    NSLog(@"%@",info);
     NSString *type = [info objectForKey:UIImagePickerControllerMediaType];
     
-    // 判断获取类型 : 图片
-    if ([type isEqualToString:@""]) {
-//        self.selectImage = [UIImage imageNamed:@"3"];
-        // 判断, 图片是否允许修改
-        if ([picker allowsEditing]) {
-            // 获取用户编辑过后的图片
-//            self.selectImage = [info objectForKey:UIImagePickerControllerEditedImage];
-//            [self.headImage setImage:self.selectImage forState:UIControlStateNormal];
-            
-        } else {
-            // 获取编辑前的图片
-//            self.headImage.imageView.image = [info objectForKey:UIImagePickerControllerOriginalImage];
-//            [self.headImage setImage:self.selectImage forState:UIControlStateNormal];
-        }
+    // 判断获取类型 : 图片  public.image
+    if ([type isEqualToString:@"public.image"]) {
+
+        _imageViewHead.image = [info objectForKey:UIImagePickerControllerEditedImage];
+        [self uploadImage:[info objectForKey:UIImagePickerControllerOriginalImage]];
         
+    } else {
+        [[[UIAlertView alloc]initWithTitle:@"提示" message:@"请选择图片" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil]show];
     }
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
@@ -274,14 +285,63 @@
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
+// 上传图片
+- (void)uploadImage:(UIImage *)image
+{
+    NSData *imageData = UIImageJPEGRepresentation(image, 0.1);
+    NSLog(@"image:%@",image);
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    // 允许 https , 并且不验证主机域名
+    manager.securityPolicy.allowInvalidCertificates = YES;
+    manager.securityPolicy.validatesDomainName = NO;
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    NSString *url = @"http://222.186.45.63/personal/upload";
+    [manager POST:url parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        [formData appendPartWithFileData:imageData
+                                    name:@"1"
+                                fileName:@"image.jpg"
+                                mimeType:@"image/jpg"];
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        NSLog(@"progress:%@",uploadProgress);
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"上传图片成功");
+        NSDictionary *dic= [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"%@",dic);
+
+        NSString *status = [dic objectForKey:@"status"];
+        NSDictionary *dicData = [dic objectForKey:@"data"];
+        
+            if ([status isEqualToString:@"success"]) {
+                if (dicData) {
+                    NSString *imgUrl = [dicData objectForKey:@"pic"];
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        if (imgUrl) {
+                            NSString *pic_url = [NSString stringWithFormat:@"%@%@",URL_host,imgUrl];
+                            [self.imageViewHead setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:pic_url]]]];
+                            
+                            Account *acc = [[Account findAll] objectAtIndex:0];
+                            acc.photo = pic_url;
+                            [acc save];
+                        }
+                        
+                    });
+                }
+            }
+        
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"上传图片失败");
+    }];
+
+}
 
 - (NSMutableArray *)arraySource
 {
     if (!_arraySource) {
-        
-//        UIImage *image0 = [UIImage imageNamed:@"DrawMoney"];
-//        NSDictionary *dic0 = @{@"image":image0,
-//                               @"name":@"提现"};
         
         UIImage *image1 = [UIImage imageNamed:@"DrawMoney"];
         NSDictionary *dic1 = @{@"image":image1,
@@ -304,19 +364,36 @@
 }
 
 
+- (void)notify:(NSNotification *)sender
+{
+        NSLog(@"sender = %@",sender);
+    
+    if ([[sender.object objectForKey:@"type"] isEqualToString:@"modify"]) {
+        [self modifyUserDetail:sender.userInfo];
+    }
+}
+
+// 变更资料
+- (void)modifyUserDetail:(NSDictionary *)dic{
+    
+    [RestfulAPIRequestTool routeName:Personal_modify_URL requestModel:dic useKeys:nil success:^(id json) {
+        
+        NSLog(@"请求结果为%@", json);
+        NSString *status = [json objectForKey:@"status"];
+        if ([status isEqualToString:@"success"]) {
+            // TO DO 显示修改成功
+        }
+        
+        
+    } failure:^(id errorJson) {
+        NSLog(@"登录结果为%@", errorJson);
+    }];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-//- (UIImageView *)imageViewHead
-//{
-//    if (_imageViewHead) {
-//        
-//    }
-//    return _imageViewHead;
-//}
 
 
 /*

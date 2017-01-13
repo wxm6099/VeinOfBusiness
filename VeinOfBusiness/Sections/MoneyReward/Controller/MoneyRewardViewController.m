@@ -95,28 +95,28 @@
 
 - (void)netRequest{
     
-    Account *acc = [Account findAll][0];
-    
-    NSDictionary *dic = @{@"customerId": acc.customerId};
-    
-    [RestfulAPIRequestTool routeName:@"reward_index" requestModel:dic useKeys:[dic allKeys] success:^(id json) {
-        
-        NSLog(@"取得的积分页面数据为 %@", json);
-        
-        NSDictionary *dic = json[@"data"];
-        //先清一下表
-        [IntegralModel clearTable];
-        
-        IntegralModel *model = [IntegralModel new];
-        [model setValuesForKeysWithDictionary:dic];
-        [model save];
-        //刷新界面
-        [self reloadInterfaceViewWithModel:model];
-        
-    } failure:^(id errorJson) {
-        
-        
-    }];
+//    Account *acc = [Account findAll][0];
+//    
+//    NSDictionary *dic = @{@"customerId": acc.customerId};
+//    
+//    [RestfulAPIRequestTool routeName:@"reward_index" requestModel:dic useKeys:[dic allKeys] success:^(id json) {
+//        
+//        NSLog(@"取得的积分页面数据为 %@", json);
+//        
+//        NSDictionary *dic = json[@"data"];
+//        //先清一下表
+//        [IntegralModel clearTable];
+//        
+//        IntegralModel *model = [IntegralModel new];
+//        [model setValuesForKeysWithDictionary:dic];
+//        [model save];
+//        //刷新界面
+//        [self reloadInterfaceViewWithModel:model];
+//        
+//    } failure:^(id errorJson) {
+//        
+//        
+//    }];
     
 }
 

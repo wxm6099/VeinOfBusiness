@@ -34,30 +34,10 @@
         Account *acc = [[Account findAll] objectAtIndex:0];
         
         NSDictionary *dic = @{@"customerId" : acc.customerId};
-        [RestfulAPIRequestTool routeName:Personalcenter_msg_URL requestModel:dic useKeys:[dic allKeys] success:^(id json) {
+        [RestfulAPIRequestTool routeName:Personal_msg_URL requestModel:dic useKeys:[dic allKeys] success:^(id json) {
             
             NSLog(@"请求结果为%@", json);
-            
-            if (json == nil || [json isEqualToString:@""]) {
-                json = @{@"status": @"success",
-                         @"data": @[
-                                 @{@"id": @"1",
-                                   @"msgId": @"1",
-                                   @"title": @"消息1",
-                                   @"addTime": @"2016-11-19 10:11:24",
-                                   @"link": @"http://www.jiemian.com/article/966978.html",
-                                   @"summary": @"消息1消息1消息1"},
-                                 @{@"id": @"2",
-                                   @"msgId": @"2",
-                                   @"title": @"消息2",
-                                   @"addTime": @"2016-11-20 10:11:24",
-                                   @"link": @"https://www.zhihu.com/question/19568396/answer/16245159",
-                                   @"summary": @"消息2消息2消息2"
-                                   }],
-                         @"msg": @"获取消息列表成功"
-                         };
-            }
-            
+
             NSString *status = [json objectForKey:@"status"];
             NSMutableArray *arrayData = [json objectForKey:@"data"];
             
