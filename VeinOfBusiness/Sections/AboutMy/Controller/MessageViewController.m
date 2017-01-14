@@ -12,6 +12,7 @@
 #import "RestfulAPIRequestTool.h"
 #import "MessageModel.h"
 #import "CommonViewController.h"
+#import <MJRefresh.h>
 
 @interface MessageViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -31,43 +32,10 @@
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         // 耗时操作
-        Account *acc = [[Account findAll] objectAtIndex:0];
-        
-        NSDictionary *dic = @{@"customerId" : acc.customerId};
-        [RestfulAPIRequestTool routeName:Personal_msg_URL requestModel:dic useKeys:[dic allKeys] success:^(id json) {
-            
-            NSLog(@"请求结果为%@", json);
-
-            NSString *status = [json objectForKey:@"status"];
-            NSMutableArray *arrayData = [json objectForKey:@"data"];
-            
-            if ([status isEqualToString:@"success"]) {
-                
-                for (NSDictionary *dic in arrayData) {
-                    MessageModel *model = [[MessageModel alloc]init];
-                    [model setValuesForKeysWithDictionary:dic];
-                    if (!self.arraySource) {
-                        self.arraySource = [NSMutableArray array];
-                    }
-                    [self.arraySource addObject:model];
-                }
-                
-                
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.table reloadData];
-                });
-                
-            }
-            
-            
-            
-            
-            
-        } failure:^(id errorJson) {
-            NSLog(@"登录结果为%@", errorJson);
-        }];
-        
-        
+        [self request];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.table reloadData];
+        });
         
     });
 }
@@ -98,6 +66,13 @@
     [self.table registerClass:[MessageCell class] forCellReuseIdentifier:@"message"];
     self.table.delegate = self;
     self.table.dataSource = self;
+    
+    self.table.mj_footer = [MJRefreshFooter footerWithRefreshingBlock:^{
+        [self request];
+    }];
+    self.table.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
+        [self request];
+    }];
     [self.view addSubview:self.table];
 }
 
@@ -126,6 +101,7 @@
     MessageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"message"];
 
     MessageModel *model = [self.arraySource objectAtIndex:indexPath.row];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.labelContent.text = model.summary;
     cell.labelTitle.text = model.title;
     cell.labelTime.text = model.addTime;
@@ -143,28 +119,34 @@
     
 }
 
-//- (NSMutableArray *)arraySource
-//{
-//    if (!_arraySource) {
-
-//        NSDictionary *dic1 = @{@"name":@"我也不知道在这里说些什么我也不知道在这里说些什么我也不知道在这里说些什么我也不知道在这里说些什么",
-//                               @"title":@"国庆放假通知",
-//                               @"time":@"2010-09-09"};
-//        NSDictionary *dic2 = @{@"name":@"我也不知道在这里说些什么我也不知道在这里说些什么我也不知道在这里说些什么我也不知道在这里说些什么",
-//                               @"title":@"国庆放假通知",
-//                               @"time":@"2010-09-09"};
-//        NSDictionary *dic3 = @{@"name":@"我也不知道在这里说些什么我也不知道在这里说些什么我也不知道在这里说些什么我也不知道在这里说些什么",
-//                               @"title":@"国庆放假通知",
-//                               @"time":@"2010-09-09"};
+- (void)request
+{
+    Account *acc = [[Account findAll] objectAtIndex:0];
+    NSDictionary *dic = @{@"customerId" : acc.customerId};
+    [RestfulAPIRequestTool routeName:Personal_msg_URL requestModel:dic useKeys:[dic allKeys] success:^(id json) {
         
-//        NSArray *arr1 = [NSArray arrayWithObjects:dic1,dic2, nil];
-//        NSArray *arr2 = [NSArray arrayWithObject:dic3];
-//        _arraySource = [NSMutableArray arrayWithObjects:dic1,dic2,dic3, nil];
-//    }
-//    return _arraySource;
-//}
-
-
+        NSLog(@"请求结果为%@", json);
+        
+        NSString *status = [json objectForKey:@"status"];
+        NSMutableArray *arrayData = [json objectForKey:@"data"];
+        
+        if ([status isEqualToString:@"success"]) {
+            
+            for (NSDictionary *dic in arrayData) {
+                MessageModel *model = [[MessageModel alloc]init];
+                [model setValuesForKeysWithDictionary:dic];
+                if (!self.arraySource) {
+                    self.arraySource = [NSMutableArray array];
+                }
+                [self.arraySource addObject:model];
+            }
+            
+        }
+        
+    } failure:^(id errorJson) {
+        NSLog(@"登录结果为%@", errorJson);
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

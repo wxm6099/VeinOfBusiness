@@ -10,4 +10,6 @@
 
 @interface InviteViewController : UIViewController
 
+@property (nonatomic,copy) NSString *inviteCode;
+
 @end

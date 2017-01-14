@@ -180,6 +180,7 @@
     cell.imageView.image = [dic objectForKey:@"image"];
     cell.textLabel.text = [dic objectForKey:@"name"];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 

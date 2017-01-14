@@ -131,6 +131,7 @@
     }
     cell.textLabel.text = [dic objectForKey:@"username"];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"第%ld名",indexPath.row + 1];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.labelMoney.text = [NSString stringWithFormat:@"%@积分",[dic objectForKey:@"sumPoint"]];
     
     return cell;

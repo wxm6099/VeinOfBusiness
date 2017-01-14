@@ -50,7 +50,6 @@
 
 - (void)shareButtonAction:(UIButton *)sender
 {
-    
     ShareUtil * share = [ShareUtil new];
     [share shareWeChatTimeLineWithLink:@{@"url":self.model.link, @"title":@"我在商脉发现了这个,来看看吧!", @"description":@"it is the description of balabala"}];
     NSLog(@"分享!");
