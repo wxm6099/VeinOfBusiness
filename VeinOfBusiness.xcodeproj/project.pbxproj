@@ -93,6 +93,8 @@
 		6FBC19A31DE5F551004DD670 /* IntegralExchangeHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC19A11DE5F551004DD670 /* IntegralExchangeHistoryView.m */; };
 		6FBC19A41DE5F551004DD670 /* IntegralExchangeHistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FBC19A21DE5F551004DD670 /* IntegralExchangeHistoryView.xib */; };
 		6FBC19B01DE605A9004DD670 /* UIViewController+DismissKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC19AF1DE605A9004DD670 /* UIViewController+DismissKeyboard.m */; };
+		6FBF98291E124CB00000E7BA /* HistoryTaskListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBF98271E124CB00000E7BA /* HistoryTaskListViewController.m */; };
+		6FBF982A1E124CB00000E7BA /* HistoryTaskListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FBF98281E124CB00000E7BA /* HistoryTaskListViewController.xib */; };
 		6FF24A621DE0997A00CCFE02 /* AdvertiseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF24A611DE0997A00CCFE02 /* AdvertiseModel.m */; };
 		706B9227812C3A38DD95C652 /* libPods-VeinOfBusiness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0E0D5730AC67B8AB90CBD /* libPods-VeinOfBusiness.a */; };
 		EF0E569C1E22B5430029FE4F /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0E569A1E22B5430029FE4F /* AuthViewController.m */; };
@@ -355,6 +357,9 @@
 		6FBC19A21DE5F551004DD670 /* IntegralExchangeHistoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntegralExchangeHistoryView.xib; sourceTree = "<group>"; };
 		6FBC19AE1DE605A9004DD670 /* UIViewController+DismissKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DismissKeyboard.h"; sourceTree = "<group>"; };
 		6FBC19AF1DE605A9004DD670 /* UIViewController+DismissKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DismissKeyboard.m"; sourceTree = "<group>"; };
+		6FBF98261E124CB00000E7BA /* HistoryTaskListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTaskListViewController.h; sourceTree = "<group>"; };
+		6FBF98271E124CB00000E7BA /* HistoryTaskListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTaskListViewController.m; sourceTree = "<group>"; };
+		6FBF98281E124CB00000E7BA /* HistoryTaskListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryTaskListViewController.xib; sourceTree = "<group>"; };
 		6FF24A601DE0997A00CCFE02 /* AdvertiseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertiseModel.h; sourceTree = "<group>"; };
 		6FF24A611DE0997A00CCFE02 /* AdvertiseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertiseModel.m; sourceTree = "<group>"; };
 		EF0E56991E22B5430029FE4F /* AuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
@@ -715,6 +720,9 @@
 				1887AF701DCF1F6D003BF6E4 /* RedEnvelopeViewController.h */,
 				1887AF711DCF1F6D003BF6E4 /* RedEnvelopeViewController.m */,
 				1887AF721DCF1F6D003BF6E4 /* RedEnvelopeViewController.xib */,
+				6FBF98261E124CB00000E7BA /* HistoryTaskListViewController.h */,
+				6FBF98271E124CB00000E7BA /* HistoryTaskListViewController.m */,
+				6FBF98281E124CB00000E7BA /* HistoryTaskListViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1166,6 +1174,7 @@
 				EF5478791DD0911500279E12 /* RankingViewController.xib in Resources */,
 				180569F01DDB38D9002CC3BC /* icon_backCircle.png in Resources */,
 				EFE983B61E0307D7007E5CC8 /* CommonViewController.xib in Resources */,
+				6FBF982A1E124CB00000E7BA /* HistoryTaskListViewController.xib in Resources */,
 				18985A4B1DD3562700D0B702 /* return2.png in Resources */,
 				18985A191DD0B4FA00D0B702 /* MyIntegralViewController.xib in Resources */,
 				18985A281DD1346700D0B702 /* InviteViewController.xib in Resources */,
@@ -1317,6 +1326,7 @@
 				18985A471DD355D500D0B702 /* UINavigationBar+DLNavigationBar.m in Sources */,
 				EFD330F61DE28A1500D388E4 /* WXApiRequestHandler.m in Sources */,
 				EFD330F91DE28A6800D388E4 /* WXApiResponseHandler.m in Sources */,
+				6FBF98291E124CB00000E7BA /* HistoryTaskListViewController.m in Sources */,
 				18985A0A1DCF747B00D0B702 /* RewardVIew.m in Sources */,
 				EFE983B51E0307D7007E5CC8 /* CommonViewController.m in Sources */,
 				6F706E911DE4AC01004F3A38 /* HeaderCollectionReusableView.m in Sources */,

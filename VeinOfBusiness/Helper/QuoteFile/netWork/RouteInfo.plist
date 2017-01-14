@@ -226,5 +226,13 @@
 		<key>routeURL</key>
 		<string>ad/open</string>
 	</dict>
+     <dict>
+         <key>routeMethod</key>
+         <string>POST</string>
+         <key>routeName</key>
+         <string>personal_upload</string>
+         <key>routeURL</key>
+         <string>personal/upload</string>
+     </dict>
 </array>
 </plist>

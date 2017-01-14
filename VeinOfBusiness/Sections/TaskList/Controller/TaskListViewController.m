@@ -16,7 +16,7 @@
 #import <MJRefresh/MJRefreshHeader.h>
 #import <MJRefresh/MJRefreshFooter.h>
 #import <MJRefresh.h>
-
+#import "HistoryTaskListViewController.h"
 
 @interface TaskListViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
@@ -47,14 +47,28 @@
     self.myTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         [self netRequest:1];
     }];
+    
+    
+    UIButton *historyButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 60, 44)];
+    
+    [historyButton setTitle:@"历史任务" forState:UIControlStateNormal];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:historyButton];
+    historyButton.titleLabel.font = [UIFont systemFontOfSize:14];
+    
+    [historyButton addTarget:self action:@selector(historyButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    self.title = @"任务";
+    
+    
+    /*
     UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];
     
     [button setTitle:@"红包" forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
-    
+    button.titleLabel.font = [UIFont systemFontOfSize:14];
     
     [button addTarget:self action:@selector(redEnvelopButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     self.title = @"任务";
+     */
 }
 
 
@@ -131,6 +145,10 @@
     
 }
 
+- (void)historyButtonAction:(UIButton *)sender{
+    HistoryTaskListViewController *history = [[HistoryTaskListViewController alloc]initWithNibName:@"HistoryTaskListViewController" bundle:nil];
+    [self.navigationController pushViewController:history animated:YES];
+}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
