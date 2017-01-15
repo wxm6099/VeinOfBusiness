@@ -146,15 +146,20 @@
             UITextField *field = [alertView textFieldAtIndex:0];
             
             Account *acc = [[Account findAll] objectAtIndex:0];
-            NSDictionary *dic = @{@"customerId":acc.customerId,
-                                  @"username":field.text,
-                                  @"getAccount":acc.aliAccount,
-                                  @"provinceId":acc.provinceId,
-                                  @"cityId":acc.cityId,
-                                  @"districtId":acc.districtId,
-                                  @"areaInfo":acc.areaInfo,
-                                  @"pic":acc.photo};
-            [[NSNotificationCenter defaultCenter]postNotificationName:NOTIFY_Personal object:@{@"type":@"modify"} userInfo:dic];
+            acc.username = field.text;
+            [acc update];
+//            NSDictionary *dic = @{@"customerId":acc.customerId,
+//                                  @"username":field.text,
+//                                  @"getAccount":acc.aliAccount,
+//                                  @"provinceId":acc.provinceId,
+//                                  @"cityId":acc.cityId,
+//                                  @"districtId":acc.districtId,
+//                                  @"areaInfo":acc.areaInfo,
+//                                  @"pic":acc.photo};
+            
+            
+            [[NSNotificationCenter defaultCenter]postNotificationName:NOTIFY_Personal object:acc userInfo:@{@"type":@"modify"}];
+            
          
             NSMutableDictionary *dic0 = [NSMutableDictionary dictionaryWithDictionary:self.arraySource[0]];
             [dic0 setObject:field.text forKey:@"footer"];

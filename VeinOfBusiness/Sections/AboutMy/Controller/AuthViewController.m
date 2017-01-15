@@ -36,7 +36,7 @@
     [self.view addSubview:labelFront];
     self.imageViewFront = [[UIImageView alloc]initWithFrame:CGRectMake(50, 150, 200, 200)];
     self.imageViewFront.tag = 1;
-    self.imageViewFront.backgroundColor = [UIColor redColor];
+    self.imageViewFront.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4];
     self.imageViewFront.userInteractionEnabled = YES;
     [self.imageViewFront addGestureRecognizer:frontTap];
     [self.view addSubview:self.imageViewFront];
@@ -47,7 +47,7 @@
     [self.view addSubview:labelBack];
     self.imageViewBack = [[UIImageView alloc]initWithFrame:CGRectMake(50, 430, 200, 200)];
     self.imageViewBack.tag = 2;
-    self.imageViewBack.backgroundColor = [UIColor greenColor];
+    self.imageViewBack.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4];
     self.imageViewBack.userInteractionEnabled = YES;
     [self.imageViewBack addGestureRecognizer:backTap];
     [self.view addSubview:self.imageViewBack];

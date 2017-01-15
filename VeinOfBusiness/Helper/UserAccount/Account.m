@@ -35,7 +35,7 @@
     
     
     if ([key isEqualToString:@"pic"]) {
-        self.photo = [NSString stringWithFormat:@"%@%@",URL_host,value];
+        self.photo = value;
     }
     if ([key isEqualToString:@"getAccount"]) {
         self.aliAccount = value;

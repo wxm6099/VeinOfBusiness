@@ -9,6 +9,8 @@
 #import "SettingViewController.h"
 #import "JKDBModel.h"
 #import "Account.h"
+#import "LoginInViewController.h"
+#import "DLNavigationController.h"
 
 @interface SettingViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -102,9 +104,16 @@
         
     }
     if (indexPath.section == 1) {
-        if (indexPath.row == 1) {
+        if (indexPath.row == 0) {
             // 退出登录
             [Account clearTable];
+            
+            UIApplication *app = [UIApplication sharedApplication];
+            
+            
+            LoginInViewController *loginIn = [[LoginInViewController alloc] initWithNibName:@"LoginInViewController" bundle:nil];
+            DLNavigationController *nav = [[DLNavigationController alloc]initWithRootViewController:loginIn];
+            [app.keyWindow setRootViewController:nav];
         }
     }
     

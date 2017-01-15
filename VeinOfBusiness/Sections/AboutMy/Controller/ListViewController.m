@@ -9,12 +9,14 @@
 #import "ListViewController.h"
 #import "RestfulAPIRequestTool.h"
 #import "Account.h"
+#import "MBProgressHUD.h"
 
 @interface ListViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,retain) NSMutableArray *arraySource;
 @property (nonatomic,retain) UITableView *table;
 
+@property (nonatomic,retain) MBProgressHUD *HUD;
 @end
 
 @implementation ListViewController
@@ -22,6 +24,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    
+    self.HUD = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    self.HUD.label.text = @"loading";
+    
     self.title = self.dic[@"title"];
     [self createUI];
     [self getList];
@@ -53,6 +60,7 @@
                 self.arraySource = arr;
                 [self.table reloadData];
                 
+                [self.HUD hideAnimated:YES];
             }
             
         } failure:^(id errorJson) {

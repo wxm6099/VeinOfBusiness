@@ -10,6 +10,9 @@
 #import "RestfulAPIRequestTool.h"
 #import "Account.h"
 #import "ShareUtil.h"
+#import "CLAnimationView.h"
+
+
 
 
 
@@ -50,31 +53,43 @@
 
 - (void)shareButtonAction:(UIButton *)sender
 {
-    ShareUtil * share = [ShareUtil new];
-    [share shareWeChatTimeLineWithLink:@{@"url":self.model.link, @"title":@"我在商脉发现了这个,来看看吧!", @"description":@"it is the description of balabala"}];
+    NSDictionary *dic_share = @{@"url":self.model.link,
+                          @"title":[NSString stringWithFormat:@"我的邀请码:%@",@"1"],
+                          @"description":@"我在金脉,分享就能赚钱,快来加入吧!"};
+    ShareUtil *share = [[ShareUtil alloc]init];
     NSLog(@"分享!");
+    
+    NSMutableArray *titarray = [NSMutableArray arrayWithObjects:@"微信好友",@"朋友圈", nil];
+    NSMutableArray *picarray = [NSMutableArray arrayWithObjects:@"WeChatSession",@"WeChatTimeLine", nil];
+    CLAnimationView *animationView = [[CLAnimationView alloc]initWithTitleArray:titarray picarray:picarray];
+    [animationView selectedWithIndex:^(NSInteger index,id shareType) {
+        
+        switch (index) {
+            case 1:
+                [share shareWeChatSessionWithLink:dic_share];
+                break;
+            case 2:
+                [share shareWeChatTimeLineWithLink:dic_share];
+                break;
+            default:
+                break;
+        }
+    }];
+    
+    [animationView show];
+    
     
     Account *acc = [Account findAll][0];
     NSDictionary *dic = @{@"customerId": acc.customerId,@"adId": self.model.adId};
     [RestfulAPIRequestTool routeName:@"ad_forward" requestModel:dic useKeys:[dic allKeys] success:^(id json) {
-        
         NSLog(@"转发结果为 %@", json);
-        
-        
     } failure:^(id errorJson) {
-        
     }];
-    
-    
-    
-    
     
 }
 - (void)setModel:(AdvertiseModel *)model
 {
     _model = model;
-    
-    
 }
 
 

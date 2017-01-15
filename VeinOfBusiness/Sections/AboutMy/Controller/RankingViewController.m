@@ -9,11 +9,14 @@
 #import "RankingViewController.h"
 #import "RankingCell.h"
 #import "RestfulAPIRequestTool.h"
+#import "MBProgressHUD.h"
 
 @interface RankingViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,retain) NSMutableArray *arraySource;
 @property (nonatomic,retain) UITableView *table;
+
+@property (nonatomic,retain) MBProgressHUD *HUD;
 
 @end
 
@@ -30,7 +33,7 @@
         // 耗时操作
 //        Account *acc = [[Account findAll] objectAtIndex:0];
         
-        NSDictionary *dic = @{@"index" : @"10"};
+        NSDictionary *dic = @{@"index" : @"25"};
         [RestfulAPIRequestTool routeName:Personal_rank_URL requestModel:dic useKeys:[dic allKeys] success:^(id json) {
             
             NSLog(@"请求结果为%@", json);
@@ -38,12 +41,17 @@
             NSString *status = [json objectForKey:@"status"];
             if ([status isEqualToString:@"success"]) {
                 
-                NSString *msg = [json objectForKey:@"msg"];
+                
                 NSArray *arrData = [json objectForKey:@"data"];
                 self.arraySource = [NSMutableArray arrayWithArray:arrData];
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.table reloadData];
+                    [self.HUD hideAnimated:YES];
+                    if (self.arraySource.count == 0) {
+                        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"没有更多排行榜数据" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+                        [alert show];
+                    }
                 });
             }
             
@@ -65,10 +73,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.HUD = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    self.HUD.label.text = @"loading";
+    
     self.navigationItem.title = @"排行";
-    
     self.arraySource = [NSMutableArray array];
-    
     [self createUI];
     
 }
@@ -124,10 +133,10 @@
     
     NSDictionary *dic = [self.arraySource objectAtIndex:indexPath.row];
     NSString *imgUrl = [dic objectForKey:@"pic"];
-    if ([imgUrl isKindOfClass:[NSNull class]] || !imgUrl||[imgUrl isEqualToString:@""]) {
-        cell.imageView.image = [UIImage imageNamed:@"Message"];
-    } else {
+    if (imgUrl&&![imgUrl isEqual:[NSNull null]]) {
         cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",URL_host,imgUrl]]]];
+    } else {
+        cell.imageView.image = [UIImage imageNamed:@"head"];
     }
     cell.textLabel.text = [dic objectForKey:@"username"];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"第%ld名",indexPath.row + 1];

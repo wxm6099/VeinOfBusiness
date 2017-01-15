@@ -7,8 +7,10 @@
 //
 
 #import "CommonViewController.h"
+#import "MBProgressHUD.h"
+@interface CommonViewController ()<UIWebViewDelegate>
+@property (nonatomic,retain) MBProgressHUD *HUD;
 
-@interface CommonViewController ()
 
 @end
 
@@ -17,11 +19,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.HUD = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    self.HUD.label.text = @"loading";
+    
     [self createUI];
 }
 
 - (void)createUI{
     UIWebView *webView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, DLScreenWidth, DLScreenHeight)];
+    webView.delegate = self;
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url]]];
     [self.view addSubview:webView];
 }
@@ -29,6 +36,28 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    [self.HUD hideAnimated:YES];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    
+    [self.HUD hideAnimated:YES];
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    [self.HUD hideAnimated:YES];
+    return YES;
 }
 
 /*

@@ -13,11 +13,13 @@
 #import "MessageModel.h"
 #import "CommonViewController.h"
 #import <MJRefresh.h>
+#import "MBProgressHUD.h"
 
 @interface MessageViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,retain) NSMutableArray *arraySource;
 @property (nonatomic,retain) UITableView *table;
+@property (nonatomic,retain) MBProgressHUD *HUD;
 
 @end
 
@@ -33,10 +35,6 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         // 耗时操作
         [self request];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.table reloadData];
-        });
-        
     });
 }
 
@@ -54,8 +52,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.navigationItem.title = @"消息";
+    self.HUD = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    self.HUD.label.text = @"loading";
     
+    self.navigationItem.title = @"消息";
     [self createUI];
     
 }
@@ -67,12 +67,12 @@
     self.table.delegate = self;
     self.table.dataSource = self;
     
-    self.table.mj_footer = [MJRefreshFooter footerWithRefreshingBlock:^{
-        [self request];
-    }];
-    self.table.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
-        [self request];
-    }];
+//    self.table.mj_footer = [MJRefreshFooter footerWithRefreshingBlock:^{
+//        [self request];
+//    }];
+//    self.table.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
+//        [self request];
+//    }];
     [self.view addSubview:self.table];
 }
 
@@ -139,7 +139,16 @@
                     self.arraySource = [NSMutableArray array];
                 }
                 [self.arraySource addObject:model];
+                
             }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.table reloadData];
+                [self.HUD hideAnimated:YES];
+                if (self.arraySource.count == 0) {
+                    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"没有更多消息" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+                    [alert show];
+                }
+            });
             
         }
         
