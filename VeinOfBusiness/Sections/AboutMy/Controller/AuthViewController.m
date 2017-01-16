@@ -185,11 +185,11 @@
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if (imgUrl) {
-                        NSString *pic_url = [NSString stringWithFormat:@"%@%@",URL_host,imgUrl];
+//                        NSString *pic_url = [NSString stringWithFormat:@"%@%@",URL_host,imgUrl];
                         if ([self.frontOrBack isEqualToString:@"front"]) {
-                            self.frontImageUrl = pic_url;
+                            self.frontImageUrl = imgUrl;
                         }else{
-                            self.backImageUrl = pic_url;
+                            self.backImageUrl = imgUrl;
                         }
                     }
                     

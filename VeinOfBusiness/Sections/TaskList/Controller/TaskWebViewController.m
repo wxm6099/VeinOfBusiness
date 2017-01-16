@@ -53,8 +53,8 @@
 
 - (void)shareButtonAction:(UIButton *)sender
 {
-    NSDictionary *dic_share = @{@"url":self.model.link,
-                          @"title":[NSString stringWithFormat:@"我的邀请码:%@",@"1"],
+    NSDictionary *dic_share = @{@"url":[NSString stringWithFormat:@"%@%@",URL_host,self.model.link],
+                          @"title":@"金脉",
                           @"description":@"我在金脉,分享就能赚钱,快来加入吧!"};
     ShareUtil *share = [[ShareUtil alloc]init];
     NSLog(@"分享!");

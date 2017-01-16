@@ -48,7 +48,7 @@
 {
     Account *acc = [[Account findAll] objectAtIndex:0];
     _labelName.text = acc.username;
-//    _imageViewHead.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",acc.photo]]]];
+    _imageViewHead.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",acc.photo]]]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -93,7 +93,7 @@
                     
                     
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        [self.imageViewHead setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imgUrl]]]];
+                        [self.imageViewHead setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",URL_host,imgUrl]]]]];
                         [self.labelName setText:username];
                     });
                 }
@@ -378,6 +378,8 @@
 // 变更资料
 - (void)modifyUserDetail:(Account *)acc{
     
+    NSString *str = [acc.photo stringByReplacingOccurrencesOfString:URL_host withString:@""];
+    
     NSDictionary *dic = @{@"customerId":acc.customerId,
                           @"username":acc.username,
                           @"getAccount":acc.aliAccount,
@@ -385,7 +387,7 @@
                           @"cityId":acc.cityId,
                           @"districtId":acc.districtId,
                           @"areaInfo":acc.areaInfo,
-                          @"pic":acc.photo};
+                          @"pic":str};
     
     
     [RestfulAPIRequestTool routeName:Personal_modify_URL requestModel:dic useKeys:nil success:^(id json) {

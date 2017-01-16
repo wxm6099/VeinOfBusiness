@@ -28,7 +28,7 @@
 }
 - (IBAction)inviteAction:(id)sender {
     
-    NSDictionary *dic = @{@"url":@"1",
+    NSDictionary *dic = @{@"url":URL_host,
                           @"title":[NSString stringWithFormat:@"我的邀请码:%@",self.inviteCode],
                           @"description":@"我在金脉,分享就能赚钱,快来加入吧!"};
     ShareUtil *share = [[ShareUtil alloc]init];
